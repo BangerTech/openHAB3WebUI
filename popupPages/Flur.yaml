@@ -57,6 +57,27 @@ blocks:
                         humidity_item: SonoffP3Kuhlschrank_SonoffP3Tagesverbr
                         lightlevel_item: SonoffP3Kuhlschrank_SonoffP3Aktuell
                         temp_item: KuehlschrankKostenHeute
+  - component: oh-block
+    config: {}
+    slots:
+      default:
+        - component: oh-grid-row
+          config: {}
+          slots:
+            default:
+              - component: oh-grid-col
+                config:
+                  large: "50"
+                  width: "100"
+                  xlarge: "50"
+                slots:
+                  default:
+                    - component: widget:Cell_Temp_Card_1
+                      config:
+                        heating_item: SonoffP3Kuhlschrank_SonoffP3Tagesverbr
+                        humidity_item: SonoffP3Kuhlschrank_SonoffP3Aktuell
+                        icon: power
+                        temp_item: KuehlschrankKostenGesamt
+                        title: Kühlschrank
 masonry: null
 grid: null
-canvas: null
