@@ -32,8 +32,8 @@ MainPage:
         - Werkstatt
         - DSL Popup
         - Alle Batterien#
-    - icons:
-        - alle icons in /etc/openhab/html/icons/ legen
+   - icons:
+       - alle Icons in /etc/openhab/html/icons/ legen
 
 Flur: 
    - Widgets: 
