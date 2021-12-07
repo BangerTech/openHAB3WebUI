@@ -1,0 +1,62 @@
+config:
+  label: Flur
+  sidebar: false
+blocks:
+  - component: oh-block
+    config: {}
+    slots:
+      default:
+        - component: oh-grid-row
+          config: {}
+          slots:
+            default:
+              - component: oh-grid-col
+                config:
+                  width: "50"
+                slots:
+                  default:
+                    - component: widget:command-button-heater
+                      config:
+                        background: "#1c1c1d"
+                        cardwidth: "100"
+                        command1: OFF
+                        command2: ON
+                        header: Gang
+                        headline1: Flur Licht Aus
+                        headline2: Flur Licht An
+                        icon: lightbulb
+                        item: FlurLicht_4_STATE
+                        item_brightness: LichtWohnzimmerGang_Helligkeit
+                        item_schalter: FlurLicht_4_STATE
+                        title: Licht
+              - component: oh-grid-col
+                config:
+                  width: "50"
+                slots:
+                  default:
+                    - component: widget:command-button-heater
+                      config:
+                        background: "#1c1c1d"
+                        cardwidth: "100"
+                        command1: OFF
+                        command2: ON
+                        header: Speise
+                        headline1: Speise Aus
+                        headline2: Speise An
+                        icon: lightbulb
+                        item: SonoffSpeise_SonoffSpeise
+                        item_brightness: LichtKuche_Helligkeit
+                        item_schalter: SonoffSpeise_SonoffSpeise
+                        title: Licht
+              - component: oh-grid-col
+                config: {}
+                slots:
+                  default:
+                    - component: widget:Cell_Temp_Card_3
+                      config:
+                        humidity_item: SonoffP3Kuhlschrank_SonoffP3Tagesverbr
+                        lightlevel_item: SonoffP3Kuhlschrank_SonoffP3Aktuell
+                        temp_item: KuehlschrankKostenHeute
+masonry: null
+grid: null
+canvas: null
