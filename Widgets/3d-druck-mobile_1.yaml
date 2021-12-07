@@ -1,0 +1,259 @@
+uid: 3d-druck-mobile_1
+tags: []
+props:
+  parameters:
+    - description: icon1 name without ".png", located in static/icons/ folder
+      label: Icon1
+      name: iconimage1
+      required: false
+      type: TEXT
+    - description: icon2 name without ".png", located in static/icons/ folder
+      label: Icon2
+      name: iconimage2
+      required: false
+      type: TEXT
+    - context: item
+      description: Set the Power item here
+      label: Power
+      name: poweritem
+      required: false
+      type: TEXT
+    - context: item
+      description: Set the Light item here
+      label: Light
+      name: lightitem
+      required: false
+      type: TEXT
+    - description: Set the height of the Widget
+      label: Widget Height
+      name: cardheight
+      required: false
+      type: TEXT
+    - description: Name your Printer!
+      label: Printer Name
+      name: printername
+      required: false
+      type: TEXT
+    - context: item
+      description: Set item for Bed Temperature here
+      label: Bed Temperature
+      name: bedtempitem
+      required: false
+      type: TEXT
+    - context: item
+      description: Set item for Hotend Temperature here
+      label: Hotend Temperature
+      name: hotendtempitem
+      required: false
+      type: TEXT
+    - context: item
+      description: Set item for Time Left here
+      label: Time Left
+      name: timeleftitem
+      required: false
+      type: TEXT
+    - context: item
+      description: Set item for Progress here
+      label: Progress
+      name: progressitem
+      required: false
+      type: TEXT
+    - description: Set the url of the live stream here
+      label: Url live stream
+      name: urllivestream
+      required: false
+      type: TEXT
+    - description: rgba or HEX
+      label: Background Color
+      name: bgcolor
+      required: false
+      type: TEXT
+    - description: Page which will be opened as popup
+      label: Page ID
+      name: page
+      required: false
+  parameterGroups: []
+timestamp: Nov 27, 2021, 12:54:56 PM
+component: f7-card
+config:
+  style:
+    --weather-card-border-radius: 20px
+    --weather-card-color: "=(!props.fontColor) ? '255,255,255' : props.fontColor"
+    --weather-card-text-color: rgba(var(--weather-card-color),1)
+    --weather-card-text-shadow-color: "=(!props.textShadowColor) ? '0,0,0' : props.textShadowColor"
+    --weather-font-size-large: 26px
+    --weather-font-size-normal: 18px
+    --weather-font-size-small: 16px
+    --weather-font-size-xlarge: 60px
+    --weather-font-size-xsmall: 14px
+    --weather-font-size-xxlarge: 70px
+    --weather-font-size-xxsmall: 12px
+    --weather-text-shadow-light: 2px 2px rgba(var(--weather-card-text-shadow-color),.15)
+    --weather-text-shadow-strong: 2px 2px rgba(var(--weather-card-text-shadow-color),.35)
+    --weather-text-transform-time: uppercase
+    -moz-user-select: none
+    -ms-user-select: none
+    -webkit-user-select: none
+    background: "=props.bgcolor ? props.bgcolor : ''"
+    border-radius: var(--weather-card-border-radius)
+    color: var(--weather-card-text-color)
+    height: '=props.cardheight ? props.cardheight : "180px"'
+    overflow: hidden
+    user-select: none
+slots:
+  default:
+    - component: f7-block
+      config:
+        class:
+          - no-padding
+          - no-margin
+        style:
+          height: 100%
+          left: 0
+          position: absolute
+          top: 0
+          width: 100%
+      slots:
+        default:
+          - component: f7-row
+            config:
+              style:
+                display: grid
+                height: 20%
+                justify-content: center
+                justify-items: center
+                margin-top: 15px
+            slots:
+              default:
+                - component: Label
+                  config:
+                    style:
+                      font-size: 18px
+                      grid-column: 1
+                      padding-top: 0px
+                    text: '=props.printername ? props.printername : "Printer Name"'
+          - component: f7-row
+            config:
+              style:
+                align-items: center
+                display: grid
+                grid-template-columns: 30% 70%
+                height: 13%
+            slots:
+              default:
+                - component: oh-image
+                  config:
+                    height: 14
+                    style:
+                      align-self: center
+                      place-self: end
+                    url: ='/static/icons/' + props.iconimage2 + '.png'
+                    width: 14
+                - component: Label
+                  config:
+                    style:
+                      font-size: 16px
+                      grid-column: 2
+                      margin-left: 5px
+                    text: '=items[props.bedtempitem].state ? items[props.bedtempitem].state + " ℃" : "Name"'
+          - component: f7-row
+            config:
+              style:
+                align-items: center
+                display: grid
+                grid-template-columns: 30% 70%
+                height: 13%
+            slots:
+              default:
+                - component: oh-image
+                  config:
+                    height: 14
+                    style:
+                      align-self: center
+                      place-self: end
+                    url: ='/static/icons/' + props.iconimage1 + '.png'
+                    width: 14
+                - component: Label
+                  config:
+                    style:
+                      font-size: 16px
+                      grid-column: 2
+                      margin-left: 5px
+                    text: '=items[props.hotendtempitem].state ? items[props.hotendtempitem].state + " ℃" : "Name"'
+          - component: f7-row
+            config:
+              style:
+                align-items: center
+                display: grid
+                grid-template-columns: 30% 70%
+                height: 13%
+            slots:
+              default:
+                - component: oh-image
+                  config:
+                    height: 14
+                    style:
+                      align-self: center
+                      place-self: end
+                    url: https://iconsplace.com/wp-content/uploads/_icons/ffffff/256/png/time-icon-18-256.png
+                    width: 14
+                - component: Label
+                  config:
+                    style:
+                      font-size: 16px
+                      grid-column: 2
+                      margin-left: 5px
+                    text: '=items[props.timeleftitem].state == "NULL" ? "not printing" : Math.floor(items[props.timeleftitem].state /3600)+":"+ Math.floor(items[props.timeleftitem].state / 60) + " h"'
+          - component: f7-row
+            config:
+              style:
+                display: grid
+                grid-template-columns: 50% 50%
+                height: 10%
+                justify-items: center
+                margin-top: 10px
+            slots:
+              default:
+                - component: oh-button
+                  config:
+                    action: toggle
+                    actionCommand: ON
+                    actionCommandAlt: OFF
+                    actionItem: =props.poweritem
+                    color: '=items[props.poweritem].state === "ON" ? "green": "red"'
+                    height: 40px
+                    iconF7: power
+                    iconSize: 25px
+                - component: oh-button
+                  config:
+                    action: toggle
+                    actionCommand: ON
+                    actionCommandAlt: OFF
+                    actionItem: =props.lightitem
+                    color: '=items[props.lightitem].state === "ON" ? "yellow": "white"'
+                    height: 40px
+                    iconF7: lightbulb
+                    iconSize: 25px
+    - component: f7-progressbar
+      config:
+        color: '=items[props.timeleftitem].state > 0 ? "multi" : "red"'
+        infinite: "=items[props.timeleftitem].state > 0 ? true : false"
+        style:
+          border-top-left-radius: 100px 25px
+          border-top-right-radius: 100px 25px
+          height: 5px
+          left: 0
+          margin: auto
+          position: absolute
+          right: 0
+          width: 90%
+    - component: oh-link
+      config:
+        action: popup
+        actionModal: ='page:' + props.page
+        style:
+          height: 50px
+          left: 0px
+          position: absolute
+          top: 0px
+          width: 100%
