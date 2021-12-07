@@ -36,57 +36,57 @@ MainPage:
         - alle icons in /etc/openhab/html/icons/ legen
 
 Flur: 
-    - Widgets: 
-         - command-button-heater
+   - Widgets: 
+        - command-button-heater
          
 Kitchen:
-    - Widgets:
-         - command-button-heater
-         - Cell_Temp_Card_1
-         - Cell_Shutter_Card_1
+   - Widgets:
+        - command-button-heater
+        - Cell_Temp_Card_1
+        - Cell_Shutter_Card_1
          
 Esszimmer: 
-    - Widgets:
-         - command-button-heater
-         - Cell_Shutter_Card_1
+   - Widgets:
+        - command-button-heater
+        - Cell_Shutter_Card_1
          
 Zimmer Wohnzimmer:
-     - Widgest: 
-          - Cell_Temp_Card_1
-          - Cell_Speaker_Card_1
-          - Cell_Shutter_Card_1
-          - Cell_Light_Card_1
+   - Widgest: 
+        - Cell_Temp_Card_1
+        - Cell_Speaker_Card_1
+        - Cell_Shutter_Card_1
+        - Cell_Light_Card_1
           
 Treppe: 
-     - Widgets:
-          - command-button-heater
+   - Widgets:
+        - command-button-heater
           
 Obergeschoss:
-     - Widgets:
-          - command-button-heater
-          - Cell_Temp_Card_1
-          - Cell_Shutter_Card_1
+   - Widgets:
+        - command-button-heater
+        - Cell_Temp_Card_1
+        - Cell_Shutter_Card_1
           
 Office: 
-     - Wigets:
-         - Cell_Temp_Card_1
-         - command-button-heater
-         - command-button-heater_popup_1
-         - 3d-druck-mobile_1
+   - Wigets:
+       - Cell_Temp_Card_1
+       - command-button-heater
+       - command-button-heater_popup_1
+       - 3d-druck-mobile_1
          
 Werkstatt:
-     - Widgets:
-          - Cell_Temp_Card_1
-          - command-button-heater
+   - Widgets:
+        - Cell_Temp_Card_1
+        - command-button-heater
           
 
 DSL Popup: 
-     - Widgets:
-          - dsl_popup
+   - Widgets:
+        - dsl_popup
           
 Alle Batterien: 
-     - Widgets: 
-          - oh-gauge-card
+   - Widgets: 
+        - oh-gauge-card
           
           
 
