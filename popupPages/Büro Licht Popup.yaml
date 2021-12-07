@@ -1,5 +1,5 @@
 config:
-  label: popup StudioLights
+  label: Büro Licht Popup
   sidebar: false
 blocks:
   - component: oh-block
