@@ -1,0 +1,64 @@
+config:
+  label: Werkstatt
+  sidebar: false
+blocks:
+  - component: oh-block
+    config: {}
+    slots:
+      default:
+        - component: oh-grid-row
+          config: {}
+          slots:
+            default:
+              - component: oh-grid-col
+                config:
+                  large: "100"
+                  width: "100"
+                  xlarge: "100"
+                slots:
+                  default:
+                    - component: widget:Cell_Temp_Card_1
+                      config:
+                        heating_item: TuyaTempSensor_TuyaTempSensorBatterie
+                        humidity_item: TuyaTempSensor_TuyaTempSensorLuftfeuchtigkeit
+                        icon: thermometer
+                        temp_item: TuyaTempSensor_TuyaTempSensorTemperatur
+                        title: Temperatur
+  - component: oh-block
+    config: {}
+    slots:
+      default:
+        - component: oh-grid-row
+          config: {}
+          slots:
+            default:
+              - component: oh-grid-col
+                config: {}
+                slots:
+                  default:
+                    - component: widget:command-button-heater
+                      config:
+                        background: "#1c1c1d"
+                        cardwidth: "100"
+                        command1: OFF
+                        command2: ON
+                        headline1: Licht Aus
+                        headline2: Licht An
+                        headlinesize: 20px
+                        item: SonoffMiniWerkstatt_SonoffWerkstatt
+              - component: oh-grid-col
+                config: {}
+                slots:
+                  default:
+                    - component: widget:command-button-heater
+                      config:
+                        background: "#1c1c1d"
+                        cardwidth: "100"
+                        command1: OFF
+                        command2: ON
+                        headline1: Press Aus
+                        headline2: Press An
+                        headlinesize: 20px
+                        item: SonoffSteckdose_SonoffSteckdose
+masonry: null
+grid: null
