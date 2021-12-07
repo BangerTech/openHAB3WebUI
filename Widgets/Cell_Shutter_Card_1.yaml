@@ -1,0 +1,143 @@
+uid: Cell_Shutter_Card_1
+tags: []
+props:
+  parameters:
+    - description: Small title on top of the card
+      label: Title
+      name: title
+      required: false
+      type: TEXT
+    - description: Header big sized
+      label: Header
+      name: header
+      required: false
+      type: TEXT
+    - description: Icon on top of the card
+      label: Icon
+      name: icon
+      required: false
+      type: TEXT
+    - description: HEX or rgba
+      label: Background Color
+      name: bgcolor
+      required: false
+      type: TEXT
+    - context: item
+      description: Shutter item to control
+      label: Item
+      name: item
+      required: false
+      type: TEXT
+  parameterGroups: []
+timestamp: Nov 26, 2021, 7:58:14 PM
+component: f7-card
+config:
+  style:
+    background-color: "=props.bgcolor ? props.bgcolor : ''"
+    border-radius: var(--f7-card-expandable-border-radius)
+    box-shadow: 5px 5px 10px 1px rgba(0,0,0,0.1)
+    height: 120px
+    margin-left: 5px
+    margin-right: 5px
+    noShadow: false
+    padding: 0px
+slots:
+  content:
+    - component: f7-block
+      config:
+        style:
+          display: flex
+          flex-direction: row
+          left: 16px
+          position: absolute
+          top: -5px
+      slots:
+        default:
+          - component: f7-icon
+            config:
+              f7: =props.icon
+              size: 18
+              style:
+                margin-right: 10px
+              visible: "=props.icon ? true : false"
+          - component: Label
+            config:
+              style:
+                font-size: 12px
+                margin-top: 0px
+              text: "=props.title ? props.title : ''"
+    - component: f7-block
+      config:
+        style:
+          bottom: -15px
+          flex-direction: row
+          left: 16px
+          position: absolute
+      slots:
+        default:
+          - component: Label
+            config:
+              style:
+                font-size: 17px
+                font-weight: 600
+                margin-left: 0px
+                margin-top: 0px
+              text: "=props.header ? props.header : 'Set Props'"
+    - component: f7-block
+      config:
+        style:
+          bottom: -35px
+          flex-direction: row
+          left: 16px
+          position: absolute
+      slots:
+        default:
+          - component: Label
+            config:
+              style:
+                font-size: 12px
+                margin-left: 0px
+                margin-top: 0px
+              text: "=Number(items[props.item].state) === 0 ? 'Geöffnet ' + (items[props.item].state) + '%' : 'Geschlossen '  + (items[props.item].state) + '%'"
+    - component: oh-button
+      config:
+        action: command
+        actionCommand: UP
+        actionItem: =props.item
+        iconColor: red
+        iconF7: arrow_up_circle
+        iconSize: 35
+        style:
+          background: transparent
+          height: 35px
+          position: absolute
+          right: 10px
+          top: 12px
+    - component: oh-button
+      config:
+        action: command
+        actionCommand: STOP
+        actionItem: =props.item
+        iconColor: red
+        iconF7: stop_circle
+        iconSize: 29
+        style:
+          background: transparent
+          height: 29px
+          position: absolute
+          right: 13px
+          top: 46px
+    - component: oh-button
+      config:
+        action: command
+        actionCommand: DOWN
+        actionItem: =props.item
+        iconColor: red
+        iconF7: arrow_down_circle
+        iconSize: 35
+        style:
+          background: transparent
+          height: 35px
+          position: absolute
+          right: 10px
+          top: 74px
