@@ -1,0 +1,286 @@
+uid: Card_room_12_motion
+tags:
+  - motion
+props:
+  parameters:
+    - label: Header
+      name: text_header
+      required: false
+      type: TEXT
+    - description: icon name without ".png", located in static/icons/ folder
+      label: Icon
+      name: iconimage
+      required: false
+      type: TEXT
+    - description: HEX or rgba
+      label: Backgroundcolor
+      name: bgcolor
+      required: false
+      type: TEXT
+    - description: Page which will be opened as popup
+      label: Page ID
+      name: page
+      required: false
+    - context: item
+      description: select group for status lights
+      label: Item
+      name: status
+      required: false
+      type: TEXT
+    - context: item
+      description: select item for heating
+      label: Item
+      name: heating
+      required: false
+      type: TEXT
+    - context: item
+      description: select item for temperature
+      label: Item
+      name: temp
+      required: false
+      type: TEXT
+    - context: item
+      description: select item for set temperature
+      label: Item
+      name: settemp
+      required: false
+      type: TEXT
+    - context: item
+      description: select item for humidity
+      label: Item
+      name: humidity
+      required: false
+      type: TEXT
+    - context: item
+      description: select item for illuminance
+      label: Item
+      name: illuminance
+      required: false
+      type: TEXT
+    - context: item
+      description: select item for motion state(s)
+      label: Item
+      name: motion
+      required: false
+      type: TEXT
+    - context: item
+      description: select item for door lock(s)
+      label: Item
+      name: door_lock
+      required: false
+      type: TEXT
+    - context: item
+      description: select item for blinds group (SUM)
+      label: Item
+      name: blinds_closed
+      required: false
+      type: TEXT
+    - context: item
+      description: select item for speaker(s)
+      label: Item
+      name: speakers
+      required: false
+      type: TEXT
+    - context: item
+      description: select item for windows(s)
+      label: Item
+      name: windows
+      required: false
+      type: TEXT
+    - context: item
+      description: select item for numbers of windows
+      label: Item
+      name: windows_numbers
+      required: false
+      type: TEXT
+    - context: item
+      description: select item for boiler temp
+      label: Item
+      name: boiler_temp
+      required: false
+      type: TEXT
+timestamp: Nov 27, 2021, 4:19:42 PM
+component: f7-card
+config:
+  style:
+    background-color: "=props.bgcolor ? props.bgcolor : ''"
+    border-radius: var(--f7-card-expandable-border-radius)
+    box-shadow: '=(items[props.status].state === "ON") ? "3px 3px 10px 0px rgba(255,255,255,255)" : "var(--f7-card-expandable-box-shadow)"'
+    class:
+      - padding: 0px
+    height: 125px
+    margin-left: 5px
+    margin-right: 5px
+    noShadow: false
+slots:
+  content:
+    - component: f7-block
+      config:
+        style:
+          left: 50px
+          position: absolute
+          top: -5px
+      slots:
+        default:
+          - component: Label
+            config:
+              style:
+                font-size: 17px
+                font-weight: 600
+                margin-left: 0px
+                margin-top: 0px
+              text: "=props.text_header ? props.text_header : 'Set Props'"
+    - component: f7-block
+      config:
+        style:
+          bottom: -37px
+          left: 16px
+          position: absolute
+      slots:
+        default:
+          - component: f7-chip
+            config:
+              iconColor: "=themeOptions.dark === 'dark' ? 'white' : 'black'"
+              iconF7: "=(items[props.status].state === 'ON') ? 'lightbulb' : 'lightbulb_slash'"
+              iconSize: 18
+              style:
+                --f7-chip-bg-color: rgba(255, 255, 255, 0)
+              text: "=(items[props.status].state === 'ON') ? items[props.status].state : ''"
+              visible: "=props.status ? true : false"
+          - component: f7-chip
+            config:
+              iconColor: "=themeOptions.dark === 'dark' ? 'white' : 'black'"
+              iconF7: flame
+              iconSize: 18
+              style:
+                --f7-chip-bg-color: rgba(255, 255, 255, 0)
+              text: "=items[props.heating].state === 'ON' ? '' : ''"
+              visible: =items[props.heating].state === 'ON'
+          - component: f7-chip
+            config:
+              style:
+                --f7-chip-bg-color: rgba(255, 255, 255, 0)
+              text: "=items[props.motion].state === 'ON' ? '' : ''"
+              visible: "=props.motion ? true : false"
+            slots:
+              media:
+                - component: oh-icon
+                  config:
+                    icon: "=items[props.motion].state === 'ON' ? 'motion' : ''"
+                    style:
+                      filter: "='brightness(' + (themeOptions.dark === 'dark' ? '1' : '0.4') + ')'"
+                      height: 18px
+          - component: f7-chip
+            config:
+              style:
+                --f7-chip-bg-color: rgba(255, 255, 255, 0)
+              text: "=items[props.windows_numbers].state > 0 ? items[props.windows_numbers].state : ''"
+              visible: "=items[props.windows].state === 'OPEN' ? true : false"
+            slots:
+              media:
+                - component: oh-icon
+                  config:
+                    icon: window-open
+                    style:
+                      filter: "='brightness(' + (themeOptions.dark === 'dark' ? '1' : '0.4') + ')'"
+                      height: 18px
+          - component: f7-chip
+            config:
+              iconColor: "=themeOptions.dark === 'dark' ? 'white' : 'black'"
+              iconF7: "=items[props.door_lock].state === 'ON' ? 'lock_open' : 'lock'"
+              iconSize: 18
+              style:
+                --f7-chip-bg-color: rgba(255, 255, 255, 0)
+              text: "=items[props.door_lock].state === 'ON' ? '' : ''"
+              visible: "=props.door_lock ? true : false"
+          - component: f7-chip
+            config:
+              style:
+                --f7-chip-bg-color: rgba(255, 255, 255, 0)
+              text: "=(Number(items[props.blinds_closed].state) === 0) ? '' : Math.floor(items[props.blinds_closed].state) + '%'"
+              visible: "=(Number(Math.floor(items[props.blinds_closed].state)) > 0) ? true : false"
+            slots:
+              media:
+                - component: oh-icon
+                  config:
+                    icon: "=(Number(items[props.blinds_closed].state) === 0) ? 'cinemascreen-30' : 'cinemascreen-100'"
+                    style:
+                      filter: "='brightness(' + (themeOptions.dark === 'dark' ? '100' : '0.3') + ')'"
+                      height: 18px
+          - component: f7-chip
+            config:
+              iconColor: "=themeOptions.dark === 'dark' ? 'white' : 'black'"
+              iconF7: "=items[props.speakers].state === 'PLAY' ? 'speaker_2' : 'speaker'"
+              iconSize: 18
+              style:
+                --f7-chip-bg-color: rgba(255, 255, 255, 0)
+              visible: "=items[props.speakers].state === 'PLAY' ? true : false"
+          - component: f7-chip
+            config:
+              iconColor: "=themeOptions.dark === 'dark' ? 'white' : 'black'"
+              iconF7: sun_min
+              iconSize: 18
+              style:
+                --f7-chip-bg-color: rgba(255, 255, 255, 0)
+              text: =items[props.illuminance].displayState
+              visible: "=props.illuminance ? true : false"
+    - component: f7-block
+      config:
+        style:
+          bottom: -65px
+          left: 16px
+          position: absolute
+      slots:
+        default:
+          - component: f7-chip
+            config:
+              iconColor: "=themeOptions.dark === 'dark' ? 'white' : 'black'"
+              iconF7: thermometer
+              iconSize: 18
+              style:
+                --f7-chip-bg-color: rgba(255, 255, 255, 0)
+              text: "=(items[props.temp].displayState  ? items[props.temp].displayState : items[props.temp].state) +  (props.settemp ? ' (' + items[props.settemp].state + ')' : '')"
+              visible: "=props.temp ? true : false"
+          - component: f7-chip
+            config:
+              iconColor: "=themeOptions.dark === 'dark' ? 'white' : 'black'"
+              iconF7: drop
+              iconSize: 18
+              style:
+                --f7-chip-bg-color: rgba(255, 255, 255, 0)
+              text: =items[props.humidity].displayState
+              visible: "=props.humidity ? true : false"
+          - component: f7-chip
+            config:
+              style:
+                --f7-chip-bg-color: rgba(255, 255, 255, 0)
+              text: =items[props.boiler_temp].state
+              visible: "=props.boiler_temp ? true : false"
+            slots:
+              media:
+                - component: oh-icon
+                  config:
+                    icon: waterheater2
+                    style:
+                      filter: "='invert(' + (themeOptions.dark === 'dark' ? '1' : '0') + ')'"
+                      height: 18px
+    - component: oh-image
+      config:
+        style:
+          height: 25px
+          left: 16px
+          opacity: 0.7
+          position: absolute
+          top: 10px
+        url: ='/static/icons/' + props.iconimage + '.png'
+        visible: "=props.iconimage ? true : false"
+    - component: oh-link
+      config:
+        action: popup
+        actionModal: ='page:' + props.page
+        style:
+          height: 110px
+          left: 0px
+          position: absolute
+          top: 0px
+          width: 100%
