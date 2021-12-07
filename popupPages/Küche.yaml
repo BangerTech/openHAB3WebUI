@@ -1,5 +1,5 @@
 config:
-  label: Kitchen
+  label: Küche
   sidebar: false
 blocks:
   - component: oh-block
