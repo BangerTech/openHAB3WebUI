@@ -1,0 +1,351 @@
+config:
+  label: Page Basic
+  sidebar: false
+blocks:
+  - component: oh-block
+    config: {}
+    slots:
+      default:
+        - component: oh-grid-row
+          config: {}
+          slots:
+            default:
+              - component: oh-grid-col
+                config:
+                  large: "20"
+                  medium: "33"
+                  width: "50"
+                  xlarge: "20"
+                slots:
+                  default:
+                    - component: widget:Cell_Card_1
+                      config:
+                        bgcolor: rgba(233, 196, 106, 0.5)
+                        command: "1"
+                        header: Morgen
+                        icon: sunrise
+                        item: Szene
+                        title: Aktiviere Szene
+              - component: oh-grid-col
+                config:
+                  large: "20"
+                  medium: "33"
+                  width: "50"
+                  xlarge: "20"
+                slots:
+                  default:
+                    - component: widget:Cell_Card_1
+                      config:
+                        bgcolor: rgba(244, 162, 97, 0.5)
+                        command: "2"
+                        header: Tag
+                        icon: sun_max
+                        item: Szene
+                        title: Aktiviere Szene
+              - component: oh-grid-col
+                config:
+                  large: "20"
+                  medium: "33"
+                  width: "50"
+                  xlarge: "20"
+                slots:
+                  default:
+                    - component: widget:Cell_Card_1
+                      config:
+                        bgcolor: rgba(231, 111, 81, 0.5)
+                        command: "3"
+                        header: Abend
+                        icon: sunset
+                        item: Szene
+                        title: Aktiviere Szene
+              - component: oh-grid-col
+                config:
+                  large: "20"
+                  medium: "33"
+                  width: "50"
+                  xlarge: "20"
+                slots:
+                  default:
+                    - component: widget:Cell_Card_1
+                      config:
+                        bgcolor: rgba(38, 70, 83, 0.5)
+                        command: "4"
+                        header: Nacht
+                        icon: moon_zzz
+                        item: Szene
+                        title: Aktiviere Szene
+              - component: oh-grid-col
+                config:
+                  large: "20"
+                  medium: "33"
+                  width: "50"
+                  xlarge: "20"
+                slots:
+                  default:
+                    - component: widget:Cell_Card_1
+                      config:
+                        bgcolor: rgba(2, 48, 71, 0.8)
+                        command: "5"
+                        header: Alles aus
+                        icon: zzz
+                        item: Szene
+                        title: Hauptschalter
+  - component: oh-block
+    config: {}
+    slots:
+      default:
+        - component: oh-grid-row
+          config: {}
+          slots:
+            default:
+              - component: oh-grid-col
+                config:
+                  large: "40"
+                  medium: "40"
+                  small: "100"
+                  width: "100"
+                  xlarge: "40"
+                  xsmall: "100"
+                slots:
+                  default:
+                    - component: widget:Cell_Weather_1
+                      config:
+                        command: "5"
+                        header: Alles aus
+                        icon: zzz
+                        item: Szene
+                        title: Wetter
+              - component: oh-grid-col
+                config:
+                  large: "30"
+                  medium: "30"
+                  small: "100"
+                  width: "100"
+                  xlarge: "30"
+                  xsmall: "100"
+                slots:
+                  default:
+                    - component: widget:Cell_Weather_Actual_1
+                      config:
+                        item_hum: Wetterstation_Luftfeuchtigkeit
+                        item_ill: Wetterstation_Helligkeit
+                        item_rain: Wetterstation_Regenheute
+                        item_strike: Wetterstation_LightningStrikeCount
+                        item_temp: Wetterstation_Aussentemperatur
+                        item_wind: Wetterstation_WindDurchschnitt
+                        item_wind_dir: Wetterstation_Windrichtung
+                        page: Test2
+                        title: Aussen
+              - component: oh-grid-col
+                config:
+                  large: "10"
+                  medium: "10"
+                  small: "50"
+                  width: "50"
+                  xlarge: "10"
+                  xsmall: "50"
+                slots:
+                  default:
+                    - component: widget:Cell_Garden_1
+                      config:
+                        item_soil_hum: SensorSensorSoilHumidity
+                        item_zone: WateringAutomatic_CurrentZone
+                        title: Garten
+              - component: oh-grid-col
+                config:
+                  large: "10"
+                  medium: "10"
+                  small: "50"
+                  width: "50"
+                  xlarge: "10"
+                  xsmall: "50"
+                slots:
+                  default:
+                    - component: widget:Cell_Pool_1
+                      config:
+                        item_pump: SHELLY_PoolPump_OnOff
+                        item_temp: SHELLY_Temperatur_Pool
+                        title: Pool
+              - component: oh-grid-col
+                config:
+                  large: "10"
+                  medium: "10"
+                  small: "50"
+                  width: "50"
+                  xlarge: "10"
+                  xsmall: "50"
+                slots:
+                  default:
+                    - component: widget:Cell_Settings_1
+                      config:
+                        item_battery: GroupBatteryLevelCritical
+                        page: page_29fff8448f
+  - component: oh-block
+    config: {}
+    slots:
+      default:
+        - component: oh-grid-row
+          config: {}
+          slots:
+            default:
+              - component: oh-grid-col
+                config:
+                  large: "25"
+                  medium: "33"
+                  small: "50"
+                  width: "100"
+                  xlarge: "25"
+                slots:
+                  default:
+                    - component: widget:Card_room_12
+                      config:
+                        blinds_closed: StorenState
+                        heating: SHELLY_Heizung_Wohnung
+                        humidity: SHELLY_Humidity_Wohnung
+                        iconimage: livingroom
+                        illuminance: GroupIlluminanceWohnzimmer
+                        page: page_37d05f1a2b
+                        settemp: SHELLY_Soll_Temperatur_Wohnung
+                        speakers: SonosWohnzimmer_Fernbedienung
+                        status: LichterWohnung
+                        temp: SHELLY_Temperatur_Wohnung_correct
+                        text_header: Wohnzimmer
+                        windows: GroupWindowsWohnzimmerState
+                        windows_numbers: GroupWindowsWohnzimmerNumber
+              - component: oh-grid-col
+                config:
+                  large: "25"
+                  medium: "33"
+                  small: "50"
+                  width: "100"
+                  xlarge: "25"
+                slots:
+                  default:
+                    - component: widget:Card_room_12
+                      config:
+                        heating: SHELLY_Heizung_Zimmer_Eltern
+                        humidity: SHELLY_Humidity_Zimmer_Eltern
+                        iconimage: myparents
+                        page: ZimmerEltern
+                        settemp: SHELLY_Soll_Temperatur_Zimmer_Eltern
+                        speakers: SonosEltern_Fernbedienung
+                        status: Group_Lights_ElternSchlafzimmer
+                        temp: SHELLY_Temperatur_Zimmer_Eltern_correct
+                        text_header: Eltern
+              - component: oh-grid-col
+                config:
+                  large: "25"
+                  medium: "33"
+                  small: "50"
+                  width: "100"
+                  xlarge: "25"
+                slots:
+                  default:
+                    - component: widget:Card_room_12
+                      config:
+                        heating: SHELLY_Heizung_Zimmer_GIRL
+                        humidity: SHELLY_Humidity_Zimmer_GIRL
+                        iconimage: mygirl
+                        illuminance: FensterGIRL1_Lux
+                        page: ZimmerGIRL
+                        settemp: SHELLY_Soll_Temperatur_Zimmer_GIRL
+                        speakers: SonosGIRL_Fernbedienung
+                        status: LichterGIRL
+                        temp: SHELLY_Temperatur_Zimmer_GIRL_correct
+                        text_header: GIRL
+                        windows: FensterGIRL1_Contact
+              - component: oh-grid-col
+                config:
+                  large: "25"
+                  medium: "33"
+                  small: "50"
+                  width: "100"
+                  xlarge: "25"
+                slots:
+                  default:
+                    - component: widget:Card_room_12
+                      config:
+                        heating: SHELLY_Heizung_Zimmer_BOY
+                        humidity: SHELLY_Humidity_Zimmer_BOY
+                        iconimage: myboy
+                        illuminance: FensterBOY_Lux
+                        page: ZimmerBOY
+                        settemp: SHELLY_Soll_Temperatur_Zimmer_BOY
+                        speakers: SonosBOY_Fernbedienung
+                        status: LichterBOY
+                        temp: SHELLY_Temperatur_Zimmer_BOY_correct
+                        text_header: BOY
+                        windows: FensterBOY_Contact
+              - component: oh-grid-col
+                config:
+                  large: "25"
+                  medium: "33"
+                  small: "50"
+                  width: "100"
+                  xlarge: "25"
+                slots:
+                  default:
+                    - component: widget:Card_room_12
+                      config:
+                        boiler_temp: Boiler_Temperatur
+                        door_lock: SmartLock_Action
+                        door_state: SmartLock_DoorSensorState
+                        iconimage: myfrontdoor
+                        page: page_c498bc9132
+                        status: LichterEingang
+                        text_header: Eingangsbereich
+              - component: oh-grid-col
+                config:
+                  large: "25"
+                  medium: "33"
+                  small: "50"
+                  width: "100"
+                  xlarge: "25"
+                slots:
+                  default:
+                    - component: widget:Card_room_12
+                      config:
+                        humidity: ShellyHTSHHT1_Luftfeuchtigkeit
+                        iconimage: bathroom
+                        page: page_b986cb7442
+                        status: LichterBadWC
+                        temp: ShellyHTSHHT1_Temperatur
+                        text_header: Bad/WC
+              - component: oh-grid-col
+                config:
+                  large: "25"
+                  medium: "33"
+                  small: "50"
+                  width: "100"
+                  xlarge: "25"
+                slots:
+                  default:
+                    - component: widget:Card_room_12
+                      config:
+                        heating: SHELLY_Heizung_Hobbyraum
+                        humidity: SHELLY_Humidity_Hobbyraum
+                        iconimage: myhobbyroom
+                        illuminance: LichtsensorUG_Beleuchtungsstarke
+                        page: ZimmerHobby
+                        settemp: SHELLY_Soll_Temperatur_Hobbyraum
+                        status: LichterHobbyraum
+                        temp: SHELLY_Temperatur_Hobbyraum_correct
+                        text_header: Hobbyraum / Keller
+              - component: oh-grid-col
+                config:
+                  large: "25"
+                  medium: "33"
+                  small: "50"
+                  width: "100"
+                  xlarge: "25"
+                slots:
+                  default:
+                    - component: widget:Card_room_12
+                      config:
+                        humidity: SensorWaschkuche_Sensorrelativehumidity
+                        iconimage: mylaundry
+                        page: page_9a9ffe53b4
+                        temp: SensorWaschkuche_Sensortemperature
+                        text_header: Waschküche
+masonry: []
+grid: null
