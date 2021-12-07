@@ -1,0 +1,329 @@
+config:
+  label: mainPage
+  sidebar: true
+blocks:
+  - component: oh-block
+    config: {}
+    slots:
+      default:
+        - component: oh-grid-row
+          config: {}
+          slots:
+            default:
+              - component: oh-grid-col
+                config:
+                  large: "40"
+                  medium: "40"
+                  small: "100"
+                  width: "100"
+                  xlarge: "40"
+                  xsmall: "100"
+                slots:
+                  default:
+                    - component: widget:weatherCard
+                      config:
+                        command: "5"
+                        dateFormat: true
+                        header: Alles aus
+                        icon: zzz
+                        item: Szene
+                        itemPrefix: OneCallAPIweatherandforecast_
+                        locationTitle: Loiching
+                        sunIndicator: true
+                        title: Wetter
+              - component: oh-grid-col
+                config:
+                  large: "40"
+                  medium: "40"
+                  small: "100"
+                  width: "100"
+                  xlarge: "40"
+                  xsmall: "100"
+                slots:
+                  default:
+                    - component: widget:front_cam_mobile
+                      config:
+                        cardheight: 200px
+                        urllivestream: http://192.168.2.193:8080/ipcamera/BulletCamera/ipcamera.mjpeg
+  - component: oh-block
+    config: {}
+    slots:
+      default:
+        - component: oh-grid-row
+          config: {}
+          slots:
+            default:
+              - component: oh-grid-col
+                config:
+                  large: "20"
+                  medium: "33"
+                  width: "50"
+                  xlarge: "20"
+                slots:
+                  default:
+                    - component: widget:Cell_Card_1
+                      config:
+                        bgcolor: rgba(0, 143, 170, 0.5)
+                        command: TOGGLE
+                        header: TV Mode
+                        icon: tv
+                        item: TVModeLicht
+                        title: Aktiviere Szene
+              - component: oh-grid-col
+                config:
+                  large: "20"
+                  medium: "33"
+                  width: "50"
+                  xlarge: "20"
+                slots:
+                  default:
+                    - component: widget:Cell_Card_1
+                      config:
+                        bgcolor: rgba(244, 162, 97, 0.5)
+                        command: TOGGLE
+                        header: Ambiente
+                        icon: lightbulb
+                        item: AmbientLight
+                        title: Aktiviere Szene
+              - component: oh-grid-col
+                config:
+                  large: "20"
+                  medium: "33"
+                  width: "50"
+                  xlarge: "20"
+                slots:
+                  default:
+                    - component: widget:Cell_Card_1
+                      config:
+                        bgcolor: rgba(231, 111, 81, 0.5)
+                        command: TOGGLE
+                        header: Büro Studio
+                        icon: camera
+                        item: StudioAll
+                        title: Aktiviere Szene
+              - component: oh-grid-col
+                config:
+                  large: "20"
+                  medium: "33"
+                  width: "50"
+                  xlarge: "20"
+                slots:
+                  default:
+                    - component: widget:Cell_Card_1
+                      config:
+                        bgcolor: rgba(38, 70, 83, 0.5)
+                        command: OFF
+                        header: Alle Lichter aus
+                        icon: moon_zzz
+                        item: AlleLichter1
+                        title: Aktiviere Szene
+              - component: oh-grid-col
+                config:
+                  large: "20"
+                  medium: "33"
+                  width: "50"
+                  xlarge: "20"
+                slots:
+                  default:
+                    - component: widget:Cell_Card_1
+                      config:
+                        bgcolor: rgba(2, 48, 71, 0.8)
+                        command: OFF
+                        header: Alles aus
+                        icon: zzz
+                        item: HauptSchalter
+                        title: Hauptschalter
+  - component: oh-block
+    config: {}
+    slots:
+      default:
+        - component: oh-grid-row
+          config: {}
+          slots:
+            default:
+              - component: oh-grid-col
+                config:
+                  large: "25"
+                  medium: "33"
+                  small: "50"
+                  width: "100"
+                  xlarge: "25"
+                slots:
+                  default:
+                    - component: widget:Card_room_12_motion
+                      config:
+                        iconimage: hallway
+                        illuminance: BewegungsmelderFlur_Illumination
+                        motion: BewegungsmelderFlur_Motion
+                        page: page_06e515f566
+                        status: FlurLicht_4_STATE
+                        text_header: Flur
+              - component: oh-grid-col
+                config:
+                  large: "25"
+                  medium: "33"
+                  small: "50"
+                  width: "100"
+                  xlarge: "25"
+                slots:
+                  default:
+                    - component: widget:Card_room_12_motion
+                      config:
+                        blinds_closed: RollladenKuche
+                        heating: HeizungKuche
+                        humidity: SwitchbotMeterTest_SwitchBotMeterTestHum
+                        iconimage: kitchen
+                        page: page_7d01bba440
+                        settemp: HeizungKuche_SetPointTemperature
+                        status: KucheLicht_4_STATE
+                        temp: SwitchbotMeterTest_SwitchbotMeterTemp
+                        text_header: Küche
+              - component: oh-grid-col
+                config:
+                  large: "25"
+                  medium: "33"
+                  small: "50"
+                  width: "100"
+                  xlarge: "25"
+                slots:
+                  default:
+                    - component: widget:Card_room_12_motion
+                      config:
+                        blinds_closed: RollladenEsszimmer_4_LEVEL
+                        humidity: SwitchbotMeterTest_SwitchBotMeterTestHum
+                        iconimage: dining-table
+                        page: page_732831597e
+                        status: EsszimmerLicht
+                        temp: BroadlinkRM2_Temperature
+                        text_header: Esszimmer
+                        windows: FensterGIRL1_Contact
+              - component: oh-grid-col
+                config:
+                  large: "25"
+                  medium: "33"
+                  small: "50"
+                  width: "100"
+                  xlarge: "25"
+                slots:
+                  default:
+                    - component: widget:Card_room_12_motion
+                      config:
+                        blinds_closed: Rollos_Wohnzimmer_4_LEVEL
+                        heating: HeizungWohnzimmer_ActiveProfile
+                        iconimage: interior-design
+                        page: page_35bf6aa62a
+                        settemp: HeizungWohnzimmer_SET_POINT_TEMPERATURE
+                        status: AlleLichterWohnzimmer
+                        temp: HeizungWohnzimmer_ACTUAL_TEMPERATURE
+                        text_header: Wohnzimmer
+              - component: oh-grid-col
+                config:
+                  large: "25"
+                  medium: "33"
+                  small: "50"
+                  width: "100"
+                  xlarge: "25"
+                slots:
+                  default:
+                    - component: widget:Card_room_12_motion
+                      config:
+                        iconimage: stairs
+                        motion: Wemos4TreppeMotion_Wemos4TreppeMotion
+                        page: page_8f953e135b
+                        status: TreppeLicht
+                        text_header: Treppe
+              - component: oh-grid-col
+                config:
+                  large: "25"
+                  medium: "33"
+                  small: "50"
+                  width: "100"
+                  xlarge: "25"
+                slots:
+                  default:
+                    - component: widget:Card_room_12_motion
+                      config:
+                        heating: SchlafzimmerHeizung_ActiveProfile
+                        iconimage: bedroom
+                        page: page_da7c97920b
+                        settemp: SchlafzimmerHeizung_SetPointTemperature
+                        speakers: Chromecast_Fernbedienung
+                        status: Schlafzimmer_BL
+                        temp: SchlafzimmerHeizung_ActualTemperature
+                        text_header: Obergeschoss
+              - component: oh-grid-col
+                config:
+                  large: "25"
+                  medium: "33"
+                  small: "50"
+                  width: "100"
+                  xlarge: "25"
+                slots:
+                  default:
+                    - component: widget:Card_room_12_motion
+                      config:
+                        humidity: SwitchbotMeter_hum
+                        iconimage: workspace
+                        page: page_50084058de
+                        status: BuroShelly1pm_Betrieb
+                        temp: GenericMQTTThing_Temp
+                        text_header: Büro
+              - component: oh-grid-col
+                config:
+                  large: "25"
+                  medium: "33"
+                  small: "50"
+                  width: "100"
+                  xlarge: "25"
+                slots:
+                  default:
+                    - component: widget:Card_room_12_motion
+                      config:
+                        humidity: TuyaTempSensor_TuyaTempSensorLuftfeuchtigkeit
+                        iconimage: clamp
+                        page: page_30797b6ed3
+                        status: WerkstattLicht
+                        temp: TuyaTempSensor_TuyaTempSensorTemperatur
+                        text_header: Werkstatt
+                        windows: TuyaContact_TuyaContactSwitch
+              - component: oh-grid-col
+                config:
+                  large: "25"
+                  medium: "33"
+                  small: "50"
+                  width: "100"
+                  xlarge: "25"
+                slots:
+                  default:
+                    - component: widget:Card_dsl
+                      config:
+                        download: SpeedtestBinding_DownloadBandwidth
+                        iconimage: neural
+                        latency: SpeedtestBinding_Latency
+                        page: page_16db151d8c
+                        text_header: Connection
+                        upload: SpeedtestBinding_UploadBandwidth
+  - component: oh-block
+    config: {}
+    slots:
+      default:
+        - component: oh-grid-row
+          config: {}
+          slots:
+            default:
+              - component: oh-grid-col
+                config:
+                  large: "10"
+                  medium: "10"
+                  small: "50"
+                  width: "50"
+                  xlarge: "10"
+                  xsmall: "50"
+                slots:
+                  default:
+                    - component: widget:Cell_Settings_1
+                      config:
+                        item_battery: AlleBatterien
+                        page: page_248bcf237a
+masonry: []
+grid: null
