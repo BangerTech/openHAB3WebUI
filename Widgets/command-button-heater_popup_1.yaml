@@ -1,0 +1,162 @@
+uid: command-button-heater_popup_1
+tags:
+  - schöner Button
+props:
+  parameters:
+    - description: Set the Headline for the first state
+      label: Headline 1
+      name: headline1
+      required: false
+      type: TEXT
+      groupName: item1
+    - label: Command 1
+      name: command1
+      required: true
+      type: TEXT
+      groupName: item1
+    - label: Icon 1
+      name: icon1
+      required: false
+      type: TEXT
+      groupName: item1
+    - label: Icon 1 Color
+      name: iconcolor1
+      required: false
+      type: TEXT
+      groupName: item1
+    - description: Set the headline for the second state
+      label: Headline 2
+      name: headline2
+      required: false
+      type: TEXT
+      groupName: item2
+    - label: Command 2
+      name: command2
+      required: true
+      type: TEXT
+      groupName: item2
+    - label: Icon 2
+      name: icon2
+      required: false
+      type: TEXT
+      groupName: item2
+    - label: Icon 2 Color
+      name: iconcolor2
+      required: false
+      type: TEXT
+      groupName: item2
+    - context: item
+      description: Set the item to control here
+      label: Item
+      name: item
+      required: false
+      type: TEXT
+    - label: Headline Color
+      name: headlinecolor
+      required: false
+      type: TEXT
+      groupName: styling
+    - label: Headline Weight
+      name: headlineweight
+      required: false
+      type: TEXT
+      groupName: styling
+    - label: Headline Size
+      name: headlinesize
+      required: false
+      type: TEXT
+      groupName: styling
+    - label: Background
+      name: background
+      required: false
+      type: TEXT
+      groupName: styling
+    - label: Card height
+      name: cardheight
+      required: false
+      type: TEXT
+      groupName: styling
+    - label: Card width
+      name: cardwidth
+      required: false
+      type: TEXT
+      groupName: styling
+    - label: Icon size
+      name: iconsize
+      required: false
+      type: TEXT
+      groupName: styling
+    - description: Page which will be opened as popup
+      label: Page ID
+      name: page
+      required: false
+  parameterGroups:
+    - name: item1
+      label: Status 1
+    - name: item2
+      label: Status 2
+    - name: styling
+      label: Styling
+timestamp: Nov 26, 2021, 3:01:02 PM
+component: f7-card
+config:
+  style:
+    background: '=(props.background) ? props.background : "linear-gradient(to bottom, #003366 0%, #00ffff 100%)"'
+    border-radius: var(--f7-card-expandable-border-radius)
+    box-shadow: '=(items[props.item].state === props.command2) ? (props.iconcolor2 ? "8px 8px 28px 1px " + props.iconcolor2 : "10px 10px 28px 1px rgba(255,234,5,0.3)") : "var(--f7-card-expandable-box-shadow)"'
+    height: '=props.cardheight ? props.cardheight : "8.5em"'
+    margin-left: auto;
+    margin-right: auto;
+    noShadow: false
+    padding: 0px
+    width: '=props.cardwidth ? props.cardwidth : "8.5em"'
+slots:
+  default:
+    - component: f7-block
+      config:
+        style:
+          align-items: center
+          display: grid
+          grid-template-rows: 1fr auto auto 1fr
+          height: 100%
+          justify-items: center
+      slots:
+        default:
+          - component: Label
+          - component: Label
+            config:
+              style:
+                color: '=(props.headlinecolor) ? props.headlinecolor : "white"'
+                font-size: '=(props.headlinesize) ? props.headlinesize: "13px"'
+                font-weight: '=(props.headlineweight) ? props.headlineweight : "normal"'
+                padding: 3px
+              text: '=(items[props.item].state === props.command1) ? ((props.headline1) ? props.headline1 : "Headline") : ((props.headline2) ? props.headline2 : "Headline")'
+          - component: f7-icon
+            config:
+              f7: '=(items[props.item].state === props.command2) ? (props.icon2 ? props.icon2 : "lightbulb_fill") : (props.icon1 ? props.icon1 : "lightbulb")'
+              size: '=props.iconsize ? props.iconsize: "65px"'
+              style:
+                color: '=(items[props.item].state === props.command2) ? (props.iconcolor2 ? props.iconcolor2 : "rgba(255,234,5,1)") : (props.iconcolor1 ? props.iconcolor1 : "")'
+                padding: 3px
+    - component: oh-link
+      config:
+        action: command
+        actionCommand: "=(items[props.item].state === props.command1) ? props.command2 : props.command1"
+        actionItem: =props.item
+        style:
+          actionPosition: center
+          height: 100%
+          left: 0
+          position: absolute
+          top: 0
+          width: 100%
+    - component: oh-link
+      config:
+        action: popup
+        actionModal: ='page:' + props.page
+        style:
+          height: 30px
+          left: 0px
+          position: absolute
+          top: 0px
+          width: 100%
