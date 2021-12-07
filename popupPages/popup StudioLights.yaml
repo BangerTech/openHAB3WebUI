@@ -1,0 +1,150 @@
+config:
+  label: popup StudioLights
+  sidebar: false
+blocks:
+  - component: oh-block
+    config: {}
+    slots:
+      default:
+        - component: oh-grid-row
+          config: {}
+          slots:
+            default:
+              - component: oh-grid-col
+                config: {}
+                slots:
+                  default:
+                    - component: widget:command-button-heater
+                      config:
+                        background: "#1c1c1d"
+                        cardwidth: "100"
+                        command1: OFF
+                        command2: ON
+                        headline1: Studio Aus
+                        headline2: Studio An
+                        headlinesize: 20px
+                        item: StudioAll
+        - component: oh-grid-row
+          config: {}
+          slots:
+            default:
+              - component: oh-grid-col
+                config: {}
+                slots:
+                  default:
+                    - component: widget:command-button-heater
+                      config:
+                        background: "#1c1c1d"
+                        cardwidth: "100"
+                        command1: OFF
+                        command2: ON
+                        headline1: Spot L Aus
+                        headline2: Spot L An
+                        headlinesize: 20px
+                        item: SonoffBuroLinks_SonoffBuroLinksPower
+              - component: oh-grid-col
+                config: {}
+                slots:
+                  default:
+                    - component: widget:command-button-heater
+                      config:
+                        background: "#1c1c1d"
+                        cardwidth: "100"
+                        command1: OFF
+                        command2: ON
+                        headline1: Spot R Aus
+                        headline2: Spot R An
+                        headlinesize: 20px
+                        item: SonoffBuroRechts_SonoffBueroRechtsPower
+        - component: oh-grid-row
+          config: {}
+          slots:
+            default:
+              - component: oh-grid-col
+                config: {}
+                slots:
+                  default:
+                    - component: widget:Cell_Light_Color_Card_2
+                      config:
+                        header: " "
+                        iconimage: monitor
+                        item_color: NightKingMonitorLED_Color
+                        item_schalter: NightKingMonitorLED_Eingeschaltet
+                        title: Monitor
+        - component: oh-grid-row
+          config: {}
+          slots:
+            default:
+              - component: oh-grid-col
+                config: {}
+                slots:
+                  default:
+                    - component: widget:Cell_Light_Color_Card_2
+                      config:
+                        header: " "
+                        iconimage: desk-lamp
+                        item_color: BuroSchreibtischLampe_RGBColor
+                        item_schalter: BuroSchreibtischLampe_Power
+                        title: Desk Lamp
+        - component: oh-grid-row
+          config: {}
+          slots:
+            default:
+              - component: oh-grid-col
+                config: {}
+                slots:
+                  default:
+                    - component: widget:Cell_Light_Color_Card_2
+                      config:
+                        header: " "
+                        iconimage: led-strip
+                        item_color: LEDStabI_Color
+                        item_schalter: LEDStabI_Eingeschaltet
+                        title: BangerTECH
+        - component: oh-grid-row
+          config: {}
+          slots:
+            default:
+              - component: oh-grid-col
+                config: {}
+                slots:
+                  default:
+                    - component: widget:Cell_Light_Color_Card_2
+                      config:
+                        header: " "
+                        iconimage: rgb
+                        item_color: WLEDLinks_MasterControls
+                        item_schalter: WLEDLinks_WLEDLinksPower
+                        title: Schreibtisch L
+        - component: oh-grid-row
+          config: {}
+          slots:
+            default:
+              - component: oh-grid-col
+                config: {}
+                slots:
+                  default:
+                    - component: widget:Cell_Light_Color_Card_2
+                      config:
+                        header: " "
+                        iconimage: rgb
+                        item_color: WLEDRechts_MasterControls
+                        item_schalter: WLEDRechts_WLEDRechtsPower
+                        title: Schreibtisch R
+        - component: oh-grid-row
+          config: {}
+          slots:
+            default:
+              - component: oh-grid-col
+                config: {}
+                slots:
+                  default:
+                    - component: widget:Cell_Light_Color_Card_2
+                      config:
+                        header: " "
+                        iconimage: moss
+                        item_color: Moosbild_Color
+                        item_schalter: Moosbild_Eingeschaltet
+                        title: Moosbild
+masonry: null
+grid: null
