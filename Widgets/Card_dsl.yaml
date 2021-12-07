@@ -1,0 +1,220 @@
+uid: Card_dsl
+tags: []
+props:
+  parameters:
+    - label: Header
+      name: text_header
+      required: false
+      type: TEXT
+    - description: icon name without ".png", located in static/icons/ folder
+      label: Icon
+      name: iconimage
+      required: false
+      type: TEXT
+    - description: HEX or rgba
+      label: Backgroundcolor
+      name: bgcolor
+      required: false
+      type: TEXT
+    - description: Page which will be opened as popup
+      label: Page ID
+      name: page
+      required: false
+    - context: item
+      description: select item for download
+      label: Item
+      name: download
+      required: false
+      type: TEXT
+    - context: item
+      description: select item for upload
+      label: Item
+      name: upload
+      required: false
+      type: TEXT
+    - context: item
+      description: select item for set latency
+      label: Item
+      name: latency
+      required: false
+      type: TEXT
+timestamp: Nov 27, 2021, 3:12:47 PM
+component: f7-card
+config:
+  style:
+    background-color: "=props.bgcolor ? props.bgcolor : ''"
+    border-radius: var(--f7-card-expandable-border-radius)
+    box-shadow: 5px 5px 10px 1px rgba(0,0,0,0.1)
+    class:
+      - padding: 0px
+    height: 125px
+    margin-left: 5px
+    margin-right: 5px
+    noShadow: false
+slots:
+  content:
+    - component: f7-block
+      config:
+        style:
+          left: 50px
+          position: absolute
+          top: -5px
+      slots:
+        default:
+          - component: Label
+            config:
+              style:
+                font-size: 17px
+                font-weight: 600
+                margin-left: 0px
+                margin-top: 0px
+              text: "=props.text_header ? props.text_header : 'Set Props'"
+    - component: f7-block
+      config:
+        style:
+          bottom: -37px
+          left: 16px
+          position: absolute
+      slots:
+        default:
+          - component: f7-chip
+            config:
+              iconColor: "=themeOptions.dark === 'dark' ? 'white' : 'black'"
+              iconF7: "=(items[props.status].state === 'ON') ? 'lightbulb' : 'lightbulb_slash'"
+              iconSize: 18
+              style:
+                --f7-chip-bg-color: rgba(255, 255, 255, 0)
+              text: "=(items[props.status].state === 'ON') ? items[props.status].state : ''"
+              visible: "=props.status ? true : false"
+          - component: f7-chip
+            config:
+              iconColor: "=themeOptions.dark === 'dark' ? 'white' : 'black'"
+              iconF7: flame
+              iconSize: 18
+              style:
+                --f7-chip-bg-color: rgba(255, 255, 255, 0)
+              text: "=items[props.heating].state === 'ON' ? '' : ''"
+              visible: =items[props.heating].state === 'ON'
+          - component: f7-chip
+            config:
+              style:
+                --f7-chip-bg-color: rgba(255, 255, 255, 0)
+              text: "=items[props.motion].state === 'ON' ? '' : ''"
+              visible: "=props.motion ? true : false"
+            slots:
+              media:
+                - component: oh-icon
+                  config:
+                    icon: "=items[props.motion].state === 'ON' ? 'motion' : ''"
+                    style:
+                      filter: "='brightness(' + (themeOptions.dark === 'dark' ? '1' : '0.4') + ')'"
+                      height: 18px
+          - component: f7-chip
+            config:
+              style:
+                --f7-chip-bg-color: rgba(255, 255, 255, 0)
+              text: "=items[props.windows_numbers].state > 0 ? items[props.windows_numbers].state : ''"
+              visible: "=items[props.windows].state === 'OPEN' ? true : false"
+            slots:
+              media:
+                - component: oh-icon
+                  config:
+                    icon: window-open
+                    style:
+                      filter: "='brightness(' + (themeOptions.dark === 'dark' ? '1' : '0.4') + ')'"
+                      height: 18px
+          - component: f7-chip
+            config:
+              iconColor: "=themeOptions.dark === 'dark' ? 'white' : 'black'"
+              iconF7: "=items[props.door_lock].state === 'ON' ? 'lock_open' : 'lock'"
+              iconSize: 18
+              style:
+                --f7-chip-bg-color: rgba(255, 255, 255, 0)
+              text: "=items[props.door_lock].state === 'ON' ? '' : ''"
+              visible: "=props.door_lock ? true : false"
+          - component: f7-chip
+            config:
+              style:
+                --f7-chip-bg-color: rgba(255, 255, 255, 0)
+              text: "=(Number(items[props.blinds_closed].state) === 0) ? '' : Math.floor(items[props.blinds_closed].state) + '%'"
+              visible: "=(Number(Math.floor(items[props.blinds_closed].state)) > 0) ? true : false"
+            slots:
+              media:
+                - component: oh-icon
+                  config:
+                    icon: "=(Number(items[props.blinds_closed].state) === 0) ? 'cinemascreen-30' : 'cinemascreen-100'"
+                    style:
+                      filter: "='brightness(' + (themeOptions.dark === 'dark' ? '100' : '0.3') + ')'"
+                      height: 18px
+          - component: f7-chip
+            config:
+              iconColor: "=themeOptions.dark === 'dark' ? 'white' : 'black'"
+              iconF7: "=items[props.speakers].state === 'PLAY' ? 'speaker_2' : 'speaker'"
+              iconSize: 18
+              style:
+                --f7-chip-bg-color: rgba(255, 255, 255, 0)
+              visible: "=items[props.speakers].state === 'PLAY' ? true : false"
+          - component: f7-chip
+            config:
+              iconColor: "=themeOptions.dark === 'dark' ? 'white' : 'black'"
+              iconF7: sun_min
+              iconSize: 18
+              style:
+                --f7-chip-bg-color: rgba(255, 255, 255, 0)
+              text: =items[props.illuminance].displayState
+              visible: "=props.illuminance ? true : false"
+    - component: f7-block
+      config:
+        style:
+          bottom: -65px
+          left: 16px
+          position: absolute
+      slots:
+        default:
+          - component: f7-chip
+            config:
+              iconColor: "=themeOptions.dark === 'dark' ? 'white' : 'black'"
+              iconF7: download_circle_fill
+              iconSize: 18
+              style:
+                --f7-chip-bg-color: rgba(255, 255, 255, 0)
+              text: "=(items[props.download].displayState  ? items[props.download].displayState : items[props.download].state) "
+              visible: "=props.download ? true : false"
+          - component: f7-chip
+            config:
+              iconColor: "=themeOptions.dark === 'dark' ? 'white' : 'black'"
+              iconF7: upload_circle_fill
+              iconSize: 18
+              style:
+                --f7-chip-bg-color: rgba(255, 255, 255, 0)
+              text: "=(items[props.upload].displayState  ? items[props.upload].displayState : items[props.upload].state) "
+              visible: "=props.upload ? true : false"
+          - component: f7-chip
+            config:
+              iconColor: "=themeOptions.dark === 'dark' ? 'white' : 'black'"
+              iconF7: timer_fill
+              iconSize: 18
+              style:
+                --f7-chip-bg-color: rgba(255, 255, 255, 0)
+              text: "=(items[props.latency].displayState  ? items[props.latency].displayState : items[props.latency].state) "
+              visible: "=props.latency ? true : false"
+    - component: oh-image
+      config:
+        style:
+          height: 25px
+          left: 16px
+          opacity: 0.7
+          position: absolute
+          top: 10px
+        url: ='/static/icons/' + props.iconimage + '.png'
+        visible: "=props.iconimage ? true : false"
+    - component: oh-link
+      config:
+        action: popup
+        actionModal: ='page:' + props.page
+        style:
+          height: 110px
+          left: 0px
+          position: absolute
+          top: 0px
+          width: 100%
