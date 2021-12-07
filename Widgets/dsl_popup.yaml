@@ -1,0 +1,250 @@
+uid: dsl_popup
+tags: []
+props:
+  parameters:
+    - description: Set the height of the Widget
+      label: Widget Height
+      name: cardheight
+      required: false
+      type: TEXT
+    - description: Headline
+      label: Headline
+      name: headline
+      required: false
+      type: TEXT
+      groupName: secondpage
+    - label: Item name 1
+      name: itemname1
+      required: false
+      type: TEXT
+      groupName: item1
+    - context: item
+      label: Item 1
+      name: item1
+      required: false
+      type: TEXT
+      groupName: item1
+    - label: Item name 2
+      name: itemname2
+      required: false
+      type: TEXT
+      groupName: item2
+    - context: item
+      label: Item 2
+      name: item2
+      required: false
+      type: TEXT
+      groupName: item2
+    - label: Item name 3
+      name: itemname3
+      required: false
+      type: TEXT
+      groupName: item3
+    - context: item
+      label: Item 3
+      name: item3
+      required: false
+      type: TEXT
+      groupName: item3
+    - label: Item name 4
+      name: itemname4
+      required: false
+      type: TEXT
+      groupName: item4
+    - context: item
+      label: Item 4
+      name: item4
+      required: false
+      type: TEXT
+      groupName: item4
+    - label: Item name 5
+      name: itemname5
+      required: false
+      type: TEXT
+      groupName: item5
+    - context: item
+      label: Item 5
+      name: item5
+      required: false
+      type: TEXT
+      groupName: item5
+    - label: Item name 6
+      name: itemname6
+      required: false
+      type: TEXT
+      groupName: item6
+    - context: item
+      label: Item 6
+      name: item6
+      required: false
+      type: TEXT
+      groupName: item6
+    - label: Item name 7
+      name: itemname7
+      required: false
+      type: TEXT
+      groupName: item7
+    - context: item
+      label: Item 7
+      name: item7
+      required: false
+      type: TEXT
+      groupName: item7
+    - label: Item name 8
+      name: itemname8
+      required: false
+      type: TEXT
+      groupName: item8
+    - context: item
+      label: Item 8
+      name: item8
+      required: false
+      type: TEXT
+      groupName: item8
+    - label: Item name 9
+      name: itemname9
+      required: false
+      type: TEXT
+      groupName: item9
+    - context: item
+      label: Item 9
+      name: item9
+      required: false
+      type: TEXT
+      groupName: item9
+  parameterGroups:
+    - name: secondpage
+      label: Second Page
+    - name: item1
+      label: Item 1
+    - name: item2
+      label: Item 2
+    - name: item3
+      label: Item 3
+    - name: item4
+      label: Item 4
+    - name: item5
+      label: Item 5
+    - name: item6
+      label: Item 6
+    - name: item7
+      label: Item 7
+    - name: item8
+      label: Item 8
+    - name: item9
+      label: Item 9
+timestamp: Nov 27, 2021, 3:42:05 PM
+component: f7-card
+config:
+  style:
+    --weather-card-border-radius: 20px
+    --weather-card-color: "=(!props.fontColor) ? '255,255,255' : props.fontColor"
+    --weather-card-text-color: rgba(var(--weather-card-color),1)
+    --weather-card-text-shadow-color: "=(!props.textShadowColor) ? '0,0,0' : props.textShadowColor"
+    --weather-font-size-large: 26px
+    --weather-font-size-normal: 18px
+    --weather-font-size-small: 16px
+    --weather-font-size-xlarge: 60px
+    --weather-font-size-xsmall: 14px
+    --weather-font-size-xxlarge: 70px
+    --weather-font-size-xxsmall: 12px
+    --weather-text-shadow-light: 2px 2px rgba(var(--weather-card-text-shadow-color),.15)
+    --weather-text-shadow-strong: 2px 2px rgba(var(--weather-card-text-shadow-color),.35)
+    --weather-text-transform-time: uppercase
+    -moz-user-select: none
+    -ms-user-select: none
+    -webkit-user-select: none
+    background: "#1c1c1d"
+    border-radius: var(--weather-card-border-radius)
+    color: var(--weather-card-text-color)
+    height: =props.cardheight
+    overflow: hidden
+    user-select: none
+slots:
+  default:
+    - component: f7-block
+      config:
+        class:
+          - no-padding
+          - no-margin
+          - align-items-space-between
+        style:
+          height: 100%
+          left: 0
+          position: absolute
+          top: 0
+          width: 100%
+      slots:
+        default:
+          - component: f7-list
+            config:
+              style:
+                height: 100%
+            slots:
+              default:
+                - component: Label
+                  config:
+                    style:
+                      font-size: 25px
+                      height: 45px
+                      padding-top: 15px
+                      text-align: center
+                    text: '=props.headline ? props.headline : "Headline"'
+                - component: f7-row
+                  config:
+                    style:
+                      margin-right: 15px
+                  slots:
+                    default:
+                      - component: f7-col
+                        config:
+                          style:
+                            width: 50%
+                        slots:
+                          default:
+                            - component: f7-list-item
+                              config:
+                                badge: '=props.item1 ? ((items[props.item1].state === "ON") ? "ON" : "OFF") : false'
+                                badgeColor: '=(items[props.item1].state === "ON") ? "green" : "red"'
+                                title: '=props.itemname1 ? props.itemname1 : (props.item1 ? props.item1 : "")'
+                            - component: f7-list-item
+                              config:
+                                badge: '=props.item2 ? ((items[props.item2].state === "ON") ? "ON" : "OFF") : false'
+                                badgeColor: '=(items[props.item2].state === "ON") ? "green" : "red"'
+                                title: '=props.itemname2 ? props.itemname2 : (props.item2 ? props.item2 : "")'
+                            - component: f7-list-item
+                              config:
+                                badge: '=props.itemname3 ? ((items[props.item3].state === "ON") ? "ON" : "OFF") : false'
+                                badgeColor: '=(items[props.item3].state === "ON") ? "green" : "red"'
+                                title: '=props.itemname3 ? props.itemname3 : (props.item3 ? props.item3 : "")'
+                            - component: f7-list-item
+                              config:
+                                badge: '=props.itemname4 ? ((items[props.item4].state === "ON") ? "ON" : "OFF") : false'
+                                badgeColor: '=(items[props.item4].state === "ON") ? "green" : "red"'
+                                title: '=props.itemname4 ? props.itemname4 : (props.item4 ? props.item4 : "")'
+                      - component: f7-col
+                        config:
+                          style:
+                            width: 50%
+                        slots:
+                          default:
+                            - component: f7-list-item
+                              config:
+                                badge: '=props.itemname5 ? ((items[props.item5].state === "ON") ? "ON" : "OFF") : false'
+                                badgeColor: '=(items[props.item5].state === "ON") ? "green" : "red"'
+                                title: '=props.itemname5 ? props.itemname5 : (props.item5 ? props.item5 : "")'
+                            - component: f7-list-item
+                              config:
+                                badge: '=props.itemname6 ? ((items[props.item6].state === "ON") ? "ON" : "OFF") : false'
+                                badgeColor: '=(items[props.item6].state === "ON") ? "green" : "red"'
+                                title: '=props.itemname6 ? props.itemname6 : (props.item6 ? props.item6 : "")'
+                            - component: f7-list-item
+                              config:
+                                badge: '=props.itemname7 ? ((items[props.item7].state === "ON") ? "ON" : "OFF") : false'
+                                badgeColor: '=(items[props.item7].state === "ON") ? "green" : "red"'
+                                title: '=props.itemname7 ? props.itemname7 : (props.item7 ? props.item7 : "")'
+                            - component: f7-list-item
+                              config:
+                                badge: '=props.itemname8 ? ((items[props.item8].state === "ON") ? "ON" : "OFF") : false'
+                                badgeColor: '=(items[props.item8].state === "ON") ? "green" : "red"'
+                                title: '=props.itemname8 ? props.itemname8 : (props.item8 ? props.item8 : "")'
