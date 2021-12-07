@@ -1,5 +1,5 @@
 config:
-  label: Office
+  label: Büro
   sidebar: false
 blocks:
   - component: oh-block
