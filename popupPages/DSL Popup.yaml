@@ -1,0 +1,34 @@
+config:
+  label: DSL Popup
+  sidebar: false
+blocks:
+  - component: oh-block
+    config: {}
+    slots:
+      default:
+        - component: oh-grid-row
+          config: {}
+          slots:
+            default:
+              - component: oh-grid-col
+                config:
+                  width: "100"
+                slots:
+                  default:
+                    - component: widget:dsl_popup
+                      config:
+                        cardheight: 300px
+                        headline: DSL Devices
+                        item1: iPhoneSentshuas_MACOnline0019999CB6C2
+                        item2: NetworkDevices_MACOnline34EA34B52151
+                        item3: iPhoneSentshuas_MACOnline8ED4E3D1E8F0
+                        item4: iPhoneLena_MACOnline0622A480AD82
+                        item7: iPhoneLena_MACOnline0622A480AD82
+                        itemname1: Server
+                        itemname2: Broadlink
+                        itemname3: iPhone
+                        itemname4: Lenas Schoas
+                        itemname7: Schoas2
+masonry: null
+grid: null
+canvas: null
