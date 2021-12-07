@@ -1,0 +1,258 @@
+uid: Cell_Light_Color_Card_2
+tags:
+  - Schalter & Farbauswahl
+props:
+  parameters:
+    - description: Small title on top of the card
+      label: Title
+      name: title
+      required: false
+      type: TEXT
+    - description: Header big sized
+      label: Header
+      name: header
+      required: false
+      type: TEXT
+    - description: icon name without ".png", located in static/icons/ folder
+      label: Icon
+      name: iconimage
+      required: false
+      type: TEXT
+    - description: rgba or HEX
+      label: Background Color
+      name: bgcolor
+      required: false
+      type: TEXT
+    - context: item
+      description: Item to control on/off
+      label: Item ON OFF
+      name: item_schalter
+      required: false
+      type: TEXT
+    - context: item
+      description: Item to control color
+      label: Item light color
+      name: item_color
+      required: false
+      type: TEXT
+  parameterGroups: []
+timestamp: Nov 26, 2021, 2:02:48 PM
+component: f7-card
+config:
+  style:
+    background-color: "=props.bgcolor ? props.bgcolor : ''"
+    border-radius: var(--f7-card-expandable-border-radius)
+    box-shadow: 5px 5px 10px 1px rgba(0,0,0,0.1)
+    height: 165px
+    margin-left: 5px
+    margin-right: 5px
+    noShadow: false
+    padding: 0px
+slots:
+  default:
+    - component: f7-card-content
+      config:
+        class:
+          - display-flex
+          - flex-direction-column
+          - justify-content-flex-start
+          - align-items-left
+        style:
+          --f7-color-picker-slider-knob-size: 20px
+          --f7-color-picker-slider-size: 18px
+      slots:
+        default:
+          - component: f7-row
+            config:
+              style:
+                display: flex
+                flex-direction: row
+                left: 40px
+                position: absolute
+                top: 10px
+            slots:
+              default:
+                - component: Label
+                  config:
+                    style:
+                      font-size: 12px
+                      margin-top: 0px
+                    text: "=props.title ? props.title : ''"
+    - component: f7-block
+      config:
+        class:
+          - no-padding
+        style:
+          flex-direction: row
+          left: 10px
+          position: absolute
+          top: 40px
+      slots:
+        default:
+          - component: Label
+            config:
+              style:
+                font-size: 17px
+                font-weight: 600
+                margin-left: 0px
+                margin-top: 0px
+              text: "=props.header ? props.header : 'Set Props'"
+    - component: f7-block
+      config:
+        class:
+          - no-padding
+        style:
+          --f7-color-picker-slider-knob-size: 15px
+          --f7-color-picker-slider-size: 8px
+          --f7-range-bar-active-bg-color: transparent
+          --f7-range-bar-bg-color: linear-gradient(to right, rgba(246,158,81,0.8), rgba(246,158,81,0))
+          --f7-range-bar-border-radius: 10px
+          --f7-range-bar-size: 12px
+          --f7-range-knob-box-shadow: 0 2px 4px rgba(0, 0, 0, 0.3)
+          --f7-range-knob-size: 20px
+          --f7-range-label-text-color: black
+          flex-direction: row
+          left: 10px
+          margin-top: 0px
+          position: absolute
+          top: 70px
+          width: calc(100% - 100px)
+          z-index: 99 !important
+      slots:
+        default:
+          - component: oh-colorpicker
+            config:
+              color: red
+              item: =props.item_color
+              label: true
+              modules:
+                - hsb-sliders
+    - component: oh-toggle
+      config:
+        item: =props.item_schalter
+        style:
+          position: absolute
+          right: 90px
+          top: 15px
+    - component: oh-button
+      config:
+        action: command
+        actionCommand: 0,100,100
+        actionItem: =props.item_color
+        iconColor: red
+        iconF7: app_fill
+        iconSize: 34
+        style:
+          background: transparent
+          height: 35px
+          position: absolute
+          right: 35px
+          top: 10px
+    - component: oh-button
+      config:
+        action: command
+        actionCommand: 15,100,100
+        actionItem: =props.item_color
+        iconColor: deeporange
+        iconF7: app_fill
+        iconSize: 34
+        style:
+          background: transparent
+          height: 34px
+          position: absolute
+          right: 35px
+          top: 45px
+    - component: oh-button
+      config:
+        action: command
+        actionCommand: 30,100,100
+        actionItem: =props.item_color
+        iconColor: orange
+        iconF7: app_fill
+        iconSize: 34
+        style:
+          background: transparent
+          height: 35px
+          position: absolute
+          right: 35px
+          top: 80px
+    - component: oh-button
+      config:
+        action: command
+        actionCommand: 60,100,100
+        actionItem: =props.item_color
+        iconColor: yellow
+        iconF7: app_fill
+        iconSize: 34
+        style:
+          background: transparent
+          height: 35px
+          position: absolute
+          right: 35px
+          top: 115px
+    - component: oh-button
+      config:
+        action: command
+        actionCommand: 300,100,100
+        actionItem: =props.item_color
+        iconColor: purple
+        iconF7: app_fill
+        iconSize: 34
+        style:
+          background: transparent
+          height: 33px
+          position: absolute
+          right: 0px
+          top: 10px
+    - component: oh-button
+      config:
+        action: command
+        actionCommand: 240,100,100
+        actionItem: =props.item_color
+        iconColor: blue
+        iconF7: app_fill
+        iconSize: 34
+        style:
+          background: transparent
+          height: 33px
+          position: absolute
+          right: 0px
+          top: 45px
+    - component: oh-button
+      config:
+        action: command
+        actionCommand: 180,100,100
+        actionItem: =props.item_color
+        iconColor: lightblue
+        iconF7: app_fill
+        iconSize: 34
+        style:
+          background: transparent
+          height: 33px
+          position: absolute
+          right: 0px
+          top: 80px
+    - component: oh-button
+      config:
+        action: command
+        actionCommand: 120,100,100
+        actionItem: =props.item_color
+        iconColor: green
+        iconF7: app_fill
+        iconSize: 34
+        style:
+          background: transparent
+          height: 33px
+          position: absolute
+          right: 0px
+          top: 115px
+    - component: oh-image
+      config:
+        style:
+          height: 25px
+          left: 10px
+          opacity: 0.7
+          position: absolute
+          top: 10px
+        url: ='/static/icons/' + props.iconimage + '.png'
+        visible: "=props.iconimage ? true : false"
