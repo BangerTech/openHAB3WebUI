@@ -10,3 +10,29 @@
 <img width="380" alt="Screenshot 2021-12-07 144001" src="https://user-images.githubusercontent.com/73241309/145039689-e7e437a8-f9da-44f1-86c0-4d96cc280759.png">
 <img width="380" alt="Screenshot 2021-12-07 144021" src="https://user-images.githubusercontent.com/73241309/145039702-b6d068a0-aae9-4a46-a07d-74e895d1e1c6.png">
 <img width="380" alt="Screenshot 2021-12-07 144041" src="https://user-images.githubusercontent.com/73241309/145039711-1bcaa5a2-542c-42d2-98bb-5cc32fb61dad.png">
+
+
+Verknüpfungen: 
+MainPage:
+   - Widgets: 
+        - weatherCard
+        - front_cam_mobile
+        - Cell_Card_1
+        - Card_room_12_motion
+        - Card_dsl
+        - Cell_Settings_1
+   - Pages:
+        - Flur
+        - Kitchen
+        - Esszimmer
+        - Zimmer Wohnzimmer
+        - Treppe
+        - Obergeschoss
+        - Office
+        - Werkstatt
+        - DSL Popup
+        - Alle Batterien#
+    - icons:
+        - 
+
+
