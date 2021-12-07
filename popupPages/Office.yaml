@@ -1,0 +1,137 @@
+config:
+  label: Office
+  sidebar: false
+blocks:
+  - component: oh-block
+    config: {}
+    slots:
+      default:
+        - component: oh-grid-row
+          config: {}
+          slots:
+            default:
+              - component: oh-grid-col
+                config:
+                  width: "100"
+                slots:
+                  default:
+                    - component: widget:Cell_Temp_Card_1
+                      config:
+                        heating_item: SwitchbotMeter_battery
+                        humidity_item: SwitchbotMeter_hum
+                        icon: thermometer
+                        temp_item: GenericMQTTThing_Temp
+                        title: Temperatur
+        - component: oh-grid-row
+          config: {}
+          slots:
+            default:
+              - component: oh-grid-col
+                config:
+                  width: "50"
+                slots:
+                  default:
+                    - component: widget:command-button-heater
+                      config:
+                        background: "#1c1c1d"
+                        cardwidth: "100"
+                        command1: OFF
+                        command2: ON
+                        headline1: Licht Aus
+                        headline2: Licht An
+                        headlinesize: 20px
+                        item: BuroShelly1pm_Betrieb
+              - component: oh-grid-col
+                config:
+                  width: "50"
+                slots:
+                  default:
+                    - component: widget:command-button-heater_popup_1
+                      config:
+                        background: "#1c1c1d"
+                        cardwidth: "100"
+                        command1: OFF
+                        command2: ON
+                        headline1: Studio Aus
+                        headline2: Studio An
+                        headlinesize: 20px
+                        item: StudioAll
+                        page: page_58c79216a5
+        - component: oh-grid-row
+          config: {}
+          slots:
+            default:
+              - component: oh-grid-col
+                config:
+                  width: "50"
+                slots:
+                  default:
+                    - component: widget:command-button-heater
+                      config:
+                        background: "#1c1c1d"
+                        cardwidth: "100"
+                        command1: OFF
+                        command2: ON
+                        headline1: Drucker Aus
+                        headline2: Drucker An
+                        headlinesize: 20px
+                        icon1: power
+                        icon2: power
+                        item: Switchbot_state
+              - component: oh-grid-col
+                config:
+                  width: "50"
+                slots:
+                  default:
+                    - component: widget:command-button-heater_popup_1
+                      config:
+                        background: "#1c1c1d"
+                        cardwidth: "100"
+                        command1: OFF
+                        command2: ON
+                        headline1: Studio Aus
+                        headline2: Studio An
+                        headlinesize: 20px
+                        item: StudioAll
+                        page: page_58c79216a5
+        - component: oh-grid-row
+          config: {}
+          slots:
+            default:
+              - component: oh-grid-col
+                config:
+                  width: "50"
+                slots:
+                  default:
+                    - component: widget:3d-druck-mobile_1
+                      config:
+                        bedtempitem: OctoprintB1_B1BedTemp
+                        cardheight: 160px
+                        hotendtempitem: OctoprintB1_B1HotendTemp
+                        iconimage1: tooltemp
+                        iconimage2: bedtemp
+                        lightitem: BiquB1LED_Eingeschaltet
+                        page: page_6102089844
+                        poweritem: SonoffBiquB1_SonoffB1
+                        printername: Biqu B1
+                        progressitem: OctoprintB1_B1Progress
+                        timeleftitem: OctoprintB1_B1PrintTimeLeft
+              - component: oh-grid-col
+                config:
+                  width: "50"
+                slots:
+                  default:
+                    - component: widget:3d-druck-mobile_1
+                      config:
+                        bedtempitem: OctoprintChiron_ChironBedTemp
+                        cardheight: 160px
+                        hotendtempitem: OctoprintChiron_ChironHotendTemp
+                        iconimage1: tooltemp
+                        iconimage2: bedtemp
+                        page: page_6102089844
+                        poweritem: SonoffChiron_SonoffChiron
+                        printername: Chiron
+                        progressitem: OctoprintChiron_ChironProgress
+                        timeleftitem: OctoprintChiron_ChironPrinttimeleft
+masonry: null
+grid: null
