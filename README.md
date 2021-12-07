@@ -13,6 +13,7 @@
 
 
 Verknüpfungen: 
+
 MainPage:
    - Widgets: 
         - weatherCard
@@ -23,15 +24,15 @@ MainPage:
         - Cell_Settings_1
    - Pages:
         - Flur
-        - Kitchen
+        - Küche
         - Esszimmer
-        - Zimmer Wohnzimmer
+        - Wohnzimmer
         - Treppe
         - Obergeschoss
-        - Office
+        - Büro
         - Werkstatt
-        - DSL Popup
-        - Alle Batterien#
+        - Netzwerk Popup
+        - Alle Batterien
    - icons:
        - alle Icons in /etc/openhab/html/icons/ legen
 
@@ -39,7 +40,7 @@ Flur:
    - Widgets: 
         - command-button-heater
          
-Kitchen:
+Küche:
    - Widgets:
         - command-button-heater
         - Cell_Temp_Card_1
@@ -50,7 +51,7 @@ Esszimmer:
         - command-button-heater
         - Cell_Shutter_Card_1
          
-Zimmer Wohnzimmer:
+Wohnzimmer:
    - Widgest: 
         - Cell_Temp_Card_1
         - Cell_Speaker_Card_1
@@ -67,7 +68,7 @@ Obergeschoss:
         - Cell_Temp_Card_1
         - Cell_Shutter_Card_1
           
-Office: 
+Büro: 
    - Wigets:
        - Cell_Temp_Card_1
        - command-button-heater
@@ -80,7 +81,7 @@ Werkstatt:
         - command-button-heater
           
 
-DSL Popup: 
+Netzwerk Popup: 
    - Widgets:
         - dsl_popup
           
