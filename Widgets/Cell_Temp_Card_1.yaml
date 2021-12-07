@@ -1,0 +1,224 @@
+uid: Cell_Temp_Card_1
+tags:
+  - heatmode
+  - humidity
+  - set temp
+  - temperature
+props:
+  parameters:
+    - description: Small title on top of the card
+      label: Title
+      name: title
+      required: false
+      type: TEXT
+    - description: Icon on top of the card (only f7 icons (without f7:))
+      label: Icon
+      name: icon
+      required: false
+      type: TEXT
+    - description: in rgba() or HEX or empty
+      label: Background Color
+      name: bgcolor
+      required: false
+      type: TEXT
+    - context: item
+      label: Current Temperature
+      name: temp_item
+      required: false
+      type: TEXT
+    - context: item
+      label: Set Temperature
+      name: set_temp_item
+      required: false
+      type: TEXT
+    - context: item
+      label: Current Humidity
+      name: humidity_item
+      required: false
+      type: TEXT
+    - context: item
+      description: on/off item
+      label: Heating control item
+      name: heating_item
+      required: false
+      type: TEXT
+  parameterGroups: []
+timestamp: Nov 25, 2021, 2:21:35 PM
+component: f7-card
+config:
+  style:
+    background-color: "=props.bgcolor ? props.bgcolor : ''"
+    border-radius: var(--f7-card-expandable-border-radius)
+    box-shadow: 5px 5px 10px 1px rgba(0,0,0,0.1)
+    height: 120px
+    margin-left: 5px
+    margin-right: 5px
+    noShadow: false
+    padding: 0px
+slots:
+  content:
+    - component: f7-block
+      config:
+        style:
+          display: flex
+          flex-direction: row
+          left: 16px
+          position: absolute
+          top: -5px
+      slots:
+        default:
+          - component: f7-icon
+            config:
+              f7: =props.icon
+              size: 18
+              style:
+                margin-right: 10px
+              visible: "=props.icon ? true : false"
+          - component: Label
+            config:
+              style:
+                font-size: 12px
+                margin-top: 0px
+              text: "=props.title ? props.title : ''"
+    - component: f7-block
+      config:
+        style:
+          bottom: -20px
+          flex-direction: row
+          left: 16px
+          position: absolute
+      slots:
+        default:
+          - component: Label
+            config:
+              style:
+                font-size: 22px
+                font-weight: 400
+                margin-left: 0px
+                margin-top: 0px
+              text: "=items[props.temp_item].displayState ? items[props.temp_item].displayState : items[props.temp_item].state"
+    - component: f7-block
+      config:
+        style:
+          bottom: -40px
+          display: flex
+          flex-direction: row
+          left: 12px
+          position: absolute
+      slots:
+        default:
+          - component: f7-icon
+            config:
+              f7: drop
+              size: 18
+              visible: "=props.humidity_item ? true : false"
+          - component: Label
+            config:
+              style:
+                font-size: 12px
+                margin-left: 5px
+                margin-top: 0px
+              text: =items[props.humidity_item].displayState
+              visible: "=props.humidity_item ? true : false"
+    - component: f7-block
+      config:
+        style:
+          bottom: -63px
+          display: flex
+          flex-direction: row
+          left: 12px
+          position: absolute
+      slots:
+        default:
+          - component: f7-icon
+            config:
+              f7: flame
+              size: 18
+              visible: "=props.heating_item ? true : false"
+          - component: Label
+            config:
+              style:
+                font-size: 12px
+                margin-left: 5px
+                margin-top: 0px
+              text: =items[props.heating_item].state
+              visible: "=props.heating_item ? true : false"
+    - component: oh-button
+      config:
+        action: command
+        actionCommand: =Number(items[props.set_temp_item].state.split(' ')[0]) + 0.5
+        actionItem: =props.set_temp_item
+        iconColor: red
+        iconF7: arrow_up_circle
+        iconSize: 35
+        style:
+          background: transparent
+          height: 35px
+          position: absolute
+          right: 10px
+          top: 12px
+        visible: "=props.set_temp_item ? true : false"
+    - component: oh-button
+      config:
+        action: command
+        actionCommand: =Number(items[props.set_temp_item].state.split(' ')[0]) - 0.5
+        actionItem: =props.set_temp_item
+        iconColor: red
+        iconF7: arrow_down_circle
+        iconSize: 35
+        style:
+          background: transparent
+          height: 35px
+          position: absolute
+          right: 10px
+          top: 74px
+        visible: "=props.set_temp_item ? true : false"
+    - component: Label
+      config:
+        style:
+          font-size: 12px
+          position: absolute
+          right: 15px
+          top: 50px
+        text: =items[props.set_temp_item].state
+        visible: "=props.set_temp_item ? true : false"
+    - component: f7-block
+      config:
+        style:
+          height: 120px
+          left: 15px
+          position: absolute
+          top: 15px
+          width: "=props.set_temp_item ? 'calc(100% - 55px)' : '100%' "
+      slots:
+        default:
+          - component: oh-trend
+            config:
+              style:
+                --f7-theme-color-bg-color: transparent
+                background: var(--f7-theme-color-bg-color)
+                filter: opacity(30%)
+                height: 100%
+                left: 0px
+                position: absolute
+                top: 0px
+                width: 100%
+                z-index: 1
+              trendGradient:
+                - "#aa2b1d"
+                - "#cc561e"
+                - "#ef8d32"
+                - "#beca5c"
+              trendItem: =props.temp_item
+    - component: oh-link
+      config:
+        action: analyzer
+        actionAnalyzerChartType: day
+        actionAnalyzerCoordSystem: time
+        actionAnalyzerItems: "=props.set_temp_item ? [props.temp_item, props.humidity_item, props.set_temp_item, props.heating_item] : (props.humidity_item ? [props.temp_item, props.humidity_item] : [props.temp_item])"
+        style:
+          height: 120px
+          left: 0px
+          position: absolute
+          top: 0px
+          width: "=props.set_temp_item ? 'calc(100% - 55px)' : '100%' "
