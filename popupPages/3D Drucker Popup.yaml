@@ -1,5 +1,5 @@
 config:
-  label: 3DPopup
+  label: 3D Drucker Popup
   sidebar: false
 blocks:
   - component: oh-block
