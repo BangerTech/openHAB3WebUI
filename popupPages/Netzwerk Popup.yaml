@@ -1,5 +1,5 @@
 config:
-  label: DSL Popup
+  label: Netzwerk Popup
   sidebar: false
 blocks:
   - component: oh-block
