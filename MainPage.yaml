@@ -1,5 +1,5 @@
 config:
-  label: mainPage
+  label: MainPage
   sidebar: true
 blocks:
   - component: oh-block
