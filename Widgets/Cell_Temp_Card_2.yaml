@@ -1,0 +1,233 @@
+uid: Cell_Temp_Card_2
+tags:
+  - co
+  - humidity
+  - motion
+  - temperature
+props:
+  parameters:
+    - description: Small title on top of the card
+      label: Title
+      name: title
+      required: false
+      type: TEXT
+    - description: Icon on top of the card (only f7 icons (without f7:))
+      label: Icon
+      name: icon
+      required: false
+      type: TEXT
+    - description: Background image name
+      label: Background image
+      name: bg_image_url
+      required: false
+      type: TEXT
+    - description: in rgba() or HEX or empty
+      label: Background Color
+      name: bgcolor
+      required: false
+      type: TEXT
+    - context: item
+      label: Temperature
+      name: temp_item
+      required: false
+      type: TEXT
+    - context: item
+      label: Lightlevel
+      name: lightlevel_item
+      required: false
+      type: TEXT
+    - context: item
+      label: Humidity
+      name: humidity_item
+      required: false
+      type: TEXT
+    - context: item
+      label: CO
+      name: CO_item
+      required: false
+      type: TEXT
+    - context: item
+      label: Motion item
+      name: motion_item
+      required: false
+      type: TEXT
+  parameterGroups: []
+timestamp: Nov 24, 2021, 11:09:45 PM
+component: f7-card
+config:
+  style:
+    background-brightness: 60%
+    background-color: "=props.bgcolor ? props.bgcolor : ''"
+    background-image: "=props.bg_image_url ? 'url(/static/' + (props.bg_image_url) + ')' : ''"
+    background-position: down;
+    background-repeat: no-repeat;
+    background-size: cover
+    border-radius: var(--f7-card-expandable-border-radius)
+    box-shadow: 5px 5px 10px 1px rgba(0,0,0,0.1)
+    font-size: medium
+    height: 150px
+    margin: 5
+    noShadow: false
+    padding: 0
+    text-shadow: -1px -1px 0 black, 1px -1px 0 black, -1px 1px 0 black, 1px 1px 0 black
+slots:
+  content:
+    - component: f7-card-header
+      config:
+        style:
+          justify-content: flex-start
+          margin-top: -15px
+          min-height: 30px
+          padding: 0
+      slots:
+        default:
+          - component: f7-icon
+            config:
+              f7: =props.icon
+              size: 20
+              visible: "=props.icon ? true : false"
+          - component: Label
+            config:
+              style:
+                font-size: 18px
+                margin-left: 5px
+              text: "=props.title ? props.title : ''"
+    - component: f7-card-content
+      config:
+        style:
+          justify-content: flex-start
+          margin-top: 5px
+          padding: 0
+          width: 100%
+      slots:
+        default:
+          - component: f7-row
+            config:
+              style:
+                justify-content: flex-start
+              visible: "=props.temp_item ? true : false"
+            slots:
+              default:
+                - component: oh-icon
+                  config:
+                    icon: temperature
+                    item: =props.temp_item
+                    width: 23
+                - component: Label
+                  config:
+                    style:
+                      color: '=(Number.parseFloat(items[props.temp_item].state.split(" ")[0]) > 30) ? "red" : (Number.parseFloat(items[props.temp_item].state.split(" ")[0]) < 10) ? "blue" : "white"'
+                      margin-left: 5px
+                    text: =items[props.temp_item].state
+          - component: f7-row
+            config:
+              style:
+                justify-content: flex-start
+                z-index: 2
+              visible: "=props.humidity_item ? true : false"
+            slots:
+              default:
+                - component: oh-icon
+                  config:
+                    action: analyser
+                    actionAnalyzerItems: =props.humidity_item
+                    icon: humidity
+                    item: =props.humidity_item
+                    width: 23
+                - component: Label
+                  config:
+                    style:
+                      color: '=(Number.parseFloat(items[props.humidity_item].state.split(" ")[0]) < 35) ? "red" : (Number.parseFloat(items[props.humidity_item].state.split(" ")[0]) > 75) ? "green" : "white"'
+                      margin-left: 5px
+                    text: =items[props.humidity_item].state
+          - component: f7-row
+            config:
+              style:
+                justify-content: flex-start
+                z-index: 2
+              visible: "=props.lightlevel_item ? true : false"
+            slots:
+              default:
+                - component: oh-icon
+                  config:
+                    icon: sun
+                    width: 23
+                - component: Label
+                  config:
+                    style:
+                      color: "=(items[props.lightlevel_item].state < 5) ? 'gray' : 'white'"
+                      margin-left: 5px
+                    text: =items[props.lightlevel_item].state
+          - component: f7-row
+            config:
+              style:
+                justify-content: flex-start
+                z-index: 2
+              visible: "=props.CO_item ? true : false"
+            slots:
+              default:
+                - component: oh-icon
+                  config:
+                    icon: carbondioxide
+                    width: 23
+                - component: Label
+                  config:
+                    style:
+                      color: '=(Number.parseFloat(items[props.CO_item].state.split(" ")[0]) > 1500) ? "red" : (Number.parseFloat(items[props.CO_item].state.split(" ")[0]) > 1000) ? "yellow"'
+                      margin-left: 5px
+                    text: =items[props.CO_item].state
+          - component: f7-col
+            config:
+              style:
+                position: absolute
+                right: 0px
+                top: 0px
+                z-index: 2
+              visible: "=props.motion_item ? true : false"
+            slots:
+              default:
+                - component: oh-icon
+                  config:
+                    icon: "=(items[props.motion_item].state === 'ON') ? 'mymotion-on' : 'mymotion-off'"
+                    width: 30
+                - component: Label
+                  config:
+                    text: =items[props.motion_item].state
+          - component: f7-block
+            config:
+              style:
+                height: 300px
+                left: 10px
+                position: absolute
+                top: 10px
+                visible: "=props.temp_item ? true : false"
+                width: 100%
+                z-index: 1
+            slots:
+              default:
+                - component: oh-trend
+                  config:
+                    style:
+                      --f7-theme-color-bg-color: transparent
+                      background: var(--f7-theme-color-bg-color)
+                      filter: opacity(60%)
+                    trendGradient:
+                      - "#d4220f"
+                      - "#cc561e"
+                      - "#ef8d32"
+                      - "#beca5c"
+                    trendItem: =props.temp_item
+    - component: oh-link
+      config:
+        action: analyzer
+        actionAnalyzerChartType: day
+        actionAnalyzerCoordSystem: time
+        actionAnalyzerItems: "=props.CO_item ? [props.temp_item, props.humidity_item, props.lightlevel_item, props.CO_item] : (props.lightlevel_item ? [props.temp_item, props.humidity_item, props.lightlevel_item] : (props.humidity_item ? [props.temp_item, props.humidity_item] : [props.temp_item]))"
+        style:
+          height: 100%
+          left: 0px
+          padding: 0
+          position: absolute
+          top: 0px
+          width: 100%
+          z-index: 3
