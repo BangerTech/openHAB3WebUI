@@ -1,0 +1,103 @@
+uid: Cell_Card_1
+tags: []
+props:
+  parameters:
+    - description: Small title on top of the card
+      label: Title
+      name: title
+      required: false
+      type: TEXT
+    - description: Header big sized
+      label: Header
+      name: header
+      required: false
+      type: TEXT
+    - description: Icon on top of the card (only f7 icons (without f7:))
+      label: Icon
+      name: icon
+      required: false
+      type: TEXT
+    - description: rgba or HEX
+      label: Background Color
+      name: bgcolor
+      required: false
+      type: TEXT
+    - context: item
+      description: Item to control
+      label: Item
+      name: item
+      required: false
+      type: TEXT
+    - label: Command to send
+      name: command
+      required: false
+      type: TEXT
+  parameterGroups: []
+timestamp: Nov 27, 2021, 4:21:52 PM
+component: f7-card
+config:
+  style:
+    background-color: "=props.bgcolor ? props.bgcolor : ''"
+    border-radius: var(--f7-card-expandable-border-radius)
+    box-shadow: '=(items[props.item].state === "ON") ? "3px 3px 10px 0px rgba(255,255,255,255)" : "var(--f7-card-expandable-box-shadow)"'
+    class:
+      - padding: 0px
+    height: 100px
+    margin-left: 5px
+    margin-right: 5px
+    noShadow: false
+slots:
+  content:
+    - component: f7-block
+      config:
+        style:
+          display: flex
+          flex-direction: row
+          left: 16px
+          position: absolute
+          top: -5px
+      slots:
+        default:
+          - component: f7-icon
+            config:
+              f7: =props.icon
+              size: 18
+              style:
+                margin-right: 10px
+              visible: "=props.icon ? true : false"
+          - component: Label
+            config:
+              style:
+                font-size: 12px
+                margin-top: 0px
+              text: "=props.title ? props.title : ''"
+    - component: f7-block
+      config:
+        style:
+          bottom: -15px
+          flex-direction: row
+          left: 16px
+          position: absolute
+      slots:
+        default:
+          - component: Label
+            config:
+              style:
+                font-size: 17px
+                font-weight: 600
+                margin-left: 0px
+                margin-top: 0px
+              text: "=props.header ? props.header : 'Set Props'"
+    - component: oh-link
+      config:
+        action: command
+        actionCommand: =props.command
+        actionFeedback: Done!
+        actionItem: =props.item
+        style:
+          actionPosition: center
+          height: 100px
+          left: 0
+          position: absolute
+          top: 0
+          width: 100%
