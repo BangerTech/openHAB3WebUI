@@ -1,0 +1,115 @@
+config:
+  label: Zimmer Wohnzimmer
+  sidebar: false
+blocks:
+  - component: oh-block
+    config: {}
+    slots:
+      default:
+        - component: oh-grid-row
+          config: {}
+          slots:
+            default:
+              - component: oh-grid-col
+                config:
+                  large: "50"
+                  width: "100"
+                  xlarge: "50"
+                slots:
+                  default:
+                    - component: widget:Cell_Temp_Card_1
+                      config:
+                        humidity_item: SwitchbotMeterTest_SwitchBotMeterTestHum
+                        icon: thermometer
+                        set_temp_item: HeizungWohnzimmer_SET_POINT_TEMPERATURE
+                        temp_item: HeizungWohnzimmer_ACTUAL_TEMPERATURE
+                        title: Temperatur
+              - component: oh-grid-col
+                config:
+                  large: "50"
+                  medium: "100"
+                  small: "100"
+                  width: "100"
+                  xlarge: "50"
+                  xsmall: "100"
+                slots:
+                  default:
+                    - component: widget:Cell_Speaker_Card_1
+                      config:
+                        header: Control
+                        icon: speaker_3
+                        item: SonoffP2TV_SonoffP2TVPower
+                        item_cover: SonosWohnzimmer_Coverbild
+                        item_volume: SonosWohnzimmer_Lautstarke
+                        title: TV
+              - component: oh-grid-col
+                config:
+                  large: "50"
+                  width: "100"
+                  xlarge: "50"
+                slots:
+                  default:
+                    - component: widget:Cell_Shutter_Card_1
+                      config:
+                        header: Wohnzimmer
+                        icon: arrow_up_arrow_down
+                        item: Rollos_Wohnzimmer_4_LEVEL
+                        title: Rollo
+  - component: oh-block
+    config: {}
+    slots:
+      default:
+        - component: oh-grid-row
+          config: {}
+          slots:
+            default:
+              - component: oh-grid-col
+                config:
+                  width: "50"
+                slots:
+                  default:
+                    - component: widget:Cell_Light_Card_1
+                      config:
+                        header: Decke
+                        icon: lightbulb
+                        item_brightness: DeckenbeleuchtungL_Weiss
+                        item_schalter: DeckenbeleuchtungL_Eingeschaltet
+                        title: Licht
+              - component: oh-grid-col
+                config:
+                  width: "50"
+                slots:
+                  default:
+                    - component: widget:Cell_Light_Card_1
+                      config:
+                        header: TV Bank
+                        icon: lightbulb
+                        item_brightness: TVBankLED_Color
+                        item_schalter: TVBankLED_Eingeschaltet
+                        title: Licht
+              - component: oh-grid-col
+                config:
+                  width: "50"
+                slots:
+                  default:
+                    - component: widget:Cell_Light_Card_1
+                      config:
+                        header: Säule
+                        icon: lightbulb
+                        item_brightness: LEDSaule_Color
+                        item_schalter: LEDSaule_Eingeschaltet
+                        title: Licht
+              - component: oh-grid-col
+                config:
+                  width: "50"
+                slots:
+                  default:
+                    - component: widget:Cell_Light_Card_1
+                      config:
+                        header: Tube
+                        icon: lightbulb
+                        item_brightness: LEDTube_RGBColor
+                        item_schalter: LEDCube_Eingeschaltet
+                        title: Licht
+masonry: null
+grid: null
