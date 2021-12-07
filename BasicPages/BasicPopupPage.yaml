@@ -1,0 +1,142 @@
+config:
+  label: Basic Popup Page
+  sidebar: false
+blocks:
+  - component: oh-block
+    config: {}
+    slots:
+      default:
+        - component: oh-grid-row
+          config: {}
+          slots:
+            default:
+              - component: oh-grid-col
+                config:
+                  width: "50"
+                slots:
+                  default:
+                    - component: widget:Cell_Light_Card_1
+                      config:
+                        header: Wohnen
+                        icon: lightbulb
+                        item_brightness: LichtWohnzimmer_Helligkeit
+                        item_schalter: LichtWohnzimmer_Schalter
+                        title: Licht
+              - component: oh-grid-col
+                config:
+                  width: "50"
+                slots:
+                  default:
+                    - component: widget:Cell_Light_Card_1
+                      config:
+                        header: Essen
+                        icon: lightbulb
+                        item_brightness: LichtEssen_Helligkeit
+                        item_schalter: LichtEssen_Schalter
+                        title: Licht
+              - component: oh-grid-col
+                config:
+                  width: "50"
+                slots:
+                  default:
+                    - component: widget:Cell_Light_Card_1
+                      config:
+                        header: Gang
+                        icon: lightbulb
+                        item_brightness: LichtWohnzimmerGang_Helligkeit
+                        item_schalter: LichtWohnzimmerGang_Schalter
+                        title: Licht
+              - component: oh-grid-col
+                config:
+                  width: "50"
+                slots:
+                  default:
+                    - component: widget:Cell_Light_Card_1
+                      config:
+                        header: Küche
+                        icon: lightbulb
+                        item_brightness: LichtKuche_Helligkeit
+                        item_schalter: LichtKuche_Schalter
+                        title: Licht
+  - component: oh-block
+    config: {}
+    slots:
+      default:
+        - component: oh-grid-row
+          config: {}
+          slots:
+            default:
+              - component: oh-grid-col
+                config:
+                  large: "50"
+                  width: "100"
+                  xlarge: "50"
+                slots:
+                  default:
+                    - component: widget:Cell_Temp_Card_1
+                      config:
+                        heating_item: SHELLY_Heizung_Wohnung
+                        humidity_item: SHELLY_Humidity_Wohnung
+                        icon: thermometer
+                        set_temp_item: SHELLY_Soll_Temperatur_Wohnung
+                        temp_item: SHELLY_Temperatur_Wohnung_correct
+                        title: Temperatur
+              - component: oh-grid-col
+                config:
+                  large: "50"
+                  medium: "100"
+                  small: "100"
+                  width: "100"
+                  xlarge: "50"
+                  xsmall: "100"
+                slots:
+                  default:
+                    - component: widget:Cell_Speaker_Card_1
+                      config:
+                        header: Playbar
+                        icon: speaker_3
+                        item: SonosWohnzimmer_Fernbedienung
+                        item_cover: SonosWohnzimmer_Coverbild
+                        item_volume: SonosWohnzimmer_Lautstarke
+                        title: Sonos
+              - component: oh-grid-col
+                config:
+                  large: "33"
+                  width: "50"
+                  xlarge: "33"
+                slots:
+                  default:
+                    - component: widget:Cell_Shutter_Card_1
+                      config:
+                        header: Essen 1
+                        icon: arrow_up_arrow_down
+                        item: StorenEssen1_Steuerung0offen100geschlossen
+                        title: Storen
+              - component: oh-grid-col
+                config:
+                  large: "33"
+                  width: "50"
+                  xlarge: "33"
+                slots:
+                  default:
+                    - component: widget:Cell_Shutter_Card_1
+                      config:
+                        header: Essen 2
+                        icon: arrow_up_arrow_down
+                        item: StorenEssen2_Steuerung0offen100geschlossen
+                        title: Storen
+              - component: oh-grid-col
+                config:
+                  large: "33"
+                  width: "50"
+                  xlarge: "33"
+                slots:
+                  default:
+                    - component: widget:Cell_Shutter_Card_1
+                      config:
+                        header: Wohnen
+                        icon: arrow_up_arrow_down
+                        item: StorenWohnen_Steuerung0offen100geschlossen
+                        title: Storen
+masonry: null
+grid: null
