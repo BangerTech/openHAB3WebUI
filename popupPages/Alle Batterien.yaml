@@ -1,0 +1,284 @@
+config:
+  label: Alle Batterien
+  sidebar: false
+blocks:
+  - component: oh-block
+    config:
+      title: Home
+    slots:
+      default:
+        - component: oh-grid-row
+          config: {}
+          slots:
+            default:
+              - component: oh-grid-col
+                config:
+                  width: "50"
+                slots:
+                  default:
+                    - component: oh-gauge-card
+                      config:
+                        borderBgColor: red
+                        borderColor: green
+                        item: SwitchbotMotionHomeAss_motiononeBattery
+                        labelText: Motion Speise
+                        max: 100
+                        min: 0
+                        type: semicircle
+                        valueTextColor: green
+              - component: oh-grid-col
+                config:
+                  width: "50"
+                slots:
+                  default:
+                    - component: oh-gauge-card
+                      config:
+                        borderBgColor: red
+                        borderColor: green
+                        item: SwitchbotMeterKuche_SwitchbotBattery
+                        labelText: Meter Küche
+                        max: 100
+                        min: 0
+                        type: semicircle
+                        valueTextColor: green
+              - component: oh-grid-col
+                config:
+                  width: "50"
+                slots:
+                  default:
+                    - component: oh-gauge-card
+                      config:
+                        borderBgColor: red
+                        borderColor: green
+                        item: ShellyMotion_Batterieladung
+                        labelText: Motion Bad OG
+                        max: 100
+                        min: 0
+                        type: semicircle
+                        valueTextColor: green
+              - component: oh-grid-col
+                config:
+                  width: "50"
+                slots:
+                  default:
+                    - component: oh-gauge-card
+                      config:
+                        borderBgColor: red
+                        borderColor: green
+                        item: XiaomiButton1_XiaomiBattery
+                        labelText: Button Bad OG
+                        max: 100
+                        min: 0
+                        type: semicircle
+                        valueTextColor: green
+              - component: oh-grid-col
+                config:
+                  width: "50"
+                slots:
+                  default:
+                    - component: oh-gauge-card
+                      config:
+                        borderBgColor: red
+                        borderColor: green
+                        item: BewegungsmelderFlur_NiedrigerBatteriestatus
+                        labelText: Motion Flur
+                        max: 100
+                        min: 0
+                        type: semicircle
+                        valueTextColor: green
+              - component: oh-grid-col
+                config:
+                  width: "50"
+                slots:
+                  default:
+                    - component: oh-gauge-card
+                      config:
+                        borderBgColor: red
+                        borderColor: green
+                        item: HeizungKuche_NiedrigerBatteriestatus
+                        labelText: Heizung Küche
+                        max: 100
+                        min: 0
+                        type: semicircle
+                        valueTextColor: green
+              - component: oh-grid-col
+                config:
+                  width: "50"
+                slots:
+                  default:
+                    - component: oh-gauge-card
+                      config:
+                        borderBgColor: red
+                        borderColor: green
+                        item: HeizungWohnzimmer_NiedrigerBatteriestatus
+                        labelText: Heizung Wohnzimmer
+                        max: 100
+                        min: 0
+                        type: semicircle
+                        valueTextColor: green
+              - component: oh-grid-col
+                config:
+                  width: "50"
+                slots:
+                  default:
+                    - component: oh-gauge-card
+                      config:
+                        borderBgColor: red
+                        borderColor: green
+                        item: SchlafzimmerHeizung_NiedrigerBatteriestatus
+                        labelText: Heizung Schlafzimmer
+                        max: 100
+                        min: 0
+                        type: semicircle
+                        valueTextColor: green
+              - component: oh-grid-col
+                config:
+                  width: "50"
+                slots:
+                  default:
+                    - component: oh-gauge-card
+                      config:
+                        borderBgColor: red
+                        borderColor: green
+                        item: HeizungBadOG_NiedrigerBatteriestatus
+                        labelText: Heizung BadOG
+                        max: 100
+                        min: 0
+                        type: semicircle
+                        valueTextColor: green
+  - component: oh-block
+    config:
+      title: Office
+    slots:
+      default:
+        - component: oh-grid-row
+          config: {}
+          slots:
+            default:
+              - component: oh-grid-col
+                config:
+                  width: "50"
+                slots:
+                  default:
+                    - component: oh-gauge-card
+                      config:
+                        borderBgColor: red
+                        borderColor: green
+                        item: AqaraButton_AqaraButtonBattery
+                        labelText: Button Büro
+                        max: 100
+                        min: 0
+                        type: semicircle
+                        valueTextColor: green
+              - component: oh-grid-col
+                config:
+                  width: "50"
+                slots:
+                  default:
+                    - component: oh-gauge-card
+                      config:
+                        borderBgColor: red
+                        borderColor: green
+                        item: AqaraTempSensor_AqaraTempSensorBattery
+                        labelText: Aqara Temp Büro
+                        max: 100
+                        min: 0
+                        type: semicircle
+                        valueTextColor: green
+              - component: oh-grid-col
+                config: {}
+                slots:
+                  default:
+                    - component: oh-gauge-card
+                      config:
+                        borderBgColor: red
+                        borderColor: green
+                        item: SwitchbotMeter_battery
+                        labelText: Switchbot Meter Büro
+                        max: 100
+                        min: 0
+                        type: semicircle
+                        valueTextColor: green
+              - component: oh-grid-col
+                config: {}
+                slots:
+                  default:
+                    - component: oh-gauge-card
+                      config:
+                        borderBgColor: red
+                        borderColor: green
+                        item: Switchbot_switchbotoneBattery
+                        labelText: Switchbot Drucker
+                        max: 100
+                        min: 0
+                        type: semicircle
+                        valueTextColor: green
+  - component: oh-block
+    config:
+      title: Werkstatt
+    slots:
+      default:
+        - component: oh-grid-row
+          config: {}
+          slots:
+            default:
+              - component: oh-grid-col
+                config:
+                  width: "50"
+                slots:
+                  default:
+                    - component: oh-gauge-card
+                      config:
+                        borderBgColor: red
+                        borderColor: green
+                        item: TuyaContact_TuyaContactBattery
+                        labelText: Türe Werkstatt
+                        max: 100
+                        min: 0
+                        type: semicircle
+                        valueTextColor: green
+              - component: oh-grid-col
+                config:
+                  width: "50"
+                slots:
+                  default:
+                    - component: oh-gauge-card
+                      config:
+                        borderBgColor: red
+                        borderColor: green
+                        item: TuyaTempSensor_TuyaTempSensorBatterie
+                        labelText: Temp Werkstatt
+                        max: 100
+                        min: 0
+                        type: semicircle
+                        valueTextColor: green
+              - component: oh-grid-col
+                config: {}
+                slots:
+                  default:
+                    - component: oh-gauge-card
+                      config:
+                        borderBgColor: red
+                        borderColor: green
+                        item: SwitchbotBotTest_switchbottwoBattery
+                        labelText: Switchbot Bot 2
+                        max: 100
+                        min: 0
+                        type: semicircle
+                        valueTextColor: green
+              - component: oh-grid-col
+                config: {}
+                slots:
+                  default:
+                    - component: oh-gauge-card
+                      config:
+                        borderBgColor: red
+                        borderColor: green
+                        item: TuyaPirSensor_TuyaPirSensorBattery
+                        labelText: Tuya Pir
+                        max: 100
+                        min: 0
+                        type: semicircle
+                        valueTextColor: green
+masonry: null
+grid: null
