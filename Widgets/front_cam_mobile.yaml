@@ -1,0 +1,78 @@
+uid: front_cam_mobile
+tags: []
+props:
+  parameters:
+    - description: Set the height of the Widget
+      label: Widget Height
+      name: cardheight
+      required: false
+      type: TEXT
+    - description: Set the url of the live stream here
+      label: Url live stream
+      name: urllivestream
+      required: false
+      type: TEXT
+    - description: rgba or HEX
+      label: Background Color
+      name: bgcolor
+      required: false
+      type: TEXT
+  parameterGroups: []
+timestamp: Nov 27, 2021, 4:03:46 PM
+component: f7-card
+config:
+  style:
+    --weather-card-border-radius: 20px
+    --weather-card-color: "=(!props.fontColor) ? '255,255,255' : props.fontColor"
+    --weather-card-text-color: rgba(var(--weather-card-color),1)
+    --weather-card-text-shadow-color: "=(!props.textShadowColor) ? '0,0,0' : props.textShadowColor"
+    --weather-font-size-large: 26px
+    --weather-font-size-normal: 18px
+    --weather-font-size-small: 16px
+    --weather-font-size-xlarge: 60px
+    --weather-font-size-xsmall: 14px
+    --weather-font-size-xxlarge: 70px
+    --weather-font-size-xxsmall: 12px
+    --weather-text-shadow-light: 2px 2px rgba(var(--weather-card-text-shadow-color),.15)
+    --weather-text-shadow-strong: 2px 2px rgba(var(--weather-card-text-shadow-color),.35)
+    --weather-text-transform-time: uppercase
+    -moz-user-select: none
+    -ms-user-select: none
+    -webkit-user-select: none
+    background: "=props.bgcolor ? props.bgcolor : ''"
+    border-radius: var(--weather-card-border-radius)
+    color: var(--weather-card-text-color)
+    height: '=props.cardheight ? props.cardheight : "250px"'
+    overflow: hidden
+    user-select: none
+slots:
+  default:
+    - component: f7-block
+      config:
+        class:
+          - no-padding
+          - no-margin
+        style:
+          height: 100%
+          left: 0
+          position: absolute
+          top: 0
+          width: 100%
+      slots:
+        default:
+          - component: f7-row
+            config:
+              style:
+                align-items: center
+                display: grid
+                grid-template-columns: 100%
+                height: 100%
+                justify-items: center
+                padding-left: 10px
+                padding-right: 10px
+            slots:
+              default:
+                - component: oh-image
+                  config:
+                    url: '=props.urllivestream ? props.urllivestream : "https://www.flaticon.com/svg/vstatic/svg/3964/3964391.svg?token=exp=1614265385~hmac=9a01747702e3f44a515d0d898b3f13fc"'
+                    width: 100%
