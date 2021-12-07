@@ -1,5 +1,5 @@
 config:
-  label: Page Basic
+  label: Basic Page
   sidebar: false
 blocks:
   - component: oh-block
