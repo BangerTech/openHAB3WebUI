@@ -1,0 +1,62 @@
+config:
+  label: Esszimmer
+  sidebar: false
+blocks:
+  - component: oh-block
+    config: {}
+    slots:
+      default:
+        - component: oh-grid-row
+          config: {}
+          slots:
+            default:
+              - component: oh-grid-col
+                config:
+                  width: "50"
+                slots:
+                  default:
+                    - component: widget:command-button-heater
+                      config:
+                        background: "#1c1c1d"
+                        cardwidth: "100"
+                        command1: OFF
+                        command2: ON
+                        headline1: Licht Aus
+                        headline2: Licht An
+                        item: EsszimmerLicht_4_STATE
+              - component: oh-grid-col
+                config:
+                  width: "50"
+                slots:
+                  default:
+                    - component: widget:command-button-heater
+                      config:
+                        background: "#1c1c1d"
+                        cardwidth: "100"
+                        command1: Off
+                        command2: ON
+                        headline1: Laterne Aus
+                        headline2: Laterne An
+                        item: IkeaSteckdose_IkeaSteckdose
+  - component: oh-block
+    config: {}
+    slots:
+      default:
+        - component: oh-grid-row
+          config: {}
+          slots:
+            default:
+              - component: oh-grid-col
+                config:
+                  large: "50"
+                  width: "100"
+                  xlarge: "50"
+                slots:
+                  default:
+                    - component: widget:Cell_Shutter_Card_1
+                      config:
+                        item: RollladenEsszimmer_4_LEVEL
+                        title: Rollo
+masonry: null
+grid: null
+canvas: null
