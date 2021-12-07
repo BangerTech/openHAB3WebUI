@@ -1,0 +1,48 @@
+config:
+  label: Treppe
+  sidebar: false
+blocks:
+  - component: oh-block
+    config: {}
+    slots:
+      default:
+        - component: oh-grid-row
+          config: {}
+          slots:
+            default:
+              - component: oh-grid-col
+                config: {}
+                slots:
+                  default:
+                    - component: widget:command-button-heater
+                      config:
+                        background: "#1c1c1d"
+                        cardwidth: "100"
+                        command1: OFF
+                        command2: ON
+                        headline1: Treppe Aus
+                        headline2: Treppe An
+                        headlinesize: 20px
+                        item: SonoffT3TreppeRechts_SonoffT3TreppeRechts
+              - component: oh-grid-col
+                config:
+                  width: "50"
+                slots:
+                  default:
+                    - component: widget:command-button-heater
+                      config:
+                        background: "#1c1c1d"
+                        cardwidth: "100"
+                        command1: OFF
+                        command2: ON
+                        headline1: Treppe L Aus
+                        headline2: Treppe L An
+                        headlinesize: 20px
+                        item: SonoffT4TreppeLinks_SonoffT4Links
+  - component: oh-block
+    config: {}
+    slots:
+      default: []
+masonry: null
+grid: null
+canvas: null
