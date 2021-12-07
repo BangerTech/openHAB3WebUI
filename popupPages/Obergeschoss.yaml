@@ -1,0 +1,78 @@
+config:
+  label: Obergeschoss
+  sidebar: false
+blocks:
+  - component: oh-block
+    config: {}
+    slots:
+      default:
+        - component: oh-grid-row
+          config: {}
+          slots:
+            default:
+              - component: oh-grid-col
+                config: {}
+                slots:
+                  default:
+                    - component: widget:command-button-heater
+                      config:
+                        background: "#1c1c1d"
+                        cardwidth: "100"
+                        command1: OFF
+                        command2: ON
+                        headline1: Schlafzimmer Aus
+                        headline2: Schlafzimmer An
+                        headlinesize: 20px
+                        item: Schlafzimmer_BL
+              - component: oh-grid-col
+                config: {}
+                slots:
+                  default:
+                    - component: widget:command-button-heater
+                      config:
+                        background: "#1c1c1d"
+                        cardwidth: "100"
+                        command1: OFF
+                        command2: ON
+                        headline1: Bad Aus
+                        headline2: Bad An
+                        headlinesize: 20px
+                        item: TapoBulb_LightOn
+  - component: oh-block
+    config: {}
+    slots:
+      default:
+        - component: oh-grid-row
+          config: {}
+          slots:
+            default:
+              - component: oh-grid-col
+                config:
+                  large: "50"
+                  width: "100"
+                  xlarge: "50"
+                slots:
+                  default:
+                    - component: widget:Cell_Temp_Card_1
+                      config:
+                        humidity_item: SwitchbotMeterTest_SwitchBotMeterTestHum
+                        icon: thermometer
+                        set_temp_item: HeizungKuche_SetPointTemperature
+                        temp_item: SwitchbotMeterTest_SwitchbotMeterTemp
+                        title: Temperatur
+              - component: oh-grid-col
+                config:
+                  large: "50"
+                  medium: "100"
+                  small: "100"
+                  width: "100"
+                  xlarge: "50"
+                  xsmall: "100"
+                slots:
+                  default:
+                    - component: widget:Cell_Shutter_Card_1
+                      config:
+                        item: RollladenKuche_4_LEVEL
+                        title: Rollo
+masonry: null
+grid: null
