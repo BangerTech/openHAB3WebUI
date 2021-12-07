@@ -1,0 +1,142 @@
+uid: Cell_Speaker_Card_1
+tags: []
+props:
+  parameters:
+    - description: Small title on top of the card
+      label: Title
+      name: title
+      required: false
+      type: TEXT
+    - description: Header big sized
+      label: Header
+      name: header
+      required: false
+      type: TEXT
+    - description: HEX or rgba
+      label: Background Color
+      name: bgcolor
+      required: false
+      type: TEXT
+    - context: item
+      description: Item to control
+      label: Item
+      name: item
+      required: false
+      type: TEXT
+    - context: item
+      description: Item for volume
+      label: Item
+      name: item_volume
+      required: false
+      type: TEXT
+    - context: item
+      description: Item for Coverbild
+      label: Item
+      name: item_cover
+      required: false
+      type: TEXT
+  parameterGroups: []
+timestamp: Nov 24, 2021, 8:50:44 PM
+component: f7-card
+config:
+  style:
+    background-color: "=props.bgcolor ? props.bgcolor : ''"
+    border-radius: var(--f7-card-expandable-border-radius)
+    box-shadow: 5px 5px 10px 1px rgba(0,0,0,0.1)
+    height: 120px
+    margin-left: 5px
+    margin-right: 5px
+    noShadow: false
+    padding: 0px
+slots:
+  content:
+    - component: f7-block
+      config:
+        style:
+          display: flex
+          flex-direction: row
+          left: 16px
+          position: absolute
+          top: -5px
+      slots:
+        default:
+          - component: f7-icon
+            config:
+              f7: "=items[props.item].state === 'PLAY' ? 'speaker_3' : 'speaker'"
+              size: 18
+              style:
+                margin-right: 10px
+          - component: Label
+            config:
+              style:
+                font-size: 12px
+                margin-top: 0px
+              text: "=props.title ? props.title : ''"
+    - component: f7-block
+      config:
+        style:
+          bottom: -15px
+          flex-direction: row
+          left: 16px
+          position: absolute
+      slots:
+        default:
+          - component: Label
+            config:
+              style:
+                font-size: 17px
+                font-weight: 600
+                margin-left: 0px
+                margin-top: 0px
+              text: "=props.header ? props.header : 'Set Props'"
+    - null
+    - component: oh-button
+      config:
+        action: command
+        actionCommand: PLAY
+        actionItem: =props.item
+        iconColor: "=items[props.item].state === 'PAUSE' ? themeOptions.dark === 'dark' ? 'white' : 'black' : 'red' "
+        iconF7: play_circle
+        iconSize: 35
+        style:
+          background: transparent
+          height: 35px
+          position: absolute
+          right: 10px
+          top: 12px
+    - component: oh-button
+      config:
+        action: command
+        actionCommand: PAUSE
+        actionItem: =props.item
+        iconColor: "=items[props.item].state === 'PLAY' ? themeOptions.dark === 'dark' ? 'white' : 'black' : 'red'"
+        iconF7: pause_circle
+        iconSize: 35
+        style:
+          background: transparent
+          height: 35px
+          position: absolute
+          right: 10px
+          top: 74px
+    - component: oh-slider
+      config:
+        item: =props.item_volume
+        max: 100
+        min: 0
+        style:
+          --f7-range-bar-border-radius: 8px
+          --f7-range-bar-size: 8px
+          --f7-range-knob-box-shadow: 0 2px 4px rgba(0, 0, 0, 0.3)
+          --f7-range-knob-size: 20px
+          bottom: -75px
+          left: 20px
+          position: absolute
+          width: calc(100% - 205px)
+    - component: oh-image
+      config:
+        item: =props.item_cover
+        style:
+          bottom: -78px
+          height: 100px
+          position: absolute
+          right: 70px
