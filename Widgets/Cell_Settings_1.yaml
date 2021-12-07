@@ -1,0 +1,86 @@
+uid: Cell_Settings_1
+tags: []
+props:
+  parameters:
+    - description: rgba or HEX
+      label: Background Color
+      name: bgcolor
+      required: false
+      type: TEXT
+    - description: page which will be opened as popup
+      label: Settingspage
+      name: page
+      required: false
+      type: TEXT
+    - context: item
+      description: Item Group of Battery Critical
+      label: Item Group
+      name: item_battery
+      required: false
+      type: TEXT
+  parameterGroups: []
+timestamp: Nov 27, 2021, 10:34:41 AM
+component: f7-card
+config:
+  style:
+    background-color: "=props.bgcolor ? props.bgcolor : ''"
+    border-radius: var(--f7-card-expandable-border-radius)
+    box-shadow: 5px 5px 10px 1px rgba(0,0,0,0.1)
+    class:
+      - padding: 0px
+    height: 150px
+    margin-left: 5px
+    margin-right: 5px
+    noShadow: false
+slots:
+  content:
+    - component: f7-block
+      config:
+        style:
+          display: flex
+          flex-direction: row
+          left: 16px
+          position: absolute
+          top: -5px
+      slots:
+        default:
+          - component: f7-chip
+            config:
+              iconColor: '=items[props.item_battery].state < 30 ? "red": "green"'
+              iconF7: battery_25
+              iconSize: 16
+              style:
+                --f7-chip-bg-color: rgba(255, 255, 255, 0)
+                font-weight: 700
+              text: =items[props.item_battery].state + '%'
+              textColor: '=items[props.item_battery].state < 30 ? "red": "green"'
+              visible: "=items[props.item_battery].state > 0 ? true : false"
+    - component: f7-block
+      config:
+        class:
+          - text-align-center
+        style:
+          left: 20px
+          position: absolute
+          top: 80px
+          width: 100%
+      slots:
+        default:
+          - component: f7-icon
+            config:
+              f7: battery_100
+              size: 60
+              style:
+                margin-right: 10px
+                margin-top: -10px
+                opacity: 0.6
+    - component: oh-link
+      config:
+        action: popup
+        actionModal: ='page:' + props.page
+        style:
+          height: 150px
+          left: 0px
+          position: absolute
+          top: 0px
+          width: 100%
