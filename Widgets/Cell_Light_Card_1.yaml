@@ -1,0 +1,113 @@
+uid: Cell_Light_Card_1
+tags:
+  - Schalter&Schieberegler
+props:
+  parameters:
+    - description: Small title on top of the card
+      label: Title
+      name: title
+      required: false
+      type: TEXT
+    - description: Header big sized
+      label: Header
+      name: header
+      required: false
+      type: TEXT
+    - description: Icon on top of the card (only f7 icons (without f7:))
+      label: Icon
+      name: icon
+      required: false
+      type: TEXT
+    - description: rgba or HEX
+      label: Background Color
+      name: bgcolor
+      required: false
+      type: TEXT
+    - context: item
+      description: Item to control on/off
+      label: Item
+      name: item_schalter
+      required: false
+      type: TEXT
+    - context: item
+      description: Item to control brightness
+      label: Item
+      name: item_brightness
+      required: false
+      type: TEXT
+  parameterGroups: []
+timestamp: Nov 25, 2021, 2:17:18 PM
+component: f7-card
+config:
+  style:
+    background-color: "=props.bgcolor ? props.bgcolor : ''"
+    border-radius: var(--f7-card-expandable-border-radius)
+    box-shadow: 5px 5px 10px 1px rgba(0,0,0,0.1)
+    height: 120px
+    margin-left: 5px
+    margin-right: 5px
+    noShadow: false
+    padding: 0px
+slots:
+  content:
+    - component: f7-block
+      config:
+        style:
+          display: flex
+          flex-direction: row
+          left: 16px
+          position: absolute
+          top: -5px
+      slots:
+        default:
+          - component: f7-icon
+            config:
+              f7: =props.icon
+              size: 18
+              style:
+                margin-right: 10px
+              visible: "=props.icon ? true : false"
+          - component: Label
+            config:
+              style:
+                font-size: 12px
+                margin-top: 0px
+              text: "=props.title ? props.title : ''"
+    - component: f7-block
+      config:
+        style:
+          bottom: -15px
+          flex-direction: row
+          left: 16px
+          position: absolute
+      slots:
+        default:
+          - component: Label
+            config:
+              style:
+                font-size: 17px
+                font-weight: 600
+                margin-left: 0px
+                margin-top: 0px
+              text: "=props.header ? props.header : 'Set Props'"
+    - component: oh-slider
+      config:
+        item: =props.item_brightness
+        max: 100
+        min: 0
+        style:
+          --f7-range-bar-border-radius: 8px
+          --f7-range-bar-size: 8px
+          --f7-range-knob-box-shadow: 0 2px 4px rgba(0, 0, 0, 0.3)
+          --f7-range-knob-size: 20px
+          bottom: -75px
+          left: 20px
+          position: absolute
+          width: calc(100% - 40px)
+    - component: oh-toggle
+      config:
+        item: =props.item_schalter
+        style:
+          position: absolute
+          right: 20px
+          top: 15px
