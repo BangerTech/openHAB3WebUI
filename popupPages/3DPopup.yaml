@@ -1,0 +1,51 @@
+config:
+  label: 3DPopup
+  sidebar: false
+blocks:
+  - component: oh-block
+    config: {}
+    slots:
+      default:
+        - component: oh-grid-row
+          config: {}
+          slots:
+            default:
+              - component: oh-grid-col
+                config:
+                  width: "100"
+                slots:
+                  default:
+                    - component: widget:3d-druck-mobile
+                      config:
+                        bedtempitem: OctoprintB1_B1BedTemp
+                        hotendtempitem: OctoprintB1_B1HotendTemp
+                        iconimage1: tooltemp
+                        iconimage2: bedtemp
+                        lightitem: BiquB1LED_Eingeschaltet
+                        poweritem: SonoffBiquB1_SonoffB1
+                        printername: Biqu B1
+                        progressitem: OctoprintB1_B1Progress
+                        timeleftitem: OctoprintB1_B1PrintTimeLeft
+                        urllivestream: http://192.168.2.124/webcam/?action=stream
+        - component: oh-grid-row
+          config: {}
+          slots:
+            default:
+              - component: oh-grid-col
+                config:
+                  width: "100"
+                slots:
+                  default:
+                    - component: widget:3d-druck-mobile
+                      config:
+                        bedtempitem: OctoprintChiron_ChironBedTemp
+                        hotendtempitem: OctoprintChiron_ChironHotendTemp
+                        iconimage1: tooltemp
+                        iconimage2: bedtemp
+                        poweritem: SonoffChiron_SonoffChiron
+                        printername: Chiron
+                        progressitem: OctoprintChiron_ChironProgress
+                        timeleftitem: OctoprintChiron_ChironPrinttimeleft
+masonry: null
+grid: null
+canvas: null
