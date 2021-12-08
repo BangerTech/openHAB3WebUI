@@ -2,6 +2,8 @@
 
 One of my favorite WebUI Page for openHAB3. It was initially created by Mike P and customized by Me. 
 
+Buy me a Beer! https://www.buymeacoffee.com/BangerTECH
+
 
 -Desktop-
 
