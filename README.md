@@ -2,7 +2,10 @@
 
 One of my favorite WebUI Page for openHAB3. It was initially created by Mike P and customized by Me. 
 
-Buy me a Beer! https://www.buymeacoffee.com/BangerTECH
+<a href="https://www.buymeacoffee.com/BangerTECH" target="_blank"><img src="https://cdn.buymeacoffee.com/buttons/default-orange.png" alt="Buy Me A Coffee" height="41" width="174"></a>
+
+
+<a href="https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=FD26FHKRWS3US" target="_blank"><img src="https://pics.paypal.com/00/s/N2EwMzk4NzUtOTQ4Yy00Yjc4LWIwYmUtMTA3MWExNWIzYzMz/file.PNG" alt="Buy Me A Coffee" height="61" width="174"></a>
 
 
 -Desktop-
