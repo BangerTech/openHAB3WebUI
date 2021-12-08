@@ -1,4 +1,7 @@
 # openHAB3WebUI
+
+One of my favorite WebUI Page for openHAB3. It was initially created by Mike P and customized by Me. 
+
 -Desktop-
 
 <img width="800" alt="Screenshot 2021-12-07 123630" src="https://user-images.githubusercontent.com/73241309/145036548-1bef3653-e59c-413f-bbd8-bf48fde1dade.png">
