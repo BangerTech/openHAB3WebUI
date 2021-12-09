@@ -15,7 +15,7 @@ blocks:
                   width: "100"
                 slots:
                   default:
-                    - component: widget:3d-druck-mobile
+                    - component: widget:3D-Print-Mobile
                       config:
                         bedtempitem: OctoprintB1_B1BedTemp
                         hotendtempitem: OctoprintB1_B1HotendTemp
@@ -36,7 +36,7 @@ blocks:
                   width: "100"
                 slots:
                   default:
-                    - component: widget:3d-druck-mobile
+                    - component: widget:3D-Print-Mobile
                       config:
                         bedtempitem: OctoprintChiron_ChironBedTemp
                         hotendtempitem: OctoprintChiron_ChironHotendTemp
