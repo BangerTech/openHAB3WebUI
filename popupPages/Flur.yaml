@@ -15,7 +15,7 @@ blocks:
                   width: "50"
                 slots:
                   default:
-                    - component: widget:command-button-heater
+                    - component: widget:Command_Button
                       config:
                         background: "#1c1c1d"
                         cardwidth: "100"
@@ -34,7 +34,7 @@ blocks:
                   width: "50"
                 slots:
                   default:
-                    - component: widget:command-button-heater
+                    - component: widget:Command_Button
                       config:
                         background: "#1c1c1d"
                         cardwidth: "100"
@@ -48,15 +48,6 @@ blocks:
                         item_brightness: LichtKuche_Helligkeit
                         item_schalter: SonoffSpeise_SonoffSpeise
                         title: Licht
-              - component: oh-grid-col
-                config: {}
-                slots:
-                  default:
-                    - component: widget:Cell_Temp_Card_3
-                      config:
-                        humidity_item: SonoffP3Kuhlschrank_SonoffP3Tagesverbr
-                        lightlevel_item: SonoffP3Kuhlschrank_SonoffP3Aktuell
-                        temp_item: KuehlschrankKostenHeute
   - component: oh-block
     config: {}
     slots:
