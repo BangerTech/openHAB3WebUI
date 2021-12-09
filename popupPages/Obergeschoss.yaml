@@ -14,7 +14,7 @@ blocks:
                 config: {}
                 slots:
                   default:
-                    - component: widget:command-button-heater
+                    - component: widget:Command_Button
                       config:
                         background: "#1c1c1d"
                         cardwidth: "100"
@@ -28,7 +28,7 @@ blocks:
                 config: {}
                 slots:
                   default:
-                    - component: widget:command-button-heater
+                    - component: widget:Command_Button
                       config:
                         background: "#1c1c1d"
                         cardwidth: "100"
