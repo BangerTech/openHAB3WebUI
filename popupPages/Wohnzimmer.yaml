@@ -1,5 +1,5 @@
 config:
-  label: Zimmer Wohnzimmer
+  label: Wohnzimmer
   sidebar: false
 blocks:
   - component: oh-block
