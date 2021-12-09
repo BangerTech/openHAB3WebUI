@@ -1,0 +1,3003 @@
+{
+  "home": {
+    "class": "org.openhab.core.ui.components.RootUIComponent",
+    "value": {
+      "uid": "home",
+      "tags": [],
+      "props": {
+        "parameters": [],
+        "parameterGroups": []
+      },
+      "timestamp": "Nov 27, 2021, 1:28:34 PM",
+      "component": "oh-home-page",
+      "config": {
+        "allowChatInputTo": [
+          "role:user"
+        ],
+        "label": "Home Page"
+      },
+      "slots": {
+        "equipment": [
+          {
+            "component": "oh-equipment-tab",
+            "config": {
+              "cardOrder": [
+                "Blinds",
+                "CleaningRobot",
+                "Freezer",
+                "LightStripe",
+                "Lightbulb",
+                "Equipment",
+                "MotionDetector",
+                "PowerOutlet",
+                "RadiatorControl",
+                "Sensor",
+                "Television",
+                "WallSwitch",
+                "WeatherService",
+                "RemoteControl"
+              ]
+            },
+            "slots": {
+              "Blinds": [
+                {
+                  "component": "oh-equipment-card",
+                  "config": {
+                    "backgroundImage": "https://i.pinimg.com/originals/4e/c8/7e/4ec87e359a182687dc59db620f10e2f3.png"
+                  }
+                }
+              ],
+              "CleaningRobot": [
+                {
+                  "component": "oh-equipment-card",
+                  "config": {
+                    "backgroundImage": "https://blueforcer.de/wp-content/uploads/2020/01/Download.jpg",
+                    "title": "3D Drucker"
+                  }
+                }
+              ],
+              "Freezer": [
+                {
+                  "component": "oh-equipment-card",
+                  "config": {
+                    "backgroundImage": "https://i.pinimg.com/originals/90/19/5a/90195a2fafa83b782c6ecb0d7bc69a52.jpg"
+                  }
+                }
+              ],
+              "LightStripe": [
+                {
+                  "component": "oh-equipment-card",
+                  "config": {
+                    "backgroundImage": "https://smartapfel.de/wp-content/uploads/2020/04/42E75B13-E5D3-4B65-8A1B-F718228B86B3.jpeg"
+                  }
+                }
+              ],
+              "Lightbulb": [
+                {
+                  "component": "oh-equipment-card",
+                  "config": {
+                    "backgroundImage": "https://readersdigest.de/media/zoo/images/gluehlampen_mit_led_haengen_von_der_decke_e48845dda725e73f8a66ebe3e4af9589.jpg"
+                  }
+                }
+              ],
+              "MotionDetector": [
+                {
+                  "component": "oh-equipment-card",
+                  "config": {
+                    "backgroundImage": "https://www.safewise.com/app/uploads/2019/10/featured-beginners-guide-to-motion-sensors.jpg"
+                  }
+                }
+              ],
+              "PowerOutlet": [
+                {
+                  "component": "oh-equipment-card",
+                  "config": {
+                    "backgroundImage": "https://images.obi.de/product/DE/1500x1500/819882_1.jpg"
+                  }
+                }
+              ],
+              "RadiatorControl": [
+                {
+                  "component": "oh-equipment-card",
+                  "config": {
+                    "backgroundImage": "https://beesleys-images.s3.eu-west-2.amazonaws.com/product-images/1000-1000/k2-450x1200mm-compact-savanna-i-radiator-5613-btu-ref-245154.jpg"
+                  }
+                }
+              ],
+              "Sensor": [
+                {
+                  "component": "oh-equipment-card",
+                  "config": {
+                    "backgroundImage": "https://manuals.fibaro.com/wp-content/uploads/2017/02/ms_icon.png"
+                  }
+                }
+              ],
+              "Television": [
+                {
+                  "component": "oh-equipment-card",
+                  "config": {
+                    "backgroundImage": "https://www.homeandsmart.de/var/site/storage/images/_aliases/fixed_col_8/8/8/9/1/401988-1-ger-DE/philips-android-tv.jpg"
+                  }
+                }
+              ],
+              "WallSwitch": [
+                {
+                  "component": "oh-equipment-card",
+                  "config": {
+                    "backgroundImage": "https://cdn.nedis.com/images/products_high_res/RFWS10WT_P40.JPG"
+                  }
+                }
+              ],
+              "WeatherService": [
+                {
+                  "component": "oh-equipment-card",
+                  "config": {
+                    "backgroundImage": "https://xwidget.com/xwidget/uploads/180429/4-1P42Z91425P7.jpg"
+                  }
+                }
+              ]
+            }
+          }
+        ],
+        "locations": [
+          {
+            "component": "oh-locations-tab",
+            "config": {
+              "cardOrder": [
+                "Buero",
+                "Werkstatt",
+                "Flur",
+                "Kueche",
+                "Esszimmer",
+                "Wohnzimmer",
+                "GamingSetup",
+                "Treppe",
+                "Bad_OG",
+                "Schlafzimmer",
+                "Kalender",
+                "WetterOneCall",
+                "Home",
+                "Workshop",
+                "Outdoor",
+                "WiFiDevices",
+                "Camera",
+                "TestDevices",
+                "AlleBatterien",
+                "AlleLichter1",
+                "GeraetePower",
+                "HauptSchalter"
+              ],
+              "excludedCards": [
+                "Outdoor",
+                "TestDevices",
+                "AlleBatterien",
+                "AlleLichter1",
+                "GeraetePower",
+                "HauptSchalter",
+                "HomematicHeatBatterie"
+              ]
+            },
+            "slots": {
+              "Bad_OG": [
+                {
+                  "component": "oh-location-card",
+                  "config": {
+                    "backgroundImage": "http://holzmitdesign.de/wp-content/uploads/2018/08/20180130_163136.jpg"
+                  }
+                }
+              ],
+              "Buero": [
+                {
+                  "component": "oh-location-card",
+                  "config": {
+                    "backgroundImage": "http://cdn.home-designing.com/wp-content/uploads/2020/09/botanical-home-workspace.jpg",
+                    "badges": [
+                      "lights",
+                      "windows",
+                      "doors",
+                      "garagedoors",
+                      "blinds",
+                      "presence",
+                      "lock",
+                      "climate",
+                      "screens",
+                      "projectors",
+                      "speakers",
+                      "temperature",
+                      "humidity",
+                      "luminance"
+                    ]
+                  }
+                }
+              ],
+              "Camera": [
+                {
+                  "component": "oh-location-card",
+                  "config": {
+                    "backgroundImage": "https://bilder.t-online.de/b/89/74/91/04/id_89749104/920/tid_da/sicher-und-schnell-einsatzbereit-eine-ueberwachungskamera-fuer-den-aussenbereich-.jpg"
+                  }
+                }
+              ],
+              "Esszimmer": [
+                {
+                  "component": "oh-location-card",
+                  "config": {
+                    "backgroundImage": "https://heldasite.files.wordpress.com/2017/01/cream-hang-lamp-contemporary-wallpaper-designs-with-cream-sofas-and-black-dining-table-on-the-cream-floor-can-add-the-beauty-inside-room-x.jpg"
+                  }
+                }
+              ],
+              "Flur": [
+                {
+                  "component": "oh-location-card",
+                  "config": {
+                    "backgroundImage": "https://i.pinimg.com/736x/4d/3c/35/4d3c352d7ff851af284764ae6f812717.jpg",
+                    "invertText": true
+                  }
+                }
+              ],
+              "GamingSetup": [
+                {
+                  "component": "oh-location-card",
+                  "config": {
+                    "backgroundImage": "https://i.pinimg.com/originals/20/f5/35/20f535c616bbe807a1166e5661b396fd.jpg"
+                  }
+                }
+              ],
+              "Kueche": [
+                {
+                  "component": "oh-location-card",
+                  "config": {
+                    "backgroundImage": "https://img2.goodfon.com/wallpaper/nbig/4/29/kitchen-interior-minimal.jpg",
+                    "badges": [
+                      "lights",
+                      "windows",
+                      "doors",
+                      "garagedoors",
+                      "blinds",
+                      "presence",
+                      "lock",
+                      "climate",
+                      "screens",
+                      "projectors",
+                      "speakers",
+                      "temperature",
+                      "humidity",
+                      "luminance"
+                    ],
+                    "invertText": true
+                  }
+                }
+              ],
+              "Schlafzimmer": [
+                {
+                  "component": "oh-location-card",
+                  "config": {
+                    "backgroundImage": "https://i.pinimg.com/originals/21/0a/4b/210a4b94a6f49453e17f17c301631317.jpg",
+                    "invertText": true
+                  }
+                }
+              ],
+              "Test": [
+                {
+                  "component": "oh-location-card",
+                  "config": {
+                    "backgroundImage": "https://www.crossmedia-it.com/wp-content/uploads/2019/07/cmIT_Server-mieten-vs-kaufen.jpg",
+                    "invertText": true
+                  }
+                }
+              ],
+              "TestDevices": [
+                {
+                  "component": "oh-location-card",
+                  "config": {
+                    "backgroundImage": "https://www.spselectronic.com/fileadmin/_processed_/1/c/csm_Pruefplatz-Baujahr-1986_01d604663b.jpg"
+                  }
+                }
+              ],
+              "Treppe": [
+                {
+                  "component": "oh-location-card",
+                  "config": {
+                    "backgroundImage": "https://www.spax.com/de/assets/img/projekte/indoor/header-projekte-treppe.jpg"
+                  }
+                }
+              ],
+              "Werkstatt": [
+                {
+                  "component": "oh-location-card",
+                  "config": {
+                    "backgroundImage": "https://i.pinimg.com/originals/45/f9/fd/45f9fdb588b151657aa5164b881fcf90.jpg",
+                    "badges": [
+                      "lights",
+                      "doors",
+                      "temperature",
+                      "humidity",
+                      "luminance"
+                    ],
+                    "invertText": false
+                  }
+                }
+              ],
+              "WiFiDevices": [
+                {
+                  "component": "oh-location-card",
+                  "config": {
+                    "backgroundImage": "https://images.idgesg.net/images/article/2017/10/wireless_network_internet_of_things_iot_thinkstock_853701554_3x2-100740688-large.jpg"
+                  }
+                }
+              ],
+              "Wohnzimmer": [
+                {
+                  "component": "oh-location-card",
+                  "config": {
+                    "backgroundImage": "http://192.168.2.193:8080/static/test.jpg",
+                    "invertText": false
+                  }
+                }
+              ],
+              "pagii": [
+                {
+                  "component": "oh-location-card",
+                  "config": {
+                    "title": "Pagi"
+                  }
+                }
+              ]
+            }
+          }
+        ],
+        "properties": [
+          {
+            "component": "oh-properties-tab",
+            "config": {
+              "cardOrder": [
+                "ColorTemperature",
+                "Current",
+                "Humidity",
+                "Level",
+                "Light",
+                "Power",
+                "Presence",
+                "Temperature",
+                "Ultraviolet",
+                "Voltage",
+                "SoundVolume"
+              ]
+            },
+            "slots": {
+              "ColorTemperature": [
+                {
+                  "component": "oh-property-card",
+                  "config": {
+                    "backgroundImage": "https://cf.shopee.tw/file/05b0d49d33a2b30088bd4163be66f388"
+                  }
+                }
+              ],
+              "Current": [
+                {
+                  "component": "oh-property-card",
+                  "config": {
+                    "backgroundImage": "https://www.warensortiment.de/messtechnik/regeltechnik/images/einbau-amperemeter-1-240.jpg"
+                  }
+                }
+              ],
+              "Level": [
+                {
+                  "component": "oh-property-card",
+                  "config": {
+                    "backgroundImage": "https://www.fensterversand.com/fileadmin/images/de/rollladen/raffstoren-alternative-rolladen.jpg",
+                    "title": "Rollläden"
+                  }
+                }
+              ],
+              "Light": [
+                {
+                  "component": "oh-property-card",
+                  "config": {
+                    "backgroundImage": "https://readersdigest.de/media/zoo/images/gluehlampen_mit_led_haengen_von_der_decke_e48845dda725e73f8a66ebe3e4af9589.jpg"
+                  }
+                }
+              ],
+              "Power": [
+                {
+                  "component": "oh-property-card",
+                  "config": {
+                    "backgroundImage": "https://www.kesselheld.de/content/uploads/2017/05/kilowattstunde.jpg"
+                  }
+                }
+              ],
+              "SoundVolume": [
+                {
+                  "component": "oh-property-card",
+                  "config": {}
+                }
+              ],
+              "Temperature": [
+                {
+                  "component": "oh-property-card",
+                  "config": {
+                    "backgroundImage": "https://www.zm-online.de/fileadmin/_processed_/1/d/csm_Temperatur_PS_12bcd4c911.jpg"
+                  }
+                }
+              ],
+              "Voltage": [
+                {
+                  "component": "oh-property-card",
+                  "config": {
+                    "backgroundImage": "https://www.warensortiment.de/technische-daten/images/voltmeter-pce-dm-5-anwendung2-250.jpg"
+                  }
+                }
+              ]
+            }
+          }
+        ]
+      }
+    }
+  },
+  "overview": {
+    "class": "org.openhab.core.ui.components.RootUIComponent",
+    "value": {
+      "uid": "overview",
+      "tags": [],
+      "props": {
+        "parameters": [],
+        "parameterGroups": []
+      },
+      "timestamp": "Dec 7, 2021, 5:53:20 PM",
+      "component": "oh-layout-page",
+      "config": {
+        "label": "Übersicht",
+        "sidebar": true
+      },
+      "slots": {}
+    }
+  },
+  "page_019befbdfd": {
+    "class": "org.openhab.core.ui.components.RootUIComponent",
+    "value": {
+      "uid": "page_019befbdfd",
+      "tags": [],
+      "props": {
+        "parameters": [],
+        "parameterGroups": []
+      },
+      "timestamp": "Dec 9, 2021, 1:34:10 PM",
+      "component": "oh-layout-page",
+      "config": {
+        "label": "Netzwerk Popup",
+        "sidebar": false
+      },
+      "slots": {
+        "default": [
+          {
+            "component": "oh-block",
+            "config": {},
+            "slots": {
+              "default": [
+                {
+                  "component": "oh-grid-row",
+                  "config": {},
+                  "slots": {
+                    "default": [
+                      {
+                        "component": "oh-grid-col",
+                        "config": {
+                          "width": "100"
+                        },
+                        "slots": {
+                          "default": [
+                            {
+                              "component": "widget:Connection_Card_3",
+                              "config": {
+                                "cardheight": "300px",
+                                "headline": "DSL Devices",
+                                "item1": "iPhoneSentshuas_MACOnline0019999CB6C2",
+                                "item2": "NetworkDevices_MACOnline34EA34B52151",
+                                "item3": "iPhoneSentshuas_MACOnline8ED4E3D1E8F0",
+                                "item4": "iPhoneLena_MACOnline0622A480AD82",
+                                "itemname1": "Server",
+                                "itemname2": "Broadlink",
+                                "itemname3": "iPhone",
+                                "itemname4": "iPhone Lena"
+                              }
+                            }
+                          ]
+                        }
+                      }
+                    ]
+                  }
+                }
+              ]
+            }
+          }
+        ]
+      }
+    }
+  },
+  "page_065ac3d806": {
+    "class": "org.openhab.core.ui.components.RootUIComponent",
+    "value": {
+      "uid": "page_065ac3d806",
+      "tags": [],
+      "props": {
+        "parameters": [],
+        "parameterGroups": []
+      },
+      "timestamp": "Dec 9, 2021, 1:17:03 PM",
+      "component": "oh-layout-page",
+      "config": {
+        "label": "Flur",
+        "sidebar": false
+      },
+      "slots": {
+        "default": [
+          {
+            "component": "oh-block",
+            "config": {},
+            "slots": {
+              "default": [
+                {
+                  "component": "oh-grid-row",
+                  "config": {},
+                  "slots": {
+                    "default": [
+                      {
+                        "component": "oh-grid-col",
+                        "config": {
+                          "width": "50"
+                        },
+                        "slots": {
+                          "default": [
+                            {
+                              "component": "widget:Command_Button",
+                              "config": {
+                                "background": "#1c1c1d",
+                                "cardwidth": "100",
+                                "command1": "OFF",
+                                "command2": "ON",
+                                "header": "Gang",
+                                "headline1": "Flur Licht Aus",
+                                "headline2": "Flur Licht An",
+                                "icon": "lightbulb",
+                                "item": "FlurLicht_4_STATE",
+                                "item_brightness": "LichtWohnzimmerGang_Helligkeit",
+                                "item_schalter": "FlurLicht_4_STATE",
+                                "title": "Licht"
+                              }
+                            }
+                          ]
+                        }
+                      },
+                      {
+                        "component": "oh-grid-col",
+                        "config": {
+                          "width": "50"
+                        },
+                        "slots": {
+                          "default": [
+                            {
+                              "component": "widget:Command_Button",
+                              "config": {
+                                "background": "#1c1c1d",
+                                "cardwidth": "100",
+                                "command1": "OFF",
+                                "command2": "ON",
+                                "header": "Speise",
+                                "headline1": "Speise Aus",
+                                "headline2": "Speise An",
+                                "icon": "lightbulb",
+                                "item": "SonoffSpeise_SonoffSpeise",
+                                "item_brightness": "LichtKuche_Helligkeit",
+                                "item_schalter": "SonoffSpeise_SonoffSpeise",
+                                "title": "Licht"
+                              }
+                            }
+                          ]
+                        }
+                      }
+                    ]
+                  }
+                }
+              ]
+            }
+          },
+          {
+            "component": "oh-block",
+            "config": {},
+            "slots": {
+              "default": [
+                {
+                  "component": "oh-grid-row",
+                  "config": {},
+                  "slots": {
+                    "default": [
+                      {
+                        "component": "oh-grid-col",
+                        "config": {
+                          "large": "50",
+                          "width": "100",
+                          "xlarge": "50"
+                        },
+                        "slots": {
+                          "default": [
+                            {
+                              "component": "widget:Cell_Temp_Card_1",
+                              "config": {
+                                "heating_item": "SonoffP3Kuhlschrank_SonoffP3Tagesverbr",
+                                "humidity_item": "SonoffP3Kuhlschrank_SonoffP3Aktuell",
+                                "icon": "power",
+                                "temp_item": "KuehlschrankKostenGesamt",
+                                "title": "Kühlschrank"
+                              }
+                            }
+                          ]
+                        }
+                      }
+                    ]
+                  }
+                }
+              ]
+            }
+          }
+        ]
+      }
+    }
+  },
+  "page_2c4492bf0a": {
+    "class": "org.openhab.core.ui.components.RootUIComponent",
+    "value": {
+      "uid": "page_2c4492bf0a",
+      "tags": [],
+      "props": {
+        "parameters": [],
+        "parameterGroups": []
+      },
+      "timestamp": "Dec 9, 2021, 1:06:07 PM",
+      "component": "oh-layout-page",
+      "config": {
+        "label": "3D Drucker Popup",
+        "sidebar": false
+      },
+      "slots": {
+        "default": [
+          {
+            "component": "oh-block",
+            "config": {},
+            "slots": {
+              "default": [
+                {
+                  "component": "oh-grid-row",
+                  "config": {},
+                  "slots": {
+                    "default": [
+                      {
+                        "component": "oh-grid-col",
+                        "config": {
+                          "width": "100"
+                        },
+                        "slots": {
+                          "default": [
+                            {
+                              "component": "widget:3D-Print-Mobile",
+                              "config": {
+                                "bedtempitem": "OctoprintB1_B1BedTemp",
+                                "hotendtempitem": "OctoprintB1_B1HotendTemp",
+                                "iconimage1": "tooltemp",
+                                "iconimage2": "bedtemp",
+                                "lightitem": "BiquB1LED_Eingeschaltet",
+                                "poweritem": "SonoffBiquB1_SonoffB1",
+                                "printername": "Biqu B1",
+                                "progressitem": "OctoprintB1_B1Progress",
+                                "timeleftitem": "OctoprintB1_B1PrintTimeLeft",
+                                "urllivestream": "http://192.168.2.124/webcam/?action\u003dstream"
+                              }
+                            }
+                          ]
+                        }
+                      }
+                    ]
+                  }
+                },
+                {
+                  "component": "oh-grid-row",
+                  "config": {},
+                  "slots": {
+                    "default": [
+                      {
+                        "component": "oh-grid-col",
+                        "config": {
+                          "width": "100"
+                        },
+                        "slots": {
+                          "default": [
+                            {
+                              "component": "widget:3D-Print-Mobile",
+                              "config": {
+                                "bedtempitem": "OctoprintChiron_ChironBedTemp",
+                                "hotendtempitem": "OctoprintChiron_ChironHotendTemp",
+                                "iconimage1": "tooltemp",
+                                "iconimage2": "bedtemp",
+                                "poweritem": "SonoffChiron_SonoffChiron",
+                                "printername": "Chiron",
+                                "progressitem": "OctoprintChiron_ChironProgress",
+                                "timeleftitem": "OctoprintChiron_ChironPrinttimeleft"
+                              }
+                            }
+                          ]
+                        }
+                      }
+                    ]
+                  }
+                }
+              ]
+            }
+          }
+        ]
+      }
+    }
+  },
+  "page_45d1826f04": {
+    "class": "org.openhab.core.ui.components.RootUIComponent",
+    "value": {
+      "uid": "page_45d1826f04",
+      "tags": [],
+      "props": {
+        "parameters": [],
+        "parameterGroups": []
+      },
+      "timestamp": "Dec 9, 2021, 1:30:40 PM",
+      "component": "oh-layout-page",
+      "config": {
+        "label": "MainPage",
+        "sidebar": true
+      },
+      "slots": {
+        "default": [
+          {
+            "component": "oh-block",
+            "config": {},
+            "slots": {
+              "default": [
+                {
+                  "component": "oh-grid-row",
+                  "config": {},
+                  "slots": {
+                    "default": [
+                      {
+                        "component": "oh-grid-col",
+                        "config": {
+                          "large": "40",
+                          "medium": "40",
+                          "small": "100",
+                          "width": "100",
+                          "xlarge": "40",
+                          "xsmall": "100"
+                        },
+                        "slots": {
+                          "default": [
+                            {
+                              "component": "widget:Card_Weather_Small_1",
+                              "config": {
+                                "command": "5",
+                                "dateFormat": true,
+                                "header": "Alles aus",
+                                "icon": "zzz",
+                                "item": "Szene",
+                                "itemPrefix": "OneCallAPIweatherandforecast_",
+                                "locationTitle": "Loiching",
+                                "sunIndicator": true,
+                                "title": "Wetter"
+                              }
+                            }
+                          ]
+                        }
+                      },
+                      {
+                        "component": "oh-grid-col",
+                        "config": {
+                          "large": "40",
+                          "medium": "40",
+                          "small": "100",
+                          "width": "100",
+                          "xlarge": "40",
+                          "xsmall": "100"
+                        },
+                        "slots": {
+                          "default": [
+                            {
+                              "component": "widget:front_cam_mobile",
+                              "config": {
+                                "cardheight": "200px",
+                                "urllivestream": "http://192.168.2.193:8080/ipcamera/BulletCamera/ipcamera.mjpeg"
+                              }
+                            }
+                          ]
+                        }
+                      }
+                    ]
+                  }
+                }
+              ]
+            }
+          },
+          {
+            "component": "oh-block",
+            "config": {},
+            "slots": {
+              "default": [
+                {
+                  "component": "oh-grid-row",
+                  "config": {},
+                  "slots": {
+                    "default": [
+                      {
+                        "component": "oh-grid-col",
+                        "config": {
+                          "large": "20",
+                          "medium": "33",
+                          "width": "50",
+                          "xlarge": "20"
+                        },
+                        "slots": {
+                          "default": [
+                            {
+                              "component": "widget:Cell_Card_1",
+                              "config": {
+                                "bgcolor": "rgba(0, 143, 170, 0.5)",
+                                "command": "TOGGLE",
+                                "header": "TV Mode",
+                                "icon": "tv",
+                                "item": "TVModeLicht",
+                                "title": "Aktiviere Szene"
+                              }
+                            }
+                          ]
+                        }
+                      },
+                      {
+                        "component": "oh-grid-col",
+                        "config": {
+                          "large": "20",
+                          "medium": "33",
+                          "width": "50",
+                          "xlarge": "20"
+                        },
+                        "slots": {
+                          "default": [
+                            {
+                              "component": "widget:Cell_Card_1",
+                              "config": {
+                                "bgcolor": "rgba(244, 162, 97, 0.5)",
+                                "command": "TOGGLE",
+                                "header": "Ambiente",
+                                "icon": "lightbulb",
+                                "item": "AmbientLight",
+                                "title": "Aktiviere Szene"
+                              }
+                            }
+                          ]
+                        }
+                      },
+                      {
+                        "component": "oh-grid-col",
+                        "config": {
+                          "large": "20",
+                          "medium": "33",
+                          "width": "50",
+                          "xlarge": "20"
+                        },
+                        "slots": {
+                          "default": [
+                            {
+                              "component": "widget:Cell_Card_1",
+                              "config": {
+                                "bgcolor": "rgba(231, 111, 81, 0.5)",
+                                "command": "TOGGLE",
+                                "header": "Büro Studio",
+                                "icon": "camera",
+                                "item": "StudioAll",
+                                "title": "Aktiviere Szene"
+                              }
+                            }
+                          ]
+                        }
+                      },
+                      {
+                        "component": "oh-grid-col",
+                        "config": {
+                          "large": "20",
+                          "medium": "33",
+                          "width": "50",
+                          "xlarge": "20"
+                        },
+                        "slots": {
+                          "default": [
+                            {
+                              "component": "widget:Cell_Card_1",
+                              "config": {
+                                "bgcolor": "rgba(38, 70, 83, 0.5)",
+                                "command": "OFF",
+                                "header": "Alle Lichter aus",
+                                "icon": "moon_zzz",
+                                "item": "AlleLichter1",
+                                "title": "Aktiviere Szene"
+                              }
+                            }
+                          ]
+                        }
+                      },
+                      {
+                        "component": "oh-grid-col",
+                        "config": {
+                          "large": "20",
+                          "medium": "33",
+                          "width": "50",
+                          "xlarge": "20"
+                        },
+                        "slots": {
+                          "default": [
+                            {
+                              "component": "widget:Cell_Card_1",
+                              "config": {
+                                "bgcolor": "rgba(2, 48, 71, 0.8)",
+                                "command": "OFF",
+                                "header": "Alles aus",
+                                "icon": "zzz",
+                                "item": "HauptSchalter",
+                                "title": "Hauptschalter"
+                              }
+                            }
+                          ]
+                        }
+                      }
+                    ]
+                  }
+                }
+              ]
+            }
+          },
+          {
+            "component": "oh-block",
+            "config": {},
+            "slots": {
+              "default": [
+                {
+                  "component": "oh-grid-row",
+                  "config": {},
+                  "slots": {
+                    "default": [
+                      {
+                        "component": "oh-grid-col",
+                        "config": {
+                          "large": "25",
+                          "medium": "33",
+                          "small": "50",
+                          "width": "100",
+                          "xlarge": "25"
+                        },
+                        "slots": {
+                          "default": [
+                            {
+                              "component": "widget:Card_Room_Popup+Motion",
+                              "config": {
+                                "iconimage": "hallway",
+                                "illuminance": "BewegungsmelderFlur_Illumination",
+                                "motion": "BewegungsmelderFlur_Motion",
+                                "page": "page_065ac3d806",
+                                "status": "FlurLicht_4_STATE",
+                                "text_header": "Flur"
+                              }
+                            }
+                          ]
+                        }
+                      },
+                      {
+                        "component": "oh-grid-col",
+                        "config": {
+                          "large": "25",
+                          "medium": "33",
+                          "small": "50",
+                          "width": "100",
+                          "xlarge": "25"
+                        },
+                        "slots": {
+                          "default": [
+                            {
+                              "component": "widget:Card_Room_Popup+Motion",
+                              "config": {
+                                "blinds_closed": "RollladenKuche",
+                                "heating": "HeizungKuche",
+                                "humidity": "SwitchbotMeterTest_SwitchBotMeterTestHum",
+                                "iconimage": "kitchen",
+                                "page": "page_a72c41bde2",
+                                "settemp": "HeizungKuche_SetPointTemperature",
+                                "status": "KucheLicht_4_STATE",
+                                "temp": "SwitchbotMeterTest_SwitchbotMeterTemp",
+                                "text_header": "Küche"
+                              }
+                            }
+                          ]
+                        }
+                      },
+                      {
+                        "component": "oh-grid-col",
+                        "config": {
+                          "large": "25",
+                          "medium": "33",
+                          "small": "50",
+                          "width": "100",
+                          "xlarge": "25"
+                        },
+                        "slots": {
+                          "default": [
+                            {
+                              "component": "widget:Card_Room_Popup+Motion",
+                              "config": {
+                                "blinds_closed": "RollladenEsszimmer_4_LEVEL",
+                                "humidity": "SwitchbotMeterTest_SwitchBotMeterTestHum",
+                                "iconimage": "dining-table",
+                                "page": "page_5008381345",
+                                "status": "EsszimmerLicht",
+                                "temp": "BroadlinkRM2_Temperature",
+                                "text_header": "Esszimmer",
+                                "windows": "FensterGIRL1_Contact"
+                              }
+                            }
+                          ]
+                        }
+                      },
+                      {
+                        "component": "oh-grid-col",
+                        "config": {
+                          "large": "25",
+                          "medium": "33",
+                          "small": "50",
+                          "width": "100",
+                          "xlarge": "25"
+                        },
+                        "slots": {
+                          "default": [
+                            {
+                              "component": "widget:Card_Room_Popup+Motion",
+                              "config": {
+                                "blinds_closed": "Rollos_Wohnzimmer_4_LEVEL",
+                                "heating": "HeizungWohnzimmer_ActiveProfile",
+                                "iconimage": "interior-design",
+                                "page": "page_ac94a6c079",
+                                "settemp": "HeizungWohnzimmer_SET_POINT_TEMPERATURE",
+                                "status": "AlleLichterWohnzimmer",
+                                "temp": "HeizungWohnzimmer_ACTUAL_TEMPERATURE",
+                                "text_header": "Wohnzimmer"
+                              }
+                            }
+                          ]
+                        }
+                      },
+                      {
+                        "component": "oh-grid-col",
+                        "config": {
+                          "large": "25",
+                          "medium": "33",
+                          "small": "50",
+                          "width": "100",
+                          "xlarge": "25"
+                        },
+                        "slots": {
+                          "default": [
+                            {
+                              "component": "widget:Card_Room_Popup+Motion",
+                              "config": {
+                                "iconimage": "stairs",
+                                "motion": "Wemos4TreppeMotion_Wemos4TreppeMotion",
+                                "page": "page_98db93cfca",
+                                "status": "TreppeLicht",
+                                "text_header": "Treppe"
+                              }
+                            }
+                          ]
+                        }
+                      },
+                      {
+                        "component": "oh-grid-col",
+                        "config": {
+                          "large": "25",
+                          "medium": "33",
+                          "small": "50",
+                          "width": "100",
+                          "xlarge": "25"
+                        },
+                        "slots": {
+                          "default": [
+                            {
+                              "component": "widget:Card_Room_Popup+Motion",
+                              "config": {
+                                "heating": "SchlafzimmerHeizung_ActiveProfile",
+                                "iconimage": "bedroom",
+                                "page": "page_afef51c38a",
+                                "settemp": "SchlafzimmerHeizung_SetPointTemperature",
+                                "speakers": "Chromecast_Fernbedienung",
+                                "status": "Schlafzimmer_BL",
+                                "temp": "SchlafzimmerHeizung_ActualTemperature",
+                                "text_header": "Obergeschoss"
+                              }
+                            }
+                          ]
+                        }
+                      },
+                      {
+                        "component": "oh-grid-col",
+                        "config": {
+                          "large": "25",
+                          "medium": "33",
+                          "small": "50",
+                          "width": "100",
+                          "xlarge": "25"
+                        },
+                        "slots": {
+                          "default": [
+                            {
+                              "component": "widget:Card_Room_Popup+Motion",
+                              "config": {
+                                "humidity": "SwitchbotMeter_hum",
+                                "iconimage": "workspace",
+                                "page": "page_d602ae29f8",
+                                "status": "BuroShelly1pm_Betrieb",
+                                "temp": "GenericMQTTThing_Temp",
+                                "text_header": "Büro"
+                              }
+                            }
+                          ]
+                        }
+                      },
+                      {
+                        "component": "oh-grid-col",
+                        "config": {
+                          "large": "25",
+                          "medium": "33",
+                          "small": "50",
+                          "width": "100",
+                          "xlarge": "25"
+                        },
+                        "slots": {
+                          "default": [
+                            {
+                              "component": "widget:Card_Room_Popup+Motion",
+                              "config": {
+                                "humidity": "TuyaTempSensor_TuyaTempSensorLuftfeuchtigkeit",
+                                "iconimage": "clamp",
+                                "page": "page_da9e656284",
+                                "status": "WerkstattLicht",
+                                "temp": "TuyaTempSensor_TuyaTempSensorTemperatur",
+                                "text_header": "Werkstatt",
+                                "windows": "TuyaContact_TuyaContactSwitch"
+                              }
+                            }
+                          ]
+                        }
+                      },
+                      {
+                        "component": "oh-grid-col",
+                        "config": {
+                          "large": "25",
+                          "medium": "33",
+                          "small": "50",
+                          "width": "100",
+                          "xlarge": "25"
+                        },
+                        "slots": {
+                          "default": [
+                            {
+                              "component": "widget:Connection_Card_2",
+                              "config": {
+                                "download": "SpeedtestBinding_DownloadBandwidth",
+                                "iconimage": "neural",
+                                "latency": "SpeedtestBinding_Latency",
+                                "page": "page_019befbdfd",
+                                "text_header": "Connection",
+                                "upload": "SpeedtestBinding_UploadBandwidth"
+                              }
+                            }
+                          ]
+                        }
+                      }
+                    ]
+                  }
+                }
+              ]
+            }
+          },
+          {
+            "component": "oh-block",
+            "config": {},
+            "slots": {
+              "default": [
+                {
+                  "component": "oh-grid-row",
+                  "config": {},
+                  "slots": {
+                    "default": [
+                      {
+                        "component": "oh-grid-col",
+                        "config": {
+                          "large": "10",
+                          "medium": "10",
+                          "small": "50",
+                          "width": "50",
+                          "xlarge": "10",
+                          "xsmall": "50"
+                        },
+                        "slots": {
+                          "default": [
+                            {
+                              "component": "widget:Cell_Settings_1",
+                              "config": {
+                                "item_battery": "AlleBatterien",
+                                "page": "page_dbf9a7900f"
+                              }
+                            }
+                          ]
+                        }
+                      }
+                    ]
+                  }
+                }
+              ]
+            }
+          }
+        ],
+        "masonry": []
+      }
+    }
+  },
+  "page_4e2bf5b1c4": {
+    "class": "org.openhab.core.ui.components.RootUIComponent",
+    "value": {
+      "uid": "page_4e2bf5b1c4",
+      "tags": [],
+      "props": {
+        "parameters": [],
+        "parameterGroups": []
+      },
+      "timestamp": "Dec 9, 2021, 1:10:04 PM",
+      "component": "oh-layout-page",
+      "config": {
+        "label": "Büro Licht Popup",
+        "sidebar": false
+      },
+      "slots": {
+        "default": [
+          {
+            "component": "oh-block",
+            "config": {},
+            "slots": {
+              "default": [
+                {
+                  "component": "oh-grid-row",
+                  "config": {},
+                  "slots": {
+                    "default": [
+                      {
+                        "component": "oh-grid-col",
+                        "config": {},
+                        "slots": {
+                          "default": [
+                            {
+                              "component": "widget:Command-Button",
+                              "config": {
+                                "background": "#1c1c1d",
+                                "cardwidth": "100",
+                                "command1": "OFF",
+                                "command2": "ON",
+                                "headline1": "Studio Aus",
+                                "headline2": "Studio An",
+                                "headlinesize": "20px",
+                                "item": "StudioAll"
+                              }
+                            }
+                          ]
+                        }
+                      }
+                    ]
+                  }
+                },
+                {
+                  "component": "oh-grid-row",
+                  "config": {},
+                  "slots": {
+                    "default": [
+                      {
+                        "component": "oh-grid-col",
+                        "config": {},
+                        "slots": {
+                          "default": [
+                            {
+                              "component": "widget:Command-Button",
+                              "config": {
+                                "background": "#1c1c1d",
+                                "cardwidth": "100",
+                                "command1": "OFF",
+                                "command2": "ON",
+                                "headline1": "Spot L Aus",
+                                "headline2": "Spot L An",
+                                "headlinesize": "20px",
+                                "item": "SonoffBuroLinks_SonoffBuroLinksPower"
+                              }
+                            }
+                          ]
+                        }
+                      },
+                      {
+                        "component": "oh-grid-col",
+                        "config": {},
+                        "slots": {
+                          "default": [
+                            {
+                              "component": "widget:Command-Button",
+                              "config": {
+                                "background": "#1c1c1d",
+                                "cardwidth": "100",
+                                "command1": "OFF",
+                                "command2": "ON",
+                                "headline1": "Spot R Aus",
+                                "headline2": "Spot R An",
+                                "headlinesize": "20px",
+                                "item": "SonoffBuroRechts_SonoffBueroRechtsPower"
+                              }
+                            }
+                          ]
+                        }
+                      }
+                    ]
+                  }
+                },
+                {
+                  "component": "oh-grid-row",
+                  "config": {},
+                  "slots": {
+                    "default": [
+                      {
+                        "component": "oh-grid-col",
+                        "config": {},
+                        "slots": {
+                          "default": [
+                            {
+                              "component": "widget:Cell_Light_Color_Card_2",
+                              "config": {
+                                "header": " ",
+                                "iconimage": "monitor",
+                                "item_color": "NightKingMonitorLED_Color",
+                                "item_schalter": "NightKingMonitorLED_Eingeschaltet",
+                                "title": "Monitor"
+                              }
+                            }
+                          ]
+                        }
+                      }
+                    ]
+                  }
+                },
+                {
+                  "component": "oh-grid-row",
+                  "config": {},
+                  "slots": {
+                    "default": [
+                      {
+                        "component": "oh-grid-col",
+                        "config": {},
+                        "slots": {
+                          "default": [
+                            {
+                              "component": "widget:Cell_Light_Color_Card_2",
+                              "config": {
+                                "header": " ",
+                                "iconimage": "desk-lamp",
+                                "item_color": "BuroSchreibtischLampe_RGBColor",
+                                "item_schalter": "BuroSchreibtischLampe_Power",
+                                "title": "Desk Lamp"
+                              }
+                            }
+                          ]
+                        }
+                      }
+                    ]
+                  }
+                },
+                {
+                  "component": "oh-grid-row",
+                  "config": {},
+                  "slots": {
+                    "default": [
+                      {
+                        "component": "oh-grid-col",
+                        "config": {},
+                        "slots": {
+                          "default": [
+                            {
+                              "component": "widget:Cell_Light_Color_Card_2",
+                              "config": {
+                                "header": " ",
+                                "iconimage": "led-strip",
+                                "item_color": "LEDStabI_Color",
+                                "item_schalter": "LEDStabI_Eingeschaltet",
+                                "title": "BangerTECH"
+                              }
+                            }
+                          ]
+                        }
+                      }
+                    ]
+                  }
+                },
+                {
+                  "component": "oh-grid-row",
+                  "config": {},
+                  "slots": {
+                    "default": [
+                      {
+                        "component": "oh-grid-col",
+                        "config": {},
+                        "slots": {
+                          "default": [
+                            {
+                              "component": "widget:Cell_Light_Color_Card_2",
+                              "config": {
+                                "header": " ",
+                                "iconimage": "rgb",
+                                "item_color": "WLEDLinks_MasterControls",
+                                "item_schalter": "WLEDLinks_WLEDLinksPower",
+                                "title": "Schreibtisch L"
+                              }
+                            }
+                          ]
+                        }
+                      }
+                    ]
+                  }
+                },
+                {
+                  "component": "oh-grid-row",
+                  "config": {},
+                  "slots": {
+                    "default": [
+                      {
+                        "component": "oh-grid-col",
+                        "config": {},
+                        "slots": {
+                          "default": [
+                            {
+                              "component": "widget:Cell_Light_Color_Card_2",
+                              "config": {
+                                "header": " ",
+                                "iconimage": "rgb",
+                                "item_color": "WLEDRechts_MasterControls",
+                                "item_schalter": "WLEDRechts_WLEDRechtsPower",
+                                "title": "Schreibtisch R"
+                              }
+                            }
+                          ]
+                        }
+                      }
+                    ]
+                  }
+                },
+                {
+                  "component": "oh-grid-row",
+                  "config": {},
+                  "slots": {
+                    "default": [
+                      {
+                        "component": "oh-grid-col",
+                        "config": {},
+                        "slots": {
+                          "default": [
+                            {
+                              "component": "widget:Cell_Light_Color_Card_2",
+                              "config": {
+                                "header": " ",
+                                "iconimage": "moss",
+                                "item_color": "Moosbild_Color",
+                                "item_schalter": "Moosbild_Eingeschaltet",
+                                "title": "Moosbild"
+                              }
+                            }
+                          ]
+                        }
+                      }
+                    ]
+                  }
+                }
+              ]
+            }
+          }
+        ]
+      }
+    }
+  },
+  "page_5008381345": {
+    "class": "org.openhab.core.ui.components.RootUIComponent",
+    "value": {
+      "uid": "page_5008381345",
+      "tags": [],
+      "props": {
+        "parameters": [],
+        "parameterGroups": []
+      },
+      "timestamp": "Dec 9, 2021, 1:15:35 PM",
+      "component": "oh-layout-page",
+      "config": {
+        "label": "Esszimmer",
+        "sidebar": false
+      },
+      "slots": {
+        "default": [
+          {
+            "component": "oh-block",
+            "config": {},
+            "slots": {
+              "default": [
+                {
+                  "component": "oh-grid-row",
+                  "config": {},
+                  "slots": {
+                    "default": [
+                      {
+                        "component": "oh-grid-col",
+                        "config": {
+                          "width": "50"
+                        },
+                        "slots": {
+                          "default": [
+                            {
+                              "component": "widget:Command_Button",
+                              "config": {
+                                "background": "#1c1c1d",
+                                "cardwidth": "100",
+                                "command1": "OFF",
+                                "command2": "ON",
+                                "headline1": "Licht Aus",
+                                "headline2": "Licht An",
+                                "item": "EsszimmerLicht_4_STATE"
+                              }
+                            }
+                          ]
+                        }
+                      },
+                      {
+                        "component": "oh-grid-col",
+                        "config": {
+                          "width": "50"
+                        },
+                        "slots": {
+                          "default": [
+                            {
+                              "component": "widget:Command_Button",
+                              "config": {
+                                "background": "#1c1c1d",
+                                "cardwidth": "100",
+                                "command1": "Off",
+                                "command2": "ON",
+                                "headline1": "Laterne Aus",
+                                "headline2": "Laterne An",
+                                "item": "IkeaSteckdose_IkeaSteckdose"
+                              }
+                            }
+                          ]
+                        }
+                      }
+                    ]
+                  }
+                }
+              ]
+            }
+          },
+          {
+            "component": "oh-block",
+            "config": {},
+            "slots": {
+              "default": [
+                {
+                  "component": "oh-grid-row",
+                  "config": {},
+                  "slots": {
+                    "default": [
+                      {
+                        "component": "oh-grid-col",
+                        "config": {
+                          "large": "50",
+                          "width": "100",
+                          "xlarge": "50"
+                        },
+                        "slots": {
+                          "default": [
+                            {
+                              "component": "widget:Cell_Shutter_Card_1",
+                              "config": {
+                                "item": "RollladenEsszimmer_4_LEVEL",
+                                "title": "Rollo"
+                              }
+                            }
+                          ]
+                        }
+                      }
+                    ]
+                  }
+                }
+              ]
+            }
+          }
+        ]
+      }
+    }
+  },
+  "page_98db93cfca": {
+    "class": "org.openhab.core.ui.components.RootUIComponent",
+    "value": {
+      "uid": "page_98db93cfca",
+      "tags": [],
+      "props": {
+        "parameters": [],
+        "parameterGroups": []
+      },
+      "timestamp": "Dec 9, 2021, 1:19:48 PM",
+      "component": "oh-layout-page",
+      "config": {
+        "label": "Treppe",
+        "sidebar": false
+      },
+      "slots": {
+        "default": [
+          {
+            "component": "oh-block",
+            "config": {},
+            "slots": {
+              "default": [
+                {
+                  "component": "oh-grid-row",
+                  "config": {},
+                  "slots": {
+                    "default": [
+                      {
+                        "component": "oh-grid-col",
+                        "config": {},
+                        "slots": {
+                          "default": [
+                            {
+                              "component": "widget:Command_Button",
+                              "config": {
+                                "background": "#1c1c1d",
+                                "cardwidth": "100",
+                                "command1": "OFF",
+                                "command2": "ON",
+                                "headline1": "Treppe Aus",
+                                "headline2": "Treppe An",
+                                "headlinesize": "20px",
+                                "item": "SonoffT3TreppeRechts_SonoffT3TreppeRechts"
+                              }
+                            }
+                          ]
+                        }
+                      },
+                      {
+                        "component": "oh-grid-col",
+                        "config": {
+                          "width": "50"
+                        },
+                        "slots": {
+                          "default": [
+                            {
+                              "component": "widget:Command_Button",
+                              "config": {
+                                "background": "#1c1c1d",
+                                "cardwidth": "100",
+                                "command1": "OFF",
+                                "command2": "ON",
+                                "headline1": "Treppe L Aus",
+                                "headline2": "Treppe L An",
+                                "headlinesize": "20px",
+                                "item": "SonoffT4TreppeLinks_SonoffT4Links"
+                              }
+                            }
+                          ]
+                        }
+                      }
+                    ]
+                  }
+                }
+              ]
+            }
+          },
+          {
+            "component": "oh-block",
+            "config": {},
+            "slots": {
+              "default": []
+            }
+          }
+        ]
+      }
+    }
+  },
+  "page_a72c41bde2": {
+    "class": "org.openhab.core.ui.components.RootUIComponent",
+    "value": {
+      "uid": "page_a72c41bde2",
+      "tags": [],
+      "props": {
+        "parameters": [],
+        "parameterGroups": []
+      },
+      "timestamp": "Dec 9, 2021, 1:17:46 PM",
+      "component": "oh-layout-page",
+      "config": {
+        "label": "Küche",
+        "sidebar": false
+      },
+      "slots": {
+        "default": [
+          {
+            "component": "oh-block",
+            "config": {},
+            "slots": {
+              "default": [
+                {
+                  "component": "oh-grid-row",
+                  "config": {},
+                  "slots": {
+                    "default": [
+                      {
+                        "component": "oh-grid-col",
+                        "config": {},
+                        "slots": {
+                          "default": [
+                            {
+                              "component": "widget:Command_Button",
+                              "config": {
+                                "background": "#1c1c1d",
+                                "cardwidth": "100",
+                                "command1": "OFF",
+                                "command2": "ON",
+                                "headline1": "Licht Aus",
+                                "headline2": "Licht An",
+                                "headlinesize": "20px",
+                                "item": "KucheLicht_4_STATE"
+                              }
+                            }
+                          ]
+                        }
+                      },
+                      {
+                        "component": "oh-grid-col",
+                        "config": {},
+                        "slots": {
+                          "default": [
+                            {
+                              "component": "widget:Command_Button",
+                              "config": {
+                                "background": "#1c1c1d",
+                                "cardwidth": "100",
+                                "command1": "OFF",
+                                "command2": "ON",
+                                "headline1": "LED Aus",
+                                "headline2": "LED An",
+                                "headlinesize": "20px",
+                                "item": "SonoffT1KucheLED_SonoffT1KucheLED"
+                              }
+                            }
+                          ]
+                        }
+                      }
+                    ]
+                  }
+                }
+              ]
+            }
+          },
+          {
+            "component": "oh-block",
+            "config": {},
+            "slots": {
+              "default": [
+                {
+                  "component": "oh-grid-row",
+                  "config": {},
+                  "slots": {
+                    "default": [
+                      {
+                        "component": "oh-grid-col",
+                        "config": {
+                          "large": "50",
+                          "width": "100",
+                          "xlarge": "50"
+                        },
+                        "slots": {
+                          "default": [
+                            {
+                              "component": "widget:Cell_Temp_Card_1",
+                              "config": {
+                                "humidity_item": "SwitchbotMeterTest_SwitchBotMeterTestHum",
+                                "icon": "thermometer",
+                                "set_temp_item": "HeizungKuche_SetPointTemperature",
+                                "temp_item": "SwitchbotMeterTest_SwitchbotMeterTemp",
+                                "title": "Temperatur"
+                              }
+                            }
+                          ]
+                        }
+                      },
+                      {
+                        "component": "oh-grid-col",
+                        "config": {
+                          "large": "50",
+                          "medium": "100",
+                          "small": "100",
+                          "width": "100",
+                          "xlarge": "50",
+                          "xsmall": "100"
+                        },
+                        "slots": {
+                          "default": [
+                            {
+                              "component": "widget:Cell_Shutter_Card_1",
+                              "config": {
+                                "item": "RollladenKuche_4_LEVEL",
+                                "title": "Rollo"
+                              }
+                            }
+                          ]
+                        }
+                      }
+                    ]
+                  }
+                }
+              ]
+            }
+          }
+        ]
+      }
+    }
+  },
+  "page_ac94a6c079": {
+    "class": "org.openhab.core.ui.components.RootUIComponent",
+    "value": {
+      "uid": "page_ac94a6c079",
+      "tags": [],
+      "props": {
+        "parameters": [],
+        "parameterGroups": []
+      },
+      "timestamp": "Dec 9, 2021, 1:28:47 PM",
+      "component": "oh-layout-page",
+      "config": {
+        "label": "Wohnzimmer",
+        "sidebar": false
+      },
+      "slots": {
+        "default": [
+          {
+            "component": "oh-block",
+            "config": {},
+            "slots": {
+              "default": [
+                {
+                  "component": "oh-grid-row",
+                  "config": {},
+                  "slots": {
+                    "default": [
+                      {
+                        "component": "oh-grid-col",
+                        "config": {
+                          "large": "50",
+                          "width": "100",
+                          "xlarge": "50"
+                        },
+                        "slots": {
+                          "default": [
+                            {
+                              "component": "widget:Cell_Temp_Card_1",
+                              "config": {
+                                "humidity_item": "SwitchbotMeterTest_SwitchBotMeterTestHum",
+                                "icon": "thermometer",
+                                "set_temp_item": "HeizungWohnzimmer_SET_POINT_TEMPERATURE",
+                                "temp_item": "HeizungWohnzimmer_ACTUAL_TEMPERATURE",
+                                "title": "Temperatur"
+                              }
+                            }
+                          ]
+                        }
+                      },
+                      {
+                        "component": "oh-grid-col",
+                        "config": {
+                          "large": "50",
+                          "medium": "100",
+                          "small": "100",
+                          "width": "100",
+                          "xlarge": "50",
+                          "xsmall": "100"
+                        },
+                        "slots": {
+                          "default": [
+                            {
+                              "component": "widget:Cell_Speaker_Card_1",
+                              "config": {
+                                "header": "Control",
+                                "icon": "speaker_3",
+                                "item": "SonoffP2TV_SonoffP2TVPower",
+                                "item_cover": "SonosWohnzimmer_Coverbild",
+                                "item_volume": "SonosWohnzimmer_Lautstarke",
+                                "title": "TV"
+                              }
+                            }
+                          ]
+                        }
+                      },
+                      {
+                        "component": "oh-grid-col",
+                        "config": {
+                          "large": "50",
+                          "width": "100",
+                          "xlarge": "50"
+                        },
+                        "slots": {
+                          "default": [
+                            {
+                              "component": "widget:Cell_Shutter_Card_1",
+                              "config": {
+                                "header": "Wohnzimmer",
+                                "icon": "arrow_up_arrow_down",
+                                "item": "Rollos_Wohnzimmer_4_LEVEL",
+                                "title": "Rollo"
+                              }
+                            }
+                          ]
+                        }
+                      }
+                    ]
+                  }
+                }
+              ]
+            }
+          },
+          {
+            "component": "oh-block",
+            "config": {},
+            "slots": {
+              "default": [
+                {
+                  "component": "oh-grid-row",
+                  "config": {},
+                  "slots": {
+                    "default": [
+                      {
+                        "component": "oh-grid-col",
+                        "config": {
+                          "width": "50"
+                        },
+                        "slots": {
+                          "default": [
+                            {
+                              "component": "widget:Cell_Light_Card_1",
+                              "config": {
+                                "header": "Decke",
+                                "icon": "lightbulb",
+                                "item_brightness": "DeckenbeleuchtungL_Weiss",
+                                "item_schalter": "DeckenbeleuchtungL_Eingeschaltet",
+                                "title": "Licht"
+                              }
+                            }
+                          ]
+                        }
+                      },
+                      {
+                        "component": "oh-grid-col",
+                        "config": {
+                          "width": "50"
+                        },
+                        "slots": {
+                          "default": [
+                            {
+                              "component": "widget:Cell_Light_Card_1",
+                              "config": {
+                                "header": "TV Bank",
+                                "icon": "lightbulb",
+                                "item_brightness": "TVBankLED_Color",
+                                "item_schalter": "TVBankLED_Eingeschaltet",
+                                "title": "Licht"
+                              }
+                            }
+                          ]
+                        }
+                      },
+                      {
+                        "component": "oh-grid-col",
+                        "config": {
+                          "width": "50"
+                        },
+                        "slots": {
+                          "default": [
+                            {
+                              "component": "widget:Cell_Light_Card_1",
+                              "config": {
+                                "header": "Säule",
+                                "icon": "lightbulb",
+                                "item_brightness": "LEDSaule_Color",
+                                "item_schalter": "LEDSaule_Eingeschaltet",
+                                "title": "Licht"
+                              }
+                            }
+                          ]
+                        }
+                      },
+                      {
+                        "component": "oh-grid-col",
+                        "config": {
+                          "width": "50"
+                        },
+                        "slots": {
+                          "default": [
+                            {
+                              "component": "widget:Cell_Light_Card_1",
+                              "config": {
+                                "header": "Tube",
+                                "icon": "lightbulb",
+                                "item_brightness": "LEDTube_RGBColor",
+                                "item_schalter": "LEDCube_Eingeschaltet",
+                                "title": "Licht"
+                              }
+                            }
+                          ]
+                        }
+                      }
+                    ]
+                  }
+                }
+              ]
+            }
+          }
+        ]
+      }
+    }
+  },
+  "page_afef51c38a": {
+    "class": "org.openhab.core.ui.components.RootUIComponent",
+    "value": {
+      "uid": "page_afef51c38a",
+      "tags": [],
+      "props": {
+        "parameters": [],
+        "parameterGroups": []
+      },
+      "timestamp": "Dec 9, 2021, 1:19:10 PM",
+      "component": "oh-layout-page",
+      "config": {
+        "label": "Obergeschoss",
+        "sidebar": false
+      },
+      "slots": {
+        "default": [
+          {
+            "component": "oh-block",
+            "config": {},
+            "slots": {
+              "default": [
+                {
+                  "component": "oh-grid-row",
+                  "config": {},
+                  "slots": {
+                    "default": [
+                      {
+                        "component": "oh-grid-col",
+                        "config": {},
+                        "slots": {
+                          "default": [
+                            {
+                              "component": "widget:Command_Button",
+                              "config": {
+                                "background": "#1c1c1d",
+                                "cardwidth": "100",
+                                "command1": "OFF",
+                                "command2": "ON",
+                                "headline1": "Schlafzimmer Aus",
+                                "headline2": "Schlafzimmer An",
+                                "headlinesize": "20px",
+                                "item": "Schlafzimmer_BL"
+                              }
+                            }
+                          ]
+                        }
+                      },
+                      {
+                        "component": "oh-grid-col",
+                        "config": {},
+                        "slots": {
+                          "default": [
+                            {
+                              "component": "widget:Command_Button",
+                              "config": {
+                                "background": "#1c1c1d",
+                                "cardwidth": "100",
+                                "command1": "OFF",
+                                "command2": "ON",
+                                "headline1": "Bad Aus",
+                                "headline2": "Bad An",
+                                "headlinesize": "20px",
+                                "item": "TapoBulb_LightOn"
+                              }
+                            }
+                          ]
+                        }
+                      }
+                    ]
+                  }
+                }
+              ]
+            }
+          },
+          {
+            "component": "oh-block",
+            "config": {},
+            "slots": {
+              "default": [
+                {
+                  "component": "oh-grid-row",
+                  "config": {},
+                  "slots": {
+                    "default": [
+                      {
+                        "component": "oh-grid-col",
+                        "config": {
+                          "large": "50",
+                          "width": "100",
+                          "xlarge": "50"
+                        },
+                        "slots": {
+                          "default": [
+                            {
+                              "component": "widget:Cell_Temp_Card_1",
+                              "config": {
+                                "humidity_item": "SwitchbotMeterTest_SwitchBotMeterTestHum",
+                                "icon": "thermometer",
+                                "set_temp_item": "HeizungKuche_SetPointTemperature",
+                                "temp_item": "SwitchbotMeterTest_SwitchbotMeterTemp",
+                                "title": "Temperatur"
+                              }
+                            }
+                          ]
+                        }
+                      },
+                      {
+                        "component": "oh-grid-col",
+                        "config": {
+                          "large": "50",
+                          "medium": "100",
+                          "small": "100",
+                          "width": "100",
+                          "xlarge": "50",
+                          "xsmall": "100"
+                        },
+                        "slots": {
+                          "default": [
+                            {
+                              "component": "widget:Cell_Shutter_Card_1",
+                              "config": {
+                                "item": "RollladenKuche_4_LEVEL",
+                                "title": "Rollo"
+                              }
+                            }
+                          ]
+                        }
+                      }
+                    ]
+                  }
+                }
+              ]
+            }
+          }
+        ]
+      }
+    }
+  },
+  "page_d602ae29f8": {
+    "class": "org.openhab.core.ui.components.RootUIComponent",
+    "value": {
+      "uid": "page_d602ae29f8",
+      "tags": [],
+      "props": {
+        "parameters": [],
+        "parameterGroups": []
+      },
+      "timestamp": "Dec 9, 2021, 1:37:14 PM",
+      "component": "oh-layout-page",
+      "config": {
+        "label": "Büro",
+        "sidebar": false
+      },
+      "slots": {
+        "default": [
+          {
+            "component": "oh-block",
+            "config": {},
+            "slots": {
+              "default": [
+                {
+                  "component": "oh-grid-row",
+                  "config": {},
+                  "slots": {
+                    "default": [
+                      {
+                        "component": "oh-grid-col",
+                        "config": {
+                          "width": "100"
+                        },
+                        "slots": {
+                          "default": [
+                            {
+                              "component": "widget:Cell_Temp_Card_1",
+                              "config": {
+                                "heating_item": "SwitchbotMeter_battery",
+                                "humidity_item": "SwitchbotMeter_hum",
+                                "icon": "thermometer",
+                                "temp_item": "GenericMQTTThing_Temp",
+                                "title": "Temperatur"
+                              }
+                            }
+                          ]
+                        }
+                      }
+                    ]
+                  }
+                },
+                {
+                  "component": "oh-grid-row",
+                  "config": {},
+                  "slots": {
+                    "default": [
+                      {
+                        "component": "oh-grid-col",
+                        "config": {
+                          "width": "50"
+                        },
+                        "slots": {
+                          "default": [
+                            {
+                              "component": "widget:Command_Button",
+                              "config": {
+                                "background": "#1c1c1d",
+                                "cardwidth": "100",
+                                "command1": "OFF",
+                                "command2": "ON",
+                                "headline1": "Licht Aus",
+                                "headline2": "Licht An",
+                                "headlinesize": "20px",
+                                "item": "BuroShelly1pm_Betrieb"
+                              }
+                            }
+                          ]
+                        }
+                      },
+                      {
+                        "component": "oh-grid-col",
+                        "config": {
+                          "width": "50"
+                        },
+                        "slots": {
+                          "default": [
+                            {
+                              "component": "widget:Command_Button_Popup",
+                              "config": {
+                                "background": "#1c1c1d",
+                                "cardwidth": "100",
+                                "command1": "OFF",
+                                "command2": "ON",
+                                "headline1": "Studio Aus",
+                                "headline2": "Studio An",
+                                "headlinesize": "20px",
+                                "item": "StudioAll",
+                                "page": "page_4e2bf5b1c4"
+                              }
+                            }
+                          ]
+                        }
+                      }
+                    ]
+                  }
+                },
+                {
+                  "component": "oh-grid-row",
+                  "config": {},
+                  "slots": {
+                    "default": [
+                      {
+                        "component": "oh-grid-col",
+                        "config": {
+                          "width": "50"
+                        },
+                        "slots": {
+                          "default": [
+                            {
+                              "component": "widget:Command_Button",
+                              "config": {
+                                "background": "#1c1c1d",
+                                "cardwidth": "100",
+                                "command1": "OFF",
+                                "command2": "ON",
+                                "headline1": "Drucker Aus",
+                                "headline2": "Drucker An",
+                                "headlinesize": "20px",
+                                "icon1": "power",
+                                "icon2": "power",
+                                "item": "Switchbot_state"
+                              }
+                            }
+                          ]
+                        }
+                      },
+                      {
+                        "component": "oh-grid-col",
+                        "config": {
+                          "width": "50"
+                        },
+                        "slots": {
+                          "default": [
+                            {
+                              "component": "widget:Command_Button_Popup",
+                              "config": {
+                                "background": "#1c1c1d",
+                                "cardwidth": "100",
+                                "command1": "OFF",
+                                "command2": "ON",
+                                "headline1": "Studio Aus",
+                                "headline2": "Studio An",
+                                "headlinesize": "20px",
+                                "item": "StudioAll",
+                                "page": "page_58c79216a5"
+                              }
+                            }
+                          ]
+                        }
+                      }
+                    ]
+                  }
+                },
+                {
+                  "component": "oh-grid-row",
+                  "config": {},
+                  "slots": {
+                    "default": [
+                      {
+                        "component": "oh-grid-col",
+                        "config": {
+                          "width": "50"
+                        },
+                        "slots": {
+                          "default": [
+                            {
+                              "component": "widget:3D-Print-Mobile_1",
+                              "config": {
+                                "bedtempitem": "OctoprintB1_B1BedTemp",
+                                "cardheight": "160px",
+                                "hotendtempitem": "OctoprintB1_B1HotendTemp",
+                                "iconimage1": "tooltemp",
+                                "iconimage2": "bedtemp",
+                                "lightitem": "BiquB1LED_Eingeschaltet",
+                                "page": "page_6102089844",
+                                "poweritem": "SonoffBiquB1_SonoffB1",
+                                "printername": "Biqu B1",
+                                "progressitem": "OctoprintB1_B1Progress",
+                                "timeleftitem": "OctoprintB1_B1PrintTimeLeft"
+                              }
+                            }
+                          ]
+                        }
+                      },
+                      {
+                        "component": "oh-grid-col",
+                        "config": {
+                          "width": "50"
+                        },
+                        "slots": {
+                          "default": [
+                            {
+                              "component": "widget:3D-Print-Mobile_1",
+                              "config": {
+                                "bedtempitem": "OctoprintChiron_ChironBedTemp",
+                                "cardheight": "160px",
+                                "hotendtempitem": "OctoprintChiron_ChironHotendTemp",
+                                "iconimage1": "tooltemp",
+                                "iconimage2": "bedtemp",
+                                "page": "page_6102089844",
+                                "poweritem": "SonoffChiron_SonoffChiron",
+                                "printername": "Chiron",
+                                "progressitem": "OctoprintChiron_ChironProgress",
+                                "timeleftitem": "OctoprintChiron_ChironPrinttimeleft"
+                              }
+                            }
+                          ]
+                        }
+                      }
+                    ]
+                  }
+                }
+              ]
+            }
+          }
+        ]
+      }
+    }
+  },
+  "page_da9e656284": {
+    "class": "org.openhab.core.ui.components.RootUIComponent",
+    "value": {
+      "uid": "page_da9e656284",
+      "tags": [],
+      "props": {
+        "parameters": [],
+        "parameterGroups": []
+      },
+      "timestamp": "Dec 9, 2021, 1:20:27 PM",
+      "component": "oh-layout-page",
+      "config": {
+        "label": "Werkstatt",
+        "sidebar": false
+      },
+      "slots": {
+        "default": [
+          {
+            "component": "oh-block",
+            "config": {},
+            "slots": {
+              "default": [
+                {
+                  "component": "oh-grid-row",
+                  "config": {},
+                  "slots": {
+                    "default": [
+                      {
+                        "component": "oh-grid-col",
+                        "config": {
+                          "large": "100",
+                          "width": "100",
+                          "xlarge": "100"
+                        },
+                        "slots": {
+                          "default": [
+                            {
+                              "component": "widget:Cell_Temp_Card_1",
+                              "config": {
+                                "heating_item": "TuyaTempSensor_TuyaTempSensorBatterie",
+                                "humidity_item": "TuyaTempSensor_TuyaTempSensorLuftfeuchtigkeit",
+                                "icon": "thermometer",
+                                "temp_item": "TuyaTempSensor_TuyaTempSensorTemperatur",
+                                "title": "Temperatur"
+                              }
+                            }
+                          ]
+                        }
+                      }
+                    ]
+                  }
+                }
+              ]
+            }
+          },
+          {
+            "component": "oh-block",
+            "config": {},
+            "slots": {
+              "default": [
+                {
+                  "component": "oh-grid-row",
+                  "config": {},
+                  "slots": {
+                    "default": [
+                      {
+                        "component": "oh-grid-col",
+                        "config": {},
+                        "slots": {
+                          "default": [
+                            {
+                              "component": "widget:Command_Button",
+                              "config": {
+                                "background": "#1c1c1d",
+                                "cardwidth": "100",
+                                "command1": "OFF",
+                                "command2": "ON",
+                                "headline1": "Licht Aus",
+                                "headline2": "Licht An",
+                                "headlinesize": "20px",
+                                "item": "SonoffMiniWerkstatt_SonoffWerkstatt"
+                              }
+                            }
+                          ]
+                        }
+                      },
+                      {
+                        "component": "oh-grid-col",
+                        "config": {},
+                        "slots": {
+                          "default": [
+                            {
+                              "component": "widget:Command_Button",
+                              "config": {
+                                "background": "#1c1c1d",
+                                "cardwidth": "100",
+                                "command1": "OFF",
+                                "command2": "ON",
+                                "headline1": "Press Aus",
+                                "headline2": "Press An",
+                                "headlinesize": "20px",
+                                "item": "SonoffSteckdose_SonoffSteckdose"
+                              }
+                            }
+                          ]
+                        }
+                      }
+                    ]
+                  }
+                }
+              ]
+            }
+          }
+        ]
+      }
+    }
+  },
+  "page_dbf9a7900f": {
+    "class": "org.openhab.core.ui.components.RootUIComponent",
+    "value": {
+      "uid": "page_dbf9a7900f",
+      "tags": [],
+      "props": {
+        "parameters": [],
+        "parameterGroups": []
+      },
+      "timestamp": "Dec 9, 2021, 1:06:56 PM",
+      "component": "oh-layout-page",
+      "config": {
+        "label": "Alle Batterien",
+        "sidebar": false
+      },
+      "slots": {
+        "default": [
+          {
+            "component": "oh-block",
+            "config": {
+              "title": "Home"
+            },
+            "slots": {
+              "default": [
+                {
+                  "component": "oh-grid-row",
+                  "config": {},
+                  "slots": {
+                    "default": [
+                      {
+                        "component": "oh-grid-col",
+                        "config": {
+                          "width": "50"
+                        },
+                        "slots": {
+                          "default": [
+                            {
+                              "component": "oh-gauge-card",
+                              "config": {
+                                "borderBgColor": "red",
+                                "borderColor": "green",
+                                "item": "SwitchbotMotionHomeAss_motiononeBattery",
+                                "labelText": "Motion Speise",
+                                "max": 100.0,
+                                "min": 0.0,
+                                "type": "semicircle",
+                                "valueTextColor": "green"
+                              }
+                            }
+                          ]
+                        }
+                      },
+                      {
+                        "component": "oh-grid-col",
+                        "config": {
+                          "width": "50"
+                        },
+                        "slots": {
+                          "default": [
+                            {
+                              "component": "oh-gauge-card",
+                              "config": {
+                                "borderBgColor": "red",
+                                "borderColor": "green",
+                                "item": "SwitchbotMeterKuche_SwitchbotBattery",
+                                "labelText": "Meter Küche",
+                                "max": 100.0,
+                                "min": 0.0,
+                                "type": "semicircle",
+                                "valueTextColor": "green"
+                              }
+                            }
+                          ]
+                        }
+                      },
+                      {
+                        "component": "oh-grid-col",
+                        "config": {
+                          "width": "50"
+                        },
+                        "slots": {
+                          "default": [
+                            {
+                              "component": "oh-gauge-card",
+                              "config": {
+                                "borderBgColor": "red",
+                                "borderColor": "green",
+                                "item": "ShellyMotion_Batterieladung",
+                                "labelText": "Motion Bad OG",
+                                "max": 100.0,
+                                "min": 0.0,
+                                "type": "semicircle",
+                                "valueTextColor": "green"
+                              }
+                            }
+                          ]
+                        }
+                      },
+                      {
+                        "component": "oh-grid-col",
+                        "config": {
+                          "width": "50"
+                        },
+                        "slots": {
+                          "default": [
+                            {
+                              "component": "oh-gauge-card",
+                              "config": {
+                                "borderBgColor": "red",
+                                "borderColor": "green",
+                                "item": "XiaomiButton1_XiaomiBattery",
+                                "labelText": "Button Bad OG",
+                                "max": 100.0,
+                                "min": 0.0,
+                                "type": "semicircle",
+                                "valueTextColor": "green"
+                              }
+                            }
+                          ]
+                        }
+                      },
+                      {
+                        "component": "oh-grid-col",
+                        "config": {
+                          "width": "50"
+                        },
+                        "slots": {
+                          "default": [
+                            {
+                              "component": "oh-gauge-card",
+                              "config": {
+                                "borderBgColor": "red",
+                                "borderColor": "green",
+                                "item": "BewegungsmelderFlur_NiedrigerBatteriestatus",
+                                "labelText": "Motion Flur",
+                                "max": 100.0,
+                                "min": 0.0,
+                                "type": "semicircle",
+                                "valueTextColor": "green"
+                              }
+                            }
+                          ]
+                        }
+                      },
+                      {
+                        "component": "oh-grid-col",
+                        "config": {
+                          "width": "50"
+                        },
+                        "slots": {
+                          "default": [
+                            {
+                              "component": "oh-gauge-card",
+                              "config": {
+                                "borderBgColor": "red",
+                                "borderColor": "green",
+                                "item": "HeizungKuche_NiedrigerBatteriestatus",
+                                "labelText": "Heizung Küche",
+                                "max": 100.0,
+                                "min": 0.0,
+                                "type": "semicircle",
+                                "valueTextColor": "green"
+                              }
+                            }
+                          ]
+                        }
+                      },
+                      {
+                        "component": "oh-grid-col",
+                        "config": {
+                          "width": "50"
+                        },
+                        "slots": {
+                          "default": [
+                            {
+                              "component": "oh-gauge-card",
+                              "config": {
+                                "borderBgColor": "red",
+                                "borderColor": "green",
+                                "item": "HeizungWohnzimmer_NiedrigerBatteriestatus",
+                                "labelText": "Heizung Wohnzimmer",
+                                "max": 100.0,
+                                "min": 0.0,
+                                "type": "semicircle",
+                                "valueTextColor": "green"
+                              }
+                            }
+                          ]
+                        }
+                      },
+                      {
+                        "component": "oh-grid-col",
+                        "config": {
+                          "width": "50"
+                        },
+                        "slots": {
+                          "default": [
+                            {
+                              "component": "oh-gauge-card",
+                              "config": {
+                                "borderBgColor": "red",
+                                "borderColor": "green",
+                                "item": "SchlafzimmerHeizung_NiedrigerBatteriestatus",
+                                "labelText": "Heizung Schlafzimmer",
+                                "max": 100.0,
+                                "min": 0.0,
+                                "type": "semicircle",
+                                "valueTextColor": "green"
+                              }
+                            }
+                          ]
+                        }
+                      },
+                      {
+                        "component": "oh-grid-col",
+                        "config": {
+                          "width": "50"
+                        },
+                        "slots": {
+                          "default": [
+                            {
+                              "component": "oh-gauge-card",
+                              "config": {
+                                "borderBgColor": "red",
+                                "borderColor": "green",
+                                "item": "HeizungBadOG_NiedrigerBatteriestatus",
+                                "labelText": "Heizung BadOG",
+                                "max": 100.0,
+                                "min": 0.0,
+                                "type": "semicircle",
+                                "valueTextColor": "green"
+                              }
+                            }
+                          ]
+                        }
+                      }
+                    ]
+                  }
+                }
+              ]
+            }
+          },
+          {
+            "component": "oh-block",
+            "config": {
+              "title": "Office"
+            },
+            "slots": {
+              "default": [
+                {
+                  "component": "oh-grid-row",
+                  "config": {},
+                  "slots": {
+                    "default": [
+                      {
+                        "component": "oh-grid-col",
+                        "config": {
+                          "width": "50"
+                        },
+                        "slots": {
+                          "default": [
+                            {
+                              "component": "oh-gauge-card",
+                              "config": {
+                                "borderBgColor": "red",
+                                "borderColor": "green",
+                                "item": "AqaraButton_AqaraButtonBattery",
+                                "labelText": "Button Büro",
+                                "max": 100.0,
+                                "min": 0.0,
+                                "type": "semicircle",
+                                "valueTextColor": "green"
+                              }
+                            }
+                          ]
+                        }
+                      },
+                      {
+                        "component": "oh-grid-col",
+                        "config": {
+                          "width": "50"
+                        },
+                        "slots": {
+                          "default": [
+                            {
+                              "component": "oh-gauge-card",
+                              "config": {
+                                "borderBgColor": "red",
+                                "borderColor": "green",
+                                "item": "AqaraTempSensor_AqaraTempSensorBattery",
+                                "labelText": "Aqara Temp Büro",
+                                "max": 100.0,
+                                "min": 0.0,
+                                "type": "semicircle",
+                                "valueTextColor": "green"
+                              }
+                            }
+                          ]
+                        }
+                      },
+                      {
+                        "component": "oh-grid-col",
+                        "config": {},
+                        "slots": {
+                          "default": [
+                            {
+                              "component": "oh-gauge-card",
+                              "config": {
+                                "borderBgColor": "red",
+                                "borderColor": "green",
+                                "item": "SwitchbotMeter_battery",
+                                "labelText": "Switchbot Meter Büro",
+                                "max": 100.0,
+                                "min": 0.0,
+                                "type": "semicircle",
+                                "valueTextColor": "green"
+                              }
+                            }
+                          ]
+                        }
+                      },
+                      {
+                        "component": "oh-grid-col",
+                        "config": {},
+                        "slots": {
+                          "default": [
+                            {
+                              "component": "oh-gauge-card",
+                              "config": {
+                                "borderBgColor": "red",
+                                "borderColor": "green",
+                                "item": "Switchbot_switchbotoneBattery",
+                                "labelText": "Switchbot Drucker",
+                                "max": 100.0,
+                                "min": 0.0,
+                                "type": "semicircle",
+                                "valueTextColor": "green"
+                              }
+                            }
+                          ]
+                        }
+                      }
+                    ]
+                  }
+                }
+              ]
+            }
+          },
+          {
+            "component": "oh-block",
+            "config": {
+              "title": "Werkstatt"
+            },
+            "slots": {
+              "default": [
+                {
+                  "component": "oh-grid-row",
+                  "config": {},
+                  "slots": {
+                    "default": [
+                      {
+                        "component": "oh-grid-col",
+                        "config": {
+                          "width": "50"
+                        },
+                        "slots": {
+                          "default": [
+                            {
+                              "component": "oh-gauge-card",
+                              "config": {
+                                "borderBgColor": "red",
+                                "borderColor": "green",
+                                "item": "TuyaContact_TuyaContactBattery",
+                                "labelText": "Türe Werkstatt",
+                                "max": 100.0,
+                                "min": 0.0,
+                                "type": "semicircle",
+                                "valueTextColor": "green"
+                              }
+                            }
+                          ]
+                        }
+                      },
+                      {
+                        "component": "oh-grid-col",
+                        "config": {
+                          "width": "50"
+                        },
+                        "slots": {
+                          "default": [
+                            {
+                              "component": "oh-gauge-card",
+                              "config": {
+                                "borderBgColor": "red",
+                                "borderColor": "green",
+                                "item": "TuyaTempSensor_TuyaTempSensorBatterie",
+                                "labelText": "Temp Werkstatt",
+                                "max": 100.0,
+                                "min": 0.0,
+                                "type": "semicircle",
+                                "valueTextColor": "green"
+                              }
+                            }
+                          ]
+                        }
+                      },
+                      {
+                        "component": "oh-grid-col",
+                        "config": {},
+                        "slots": {
+                          "default": [
+                            {
+                              "component": "oh-gauge-card",
+                              "config": {
+                                "borderBgColor": "red",
+                                "borderColor": "green",
+                                "item": "SwitchbotBotTest_switchbottwoBattery",
+                                "labelText": "Switchbot Bot 2",
+                                "max": 100.0,
+                                "min": 0.0,
+                                "type": "semicircle",
+                                "valueTextColor": "green"
+                              }
+                            }
+                          ]
+                        }
+                      },
+                      {
+                        "component": "oh-grid-col",
+                        "config": {},
+                        "slots": {
+                          "default": [
+                            {
+                              "component": "oh-gauge-card",
+                              "config": {
+                                "borderBgColor": "red",
+                                "borderColor": "green",
+                                "item": "TuyaPirSensor_TuyaPirSensorBattery",
+                                "labelText": "Tuya Pir",
+                                "max": 100.0,
+                                "min": 0.0,
+                                "type": "semicircle",
+                                "valueTextColor": "green"
+                              }
+                            }
+                          ]
+                        }
+                      }
+                    ]
+                  }
+                }
+              ]
+            }
+          }
+        ]
+      }
+    }
+  }
+}
