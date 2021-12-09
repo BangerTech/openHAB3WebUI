@@ -20,7 +20,7 @@ blocks:
                   xsmall: "100"
                 slots:
                   default:
-                    - component: widget:weatherCard
+                    - component: widget:Card_Weather_Small_1
                       config:
                         command: "5"
                         dateFormat: true
@@ -150,12 +150,12 @@ blocks:
                   xlarge: "25"
                 slots:
                   default:
-                    - component: widget:Card_room_12_motion
+                    - component: widget:Card_Room_Popup+Motion
                       config:
                         iconimage: hallway
                         illuminance: BewegungsmelderFlur_Illumination
                         motion: BewegungsmelderFlur_Motion
-                        page: page_06e515f566
+                        page: page_065ac3d806
                         status: FlurLicht_4_STATE
                         text_header: Flur
               - component: oh-grid-col
@@ -167,13 +167,13 @@ blocks:
                   xlarge: "25"
                 slots:
                   default:
-                    - component: widget:Card_room_12_motion
+                    - component: widget:Card_Room_Popup+Motion
                       config:
                         blinds_closed: RollladenKuche
                         heating: HeizungKuche
                         humidity: SwitchbotMeterTest_SwitchBotMeterTestHum
                         iconimage: kitchen
-                        page: page_7d01bba440
+                        page: page_a72c41bde2
                         settemp: HeizungKuche_SetPointTemperature
                         status: KucheLicht_4_STATE
                         temp: SwitchbotMeterTest_SwitchbotMeterTemp
@@ -187,12 +187,12 @@ blocks:
                   xlarge: "25"
                 slots:
                   default:
-                    - component: widget:Card_room_12_motion
+                    - component: widget:Card_Room_Popup+Motion
                       config:
                         blinds_closed: RollladenEsszimmer_4_LEVEL
                         humidity: SwitchbotMeterTest_SwitchBotMeterTestHum
                         iconimage: dining-table
-                        page: page_732831597e
+                        page: page_5008381345
                         status: EsszimmerLicht
                         temp: BroadlinkRM2_Temperature
                         text_header: Esszimmer
@@ -206,12 +206,12 @@ blocks:
                   xlarge: "25"
                 slots:
                   default:
-                    - component: widget:Card_room_12_motion
+                    - component: widget:Card_Room_Popup+Motion
                       config:
                         blinds_closed: Rollos_Wohnzimmer_4_LEVEL
                         heating: HeizungWohnzimmer_ActiveProfile
                         iconimage: interior-design
-                        page: page_35bf6aa62a
+                        page: page_ac94a6c079
                         settemp: HeizungWohnzimmer_SET_POINT_TEMPERATURE
                         status: AlleLichterWohnzimmer
                         temp: HeizungWohnzimmer_ACTUAL_TEMPERATURE
@@ -225,11 +225,11 @@ blocks:
                   xlarge: "25"
                 slots:
                   default:
-                    - component: widget:Card_room_12_motion
+                    - component: widget:Card_Room_Popup+Motion
                       config:
                         iconimage: stairs
                         motion: Wemos4TreppeMotion_Wemos4TreppeMotion
-                        page: page_8f953e135b
+                        page: page_98db93cfca
                         status: TreppeLicht
                         text_header: Treppe
               - component: oh-grid-col
@@ -241,11 +241,11 @@ blocks:
                   xlarge: "25"
                 slots:
                   default:
-                    - component: widget:Card_room_12_motion
+                    - component: widget:Card_Room_Popup+Motion
                       config:
                         heating: SchlafzimmerHeizung_ActiveProfile
                         iconimage: bedroom
-                        page: page_da7c97920b
+                        page: page_afef51c38a
                         settemp: SchlafzimmerHeizung_SetPointTemperature
                         speakers: Chromecast_Fernbedienung
                         status: Schlafzimmer_BL
@@ -260,11 +260,11 @@ blocks:
                   xlarge: "25"
                 slots:
                   default:
-                    - component: widget:Card_room_12_motion
+                    - component: widget:Card_Room_Popup+Motion
                       config:
                         humidity: SwitchbotMeter_hum
                         iconimage: workspace
-                        page: page_50084058de
+                        page: page_d602ae29f8
                         status: BuroShelly1pm_Betrieb
                         temp: GenericMQTTThing_Temp
                         text_header: Büro
@@ -277,11 +277,11 @@ blocks:
                   xlarge: "25"
                 slots:
                   default:
-                    - component: widget:Card_room_12_motion
+                    - component: widget:Card_Room_Popup+Motion
                       config:
                         humidity: TuyaTempSensor_TuyaTempSensorLuftfeuchtigkeit
                         iconimage: clamp
-                        page: page_30797b6ed3
+                        page: page_da9e656284
                         status: WerkstattLicht
                         temp: TuyaTempSensor_TuyaTempSensorTemperatur
                         text_header: Werkstatt
@@ -295,12 +295,12 @@ blocks:
                   xlarge: "25"
                 slots:
                   default:
-                    - component: widget:Card_dsl
+                    - component: widget:Connection_Card_2
                       config:
                         download: SpeedtestBinding_DownloadBandwidth
                         iconimage: neural
                         latency: SpeedtestBinding_Latency
-                        page: page_16db151d8c
+                        page: page_019befbdfd
                         text_header: Connection
                         upload: SpeedtestBinding_UploadBandwidth
   - component: oh-block
@@ -324,6 +324,6 @@ blocks:
                     - component: widget:Cell_Settings_1
                       config:
                         item_battery: AlleBatterien
-                        page: page_248bcf237a
+                        page: page_dbf9a7900f
 masonry: []
 grid: null
