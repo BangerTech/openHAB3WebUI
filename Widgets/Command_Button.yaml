@@ -1,6 +1,6 @@
 uid: Command_Button
 tags:
-  - schöner Button
+  - command button
 props:
   parameters:
     - description: Set the Headline for the first state
