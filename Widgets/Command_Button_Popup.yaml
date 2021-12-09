@@ -1,6 +1,6 @@
-uid: command-button-heater_popup_1
+uid: Command_Button_Popup
 tags:
-  - schöner Button
+  - Popup
 props:
   parameters:
     - description: Set the Headline for the first state
