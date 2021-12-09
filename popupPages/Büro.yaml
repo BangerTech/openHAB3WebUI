@@ -31,7 +31,7 @@ blocks:
                   width: "50"
                 slots:
                   default:
-                    - component: widget:command-button-heater
+                    - component: widget:Command_Button
                       config:
                         background: "#1c1c1d"
                         cardwidth: "100"
@@ -46,7 +46,7 @@ blocks:
                   width: "50"
                 slots:
                   default:
-                    - component: widget:command-button-heater_popup_1
+                    - component: widget:Command_Button_Popup
                       config:
                         background: "#1c1c1d"
                         cardwidth: "100"
@@ -56,7 +56,7 @@ blocks:
                         headline2: Studio An
                         headlinesize: 20px
                         item: StudioAll
-                        page: page_58c79216a5
+                        page: page_4e2bf5b1c4
         - component: oh-grid-row
           config: {}
           slots:
@@ -66,7 +66,7 @@ blocks:
                   width: "50"
                 slots:
                   default:
-                    - component: widget:command-button-heater
+                    - component: widget:Command_Button
                       config:
                         background: "#1c1c1d"
                         cardwidth: "100"
@@ -83,7 +83,7 @@ blocks:
                   width: "50"
                 slots:
                   default:
-                    - component: widget:command-button-heater_popup_1
+                    - component: widget:Command_Button_Popup
                       config:
                         background: "#1c1c1d"
                         cardwidth: "100"
@@ -103,7 +103,7 @@ blocks:
                   width: "50"
                 slots:
                   default:
-                    - component: widget:3d-druck-mobile_1
+                    - component: widget:3D-Print-Mobile_1
                       config:
                         bedtempitem: OctoprintB1_B1BedTemp
                         cardheight: 160px
@@ -121,7 +121,7 @@ blocks:
                   width: "50"
                 slots:
                   default:
-                    - component: widget:3d-druck-mobile_1
+                    - component: widget:3D-Print-Mobile_1
                       config:
                         bedtempitem: OctoprintChiron_ChironBedTemp
                         cardheight: 160px
