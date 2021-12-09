@@ -15,7 +15,7 @@ blocks:
                   width: "100"
                 slots:
                   default:
-                    - component: widget:dsl_popup
+                    - component: widget:Connection_Card_3
                       config:
                         cardheight: 300px
                         headline: DSL Devices
