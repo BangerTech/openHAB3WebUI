@@ -289,7 +289,7 @@ slots:
                                   text-overflow: ellipsis
                                   text-shadow: var(--weather-text-shadow-strong)
                                   white-space: nowrap
-                                text: "=Math.round(items[((!props.itemPrefix) ? '' : props.itemPrefix) + 'Aussentemperatur'].state.split(' ')[0] * 10) / 10 + '°'"
+                                text: "=Math.round(items[((!props.itemPrefix) ? '' : props.itemPrefix) + 'Current_Temperature'].state.split(' ')[0] * 10) / 10 + '°'"
                             - component: Label
                               config:
                                 class:
