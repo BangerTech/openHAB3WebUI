@@ -2354,7 +2354,7 @@
                                               "font-weight": 400.0,
                                               "text-shadow": "var(--weather-text-shadow-light)"
                                             },
-                                            "text": "\u003dMath.round(items[((!props.itemPrefix) ? \u0027\u0027 : props.itemPrefix) + \u0027ForecastHours\u0027 + ((loop.hour_idx \u003c 10 ? \u00270\u0027+(loop.hour_idx) : loop.hour_idx)) + \u0027_Precipprobability\u0027].state.split(\u0027 \u0027)[0]) + \u0027%\u0027"
+                                            "text": "\u003dMath.round(items[((!props.itemPrefix) ? \u0027\u0027 : props.itemPrefix) + \u0027ForecastHours\u0027 + (loop.hour_idx \u003d\u003d\u003d 0 ? \u00270\u0027+(loop.hour_idx + 1) :(loop.hour_idx \u003c 10 ? \u00270\u0027+(loop.hour_idx) : loop.hour_idx)) + \u0027_Precipprobability\u0027].state.split(\u0027 \u0027)[0]) + \u0027%\u0027"
                                           }
                                         }
                                       ]
